@@ -1,9 +1,9 @@
-testinator
+Testinator
 ==========
 
 This is the testing page that comes bundled with the <a href="http://www.vanamco.com/ghostlab?utm_source=Github&utm_medium=github-Readme&utm_campaign=Github-Readme">Ghostlab</a> app. An app for cross browser testing and mobile website development.
 
-Basic tests:
+###Basic tests:
 
 1. mq test
 1. @media
@@ -16,25 +16,21 @@ Basic tests:
 
 
 
-Credits:
+###Credits:
 
-Viljami Salminen
--
-http://mqtest.io/
-https://twitter.com/viljamis
-http://viljamis.com/
+######Viljami Salminen
 
-Jordan Moore
--
-https://twitter.com/jordanmoore
-https://github.com/jordanmoore/palmreader
-http://www.jordanm.co.uk/palmreader
+http://mqtest.io/ <br />
 
-gPop jQuery plugin
--
+######Jordan Moore
+
+https://twitter.com/jordanmoore <br />
+
+######gPop jQuery plugin
+
 https://github.com/vnmc/jquery.gpop
 
-Icons
+######Icons
 http://glyphicons.com/
 
 
