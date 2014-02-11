@@ -1,6 +1,4 @@
  <!--credits -->
-
-<?php ?>
 <span id="credits" class="anchor"></span>
 <span class="hr-shadow-bottom"></span>
 <br>
@@ -14,6 +12,7 @@
 	</div>
 </div>
 
+<? /*
 <!--
  check these cats out
 ********************************************
@@ -44,3 +43,4 @@ gPop jQuery plugin
 https://github.com/vnmc/jquery.gpop
 
 -->
+*/ ?>

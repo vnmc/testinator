@@ -2,9 +2,10 @@
 
 <span id="tabs" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">tabs</h2>
+<h2 class="page-heading">tabs &amp; accordion</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
+
 <div class="row-fluid">
 	<div class="span6">
 		<div class="tabbable">

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<head>
-<title>Ghostlab Testing page</title>
- <!-- Head -->
-
+<html>
+	<head>
+		<title>Ghostlab Testing page</title>
+		<!-- Head -->
 <meta charset="utf-8">
+
 <!-- Head links -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-title" content="Ghostlab">
 
-    <!-- Fav and touch icons -->
+<!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
@@ -16,104 +17,200 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-	
-	<!-- fonts -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
-	<!-- Css -->
+<!-- fonts -->
+<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->
+<style>
+	@font-face {
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 300;
+	  src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/OpenSans-300.woff) format('woff');
+	}
+	@font-face {
+	  font-family: 'Open Sans';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: local('Open Sans'), local('OpenSans'), url(fonts/OpenSans-400.woff) format('woff');
+	}
+</style>
+
+<!-- Css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+	</head>
+
 	<body>
-
-<!--
-         _              _       _    _            _          _            _             _                   _        
-        /\ \           / /\    / /\ /\ \         / /\       /\ \         _\ \          / /\                / /\      
-       /  \ \         / / /   / / //  \ \       / /  \      \_\ \       /\__ \        / /  \              / /  \     
-      / /\ \_\       / /_/   / / // /\ \ \     / / /\ \__   /\__ \     / /_ \_\      / / /\ \            / / /\ \    
-     / / /\/_/      / /\ \__/ / // / /\ \ \   / / /\ \___\ / /_ \ \   / / /\/_/     / / /\ \ \          / / /\ \ \   
-    / / / ______   / /\ \___\/ // / /  \ \_\  \ \ \ \/___// / /\ \ \ / / /         / / /  \ \ \        / / /\ \_\ \  
-   / / / /\_____\ / / /\/___/ // / /   / / /   \ \ \     / / /  \/_// / /         / / /___/ /\ \      / / /\ \ \___\ 
-  / / /  \/____ // / /   / / // / /   / / /_    \ \ \   / / /      / / / ____    / / /_____/ /\ \    / / /  \ \ \__/ 
- / / /_____/ / // / /   / / // / /___/ / //_/\__/ / /  / / /      / /_/_/ ___/\ / /_________/\ \ \  / / /____\_\ \   
-/ / /______\/ // / /   / / // / /____\/ / \ \/___/ /  /_/ /      /_______/\__\// / /_       __\ \_\/ / /__________\  
-\/___________/ \/_/    \/_/ \/_________/   \_____\/   \_\/       \_______\/    \_\___\     /____/_/\/_____________/  
-                                                                                                                     
--->
-
+		<!--
+		         _              _       _    _            _          _            _             _                   _        
+		        /\ \           / /\    / /\ /\ \         / /\       /\ \         _\ \          / /\                / /\      
+		       /  \ \         / / /   / / //  \ \       / /  \      \_\ \       /\__ \        / /  \              / /  \     
+		      / /\ \_\       / /_/   / / // /\ \ \     / / /\ \__   /\__ \     / /_ \_\      / / /\ \            / / /\ \    
+		     / / /\/_/      / /\ \__/ / // / /\ \ \   / / /\ \___\ / /_ \ \   / / /\/_/     / / /\ \ \          / / /\ \ \   
+		    / / / ______   / /\ \___\/ // / /  \ \_\  \ \ \ \/___// / /\ \ \ / / /         / / /  \ \ \        / / /\ \_\ \  
+		   / / / /\_____\ / / /\/___/ // / /   / / /   \ \ \     / / /  \/_// / /         / / /___/ /\ \      / / /\ \ \___\ 
+		  / / /  \/____ // / /   / / // / /   / / /_    \ \ \   / / /      / / / ____    / / /_____/ /\ \    / / /  \ \ \__/ 
+		 / / /_____/ / // / /   / / // / /___/ / //_/\__/ / /  / / /      / /_/_/ ___/\ / /_________/\ \ \  / / /____\_\ \   
+		/ / /______\/ // / /   / / // / /____\/ / \ \/___/ /  /_/ /      /_______/\__\// / /_       __\ \_\/ / /__________\  
+		\/___________/ \/_/    \/_/ \/_________/   \_____\/   \_\/       \_______\/    \_\___\     /____/_/\/_____________/  
+		                                                                                                                     
+		-->
 		<!-- Nav -->
-
- 
-<!-- Nav -->
-
-
-
 <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
-        <span class="icon-align-justify icon-white"></span>
-      </button>
+	<div class="navbar-inner">
+		<div class="container">
+			<button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+				<span class="icon-align-justify icon-white"></span>
+			</button>
 
-      <a class="brand" href="./index.html">&nbsp;&nbsp;Ghostlab <small>Testing Page</small></a>
-      <div class="nav-collapse collapse">
-        <ul class="nav pull-right">
-          <li><a href="#">mq test</a></li>
-          <li><a href="#media">@media</a></li>
-          <li ><a href="#grid">fluid grid</a></li>
-          <li ><a href="#links">links</a></li>
-          <!-- <li ><a href="#color">colors</a></li> -->
-          <li ><a href="#forms">forms</a></li>
-          <li ><a href="#images">images</a></li>
-          <li ><a href="#tabs">tabs</a></li>
-          <li ><a href="#credits">credits</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-		<div class="container-fluid content">
+			<a class="brand" href="./index.html">&nbsp;&nbsp;Ghostlab <small>Testing Page</small></a>
+	
+			<div class="nav-collapse collapse">
+				<ul class="nav pull-right">
+					<li><a href="#">device info</a></li>
+					<li><a href="#media">media queries</a></li>
+					<li ><a href="#grid">fluid grid</a></li>
+					<li ><a href="#links">links</a></li>
+					<li ><a href="#color">colors</a></li>
+					<li ><a href="#forms">forms</a></li>
+					<li ><a href="#images">images</a></li>
+					<li ><a href="#tabs">tabs</a></li>
+					<li ><a href="#credits">credits</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>		<div class="container-fluid content">
 			<div class="row-fluid">
 				<div class="span12">
-						<!-- noscript -->
+					<!-- Scripts -->
 
+<script src="js/jquery1.8.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.gpop.js"></script>
 
-<NOSCRIPT>
+<!-- lightbox -->
+<link href="css/lightbox.css" rel="stylesheet" />
+<script src="js/lightbox-2.6.min.js"></script>
+
+<!-- menu -->
+<script>
+	$(document).ready(function()
+	{
+		$('#main-nav-check').change(function()
+		{
+			var c = this.checked ? '30%' : '0%';
+			$('.main-nav').css('width', c);
+		});
+	});
+</script>
+
+<!-- mq test mqtest.io-->
+<script type="text/javascript">
+	function reduceRatio(numerator, denominator)
+	{
+		var gcd, temp, divisor;
+
+		gcd = function (a, b)
+		{
+			if (b === 0)
+				return a;
+			return gcd(b, a % b);
+		};
+
+		if (numerator === denominator)
+			return '1/1';
+
+		if (numerator < denominator)
+		{
+			temp = numerator;
+			numerator = denominator;
+			denominator = temp;
+		}
+
+		divisor = gcd(numerator, denominator);
+
+		return 'undefined' === typeof temp ?
+			(numerator / divisor) + '/' + (denominator / divisor) :
+			(denominator / divisor) + '/' + (numerator / divisor);
+	}
+
+	$(window).load(function()
+	{
+		var docW = document.documentElement.clientWidth;
+		var docH = document.documentElement.clientHeight;
+		var w = screen.width;
+		var h = screen.height;
+		var ratio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
+		var sav = screen.availHeight;
+
+		var mqInfo = '<ul>' +
+			'<li>width <b>' + docW + 'px / ' + docW / 16 + 'em</b></li>' +
+			'<li>height <b>' + docH + 'px / ' + docH / 16 + 'em</b></li>' +
+			'<li class="">Screen available height <b>' + sav + ' px / ' + sav / 16 + ' em</b></li>' +
+			'<li>device-width <b>' + w + 'px / ' + w / 16 + 'em</b></li>' +
+			'<li>device-height <b>' + h + 'px / '  + h / 16 + 'em</b></li>' +
+			'<li>device-pixel-ratio <b>' + ratio + '</b></li>' +
+			'<li class="aspect-ratio">aspect-ratio <b>' + reduceRatio(docW, docH) + '</b></li>' +
+			'<li class="aspect-ratio">device-aspect-ratio <b>' + reduceRatio(w, h) + '</b></li>' +
+			'</ul>';
+		var mqTest = $('#mqTest');
+		mqTest.html(mqInfo);
+
+		document.getElementById('timer').innerHTML = '<p>' + '<strong>' + 'Loaded on ' + '</strong>' + '<br>' + new Date() + '</p>';       
+
+		$('.gPop-gallery').each(function()
+		{
+			$(this).gpop();
+		});
+	});
+</script>
+
+<!-- /mqtest -->					<!-- noscript -->
+<noscript>
     <div class="alert alert-info no-script" style="margin-top:80px;">
         <h2>Javascript is turned off</h2>
     </div>
-</NOSCRIPT>						<!-- Content -->
-						<br>
-						<!-- mq test -->
+</noscript>					<br>
+
+					<!-- mq test -->
 
 <span id="mqtest" class="anchor"></span>
 <br>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">MQ<small> test</small></h2>
+
+<h2 class="page-heading">device info</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <br>
+
 <div class="row-fluid">
     <div class="span12">
-        <p class="lead">media queries test</p>
-        <p><span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;<script>document.write(navigator.userAgent);</script></p>
+        <p>
+            <span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;
+            <script>document.write(navigator.userAgent);</script>
+        </p>
+        
         <div id="mqTest"></div>
-        <NOSCRIPT>
+        <noscript>
             <div class="alert alert-info">
-                <em>Your javascript is turned off<BR>
-                    Please enable JavaScript to test the browser User Agent and media query test</em>
+                <em>
+                    Your javascript is turned off<br>
+                    Please enable JavaScript to test the browser User Agent and media query test
+                </em>
             </div>
-        </NOSCRIPT>
+        </noscript>
         <div id="timer"><p></p></div>
     </div>
-</div>						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>	     
-						<!-- @media features -->
+</div>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
+
+					<!-- @media features -->
 <!--  Credits -->
 <!--
 Jordan Moore
@@ -124,12 +221,12 @@ http://www.jordanm.co.uk/palmreader
 
 <span id="media" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">@media <small>features</small></h2>
+<h2 class="page-heading">media queries</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <div class="row-fluid">
 	<div class="span12">
-		<p class="lead">Showing what @media features your device can and can't see</p>
+		<p class="lead">Showing which @media features your device can and can't see</p>
 		<p>All the media query tests are listed below, the <span class="alert alert-success">green</span> features are currently active on this device</p>
 	</div>
 </div>
@@ -221,13 +318,13 @@ http://www.jordanm.co.uk/palmreader
 
 
 
-						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						<!-- Grid -->
+					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
 
+					<!-- Grid -->
 <span id="grid" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Zee Grid <small>12 column layout</small></h2>
+<h2 class="page-heading">fluid grid <small>12 column layout</small></h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <div class="gl-grid">
@@ -252,72 +349,210 @@ http://www.jordanm.co.uk/palmreader
 		<div class="span3">span3</div>
 		<div class="span6">span6</div>
 	</div>
+</div>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
 
-</div>						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						<!-- links -->
-
-<span id="links" class="anchor"></span>
+					<!-- colors -->
+<span id="color" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">links <small>href</small></h2>
+<h2 class="page-heading">colors</h2>
+<span class="hr-shadow-bottom"></span>
+
+<div class="row-fluid">
+	<div class="span12">
+		<br>
+		<table class="color-chart">
+			<tbody>
+				<tr><td style="background-color:#FBEFEF;" title="#FBEFEF"></td><td style="background-color:#FBF2EF;" title="#FBF2EF"></td><td style="background-color:#FBF5EF;" title="#FBF5EF"></td><td style="background-color:#FBF8EF;" title="#FBF8EF"></td><td style="background-color:#FBFBEF;" title="#FBFBEF"></td><td style="background-color:#F8FBEF;" title="#F8FBEF"></td><td style="background-color:#F5FBEF;" title="#F5FBEF"></td><td style="background-color:#F2FBEF;" title="#F2FBEF"></td><td style="background-color:#EFFBEF;" title="#EFFBEF"></td><td style="background-color:#EFFBF2;" title="#EFFBF2"></td><td style="background-color:#EFFBF5;" title="#EFFBF5"></td><td style="background-color:#EFFBF8;" title="#EFFBF8"></td><td style="background-color:#EFFBFB;" title="#EFFBFB"></td><td style="background-color:#EFF8FB;" title="#EFF8FB"></td><td style="background-color:#EFF5FB;" title="#EFF5FB"></td><td style="background-color:#EFF2FB;" title="#EFF2FB"></td><td style="background-color:#EFEFFB;" title="#EFEFFB"></td><td style="background-color:#F2EFFB;" title="#F2EFFB"></td><td style="background-color:#F5EFFB;" title="#F5EFFB"></td><td style="background-color:#F8EFFB;" title="#F8EFFB"></td><td style="background-color:#FBEFFB;" title="#FBEFFB"></td><td style="background-color:#FBEFF8;" title="#FBEFF8"></td><td style="background-color:#FBEFF5;" title="#FBEFF5"></td><td style="background-color:#FBEFF2;" title="#FBEFF2"></td><td style="background-color:#FFFFFF;" title="#FFFFFF"></td></tr><tr><td style="background-color:#F8E0E0;" title="#F8E0E0"></td><td style="background-color:#F8E6E0;" title="#F8E6E0"></td><td style="background-color:#F8ECE0;" title="#F8ECE0"></td><td style="background-color:#F7F2E0;" title="#F7F2E0"></td><td style="background-color:#F7F8E0;" title="#F7F8E0"></td><td style="background-color:#F1F8E0;" title="#F1F8E0"></td><td style="background-color:#ECF8E0;" title="#ECF8E0"></td><td style="background-color:#E6F8E0;" title="#E6F8E0"></td><td style="background-color:#E0F8E0;" title="#E0F8E0"></td><td style="background-color:#E0F8E6;" title="#E0F8E6"></td><td style="background-color:#E0F8EC;" title="#E0F8EC"></td><td style="background-color:#E0F8F1;" title="#E0F8F1"></td><td style="background-color:#E0F8F7;" title="#E0F8F7"></td><td style="background-color:#E0F2F7;" title="#E0F2F7"></td><td style="background-color:#E0ECF8;" title="#E0ECF8"></td><td style="background-color:#E0E6F8;" title="#E0E6F8"></td><td style="background-color:#E0E0F8;" title="#E0E0F8"></td><td style="background-color:#E6E0F8;" title="#E6E0F8"></td><td style="background-color:#ECE0F8;" title="#ECE0F8"></td><td style="background-color:#F2E0F7;" title="#F2E0F7"></td><td style="background-color:#F8E0F7;" title="#F8E0F7"></td><td style="background-color:#F8E0F1;" title="#F8E0F1"></td><td style="background-color:#F8E0EC;" title="#F8E0EC"></td><td style="background-color:#F8E0E6;" title="#F8E0E6"></td><td style="background-color:#FAFAFA;" title="#FAFAFA"></td></tr><tr><td style="background-color:#F6CECE;" title="#F6CECE"></td><td style="background-color:#F6D8CE;" title="#F6D8CE"></td><td style="background-color:#F6E3CE;" title="#F6E3CE"></td><td style="background-color:#F5ECCE;" title="#F5ECCE"></td><td style="background-color:#F5F6CE;" title="#F5F6CE"></td><td style="background-color:#ECF6CE;" title="#ECF6CE"></td><td style="background-color:#E3F6CE;" title="#E3F6CE"></td><td style="background-color:#D8F6CE;" title="#D8F6CE"></td><td style="background-color:#CEF6CE;" title="#CEF6CE"></td><td style="background-color:#CEF6D8;" title="#CEF6D8"></td><td style="background-color:#CEF6E3;" title="#CEF6E3"></td><td style="background-color:#CEF6EC;" title="#CEF6EC"></td><td style="background-color:#CEF6F5;" title="#CEF6F5"></td><td style="background-color:#CEECF5;" title="#CEECF5"></td><td style="background-color:#CEE3F6;" title="#CEE3F6"></td><td style="background-color:#CED8F6;" title="#CED8F6"></td><td style="background-color:#CECEF6;" title="#CECEF6"></td><td style="background-color:#D8CEF6;" title="#D8CEF6"></td><td style="background-color:#E3CEF6;" title="#E3CEF6"></td><td style="background-color:#ECCEF5;" title="#ECCEF5"></td><td style="background-color:#F6CEF5;" title="#F6CEF5"></td><td style="background-color:#F6CEEC;" title="#F6CEEC"></td><td style="background-color:#F6CEE3;" title="#F6CEE3"></td><td style="background-color:#F6CED8;" title="#F6CED8"></td><td style="background-color:#F2F2F2;" title="#F2F2F2"></td></tr><tr><td style="background-color:#F5A9A9;" title="#F5A9A9"></td><td style="background-color:#F5BCA9;" title="#F5BCA9"></td><td style="background-color:#F5D0A9;" title="#F5D0A9"></td><td style="background-color:#F3E2A9;" title="#F3E2A9"></td><td style="background-color:#F2F5A9;" title="#F2F5A9"></td><td style="background-color:#E1F5A9;" title="#E1F5A9"></td><td style="background-color:#D0F5A9;" title="#D0F5A9"></td><td style="background-color:#BCF5A9;" title="#BCF5A9"></td><td style="background-color:#A9F5A9;" title="#A9F5A9"></td><td style="background-color:#A9F5BC;" title="#A9F5BC"></td><td style="background-color:#A9F5D0;" title="#A9F5D0"></td><td style="background-color:#A9F5E1;" title="#A9F5E1"></td><td style="background-color:#A9F5F2;" title="#A9F5F2"></td><td style="background-color:#A9E2F3;" title="#A9E2F3"></td><td style="background-color:#A9D0F5;" title="#A9D0F5"></td><td style="background-color:#A9BCF5;" title="#A9BCF5"></td><td style="background-color:#A9A9F5;" title="#A9A9F5"></td><td style="background-color:#BCA9F5;" title="#BCA9F5"></td><td style="background-color:#D0A9F5;" title="#D0A9F5"></td><td style="background-color:#E2A9F3;" title="#E2A9F3"></td><td style="background-color:#F5A9F2;" title="#F5A9F2"></td><td style="background-color:#F5A9E1;" title="#F5A9E1"></td><td style="background-color:#F5A9D0;" title="#F5A9D0"></td><td style="background-color:#F5A9BC;" title="#F5A9BC"></td><td style="background-color:#E6E6E6;" title="#E6E6E6"></td></tr><tr><td style="background-color:#F78181;" title="#F78181"></td><td style="background-color:#F79F81;" title="#F79F81"></td><td style="background-color:#F7BE81;" title="#F7BE81"></td><td style="background-color:#F5DA81;" title="#F5DA81"></td><td style="background-color:#F3F781;" title="#F3F781"></td><td style="background-color:#D8F781;" title="#D8F781"></td><td style="background-color:#BEF781;" title="#BEF781"></td><td style="background-color:#9FF781;" title="#9FF781"></td><td style="background-color:#81F781;" title="#81F781"></td><td style="background-color:#81F79F;" title="#81F79F"></td><td style="background-color:#81F7BE;" title="#81F7BE"></td><td style="background-color:#81F7D8;" title="#81F7D8"></td><td style="background-color:#81F7F3;" title="#81F7F3"></td><td style="background-color:#81DAF5;" title="#81DAF5"></td><td style="background-color:#81BEF7;" title="#81BEF7"></td><td style="background-color:#819FF7;" title="#819FF7"></td><td style="background-color:#8181F7;" title="#8181F7"></td><td style="background-color:#9F81F7;" title="#9F81F7"></td><td style="background-color:#BE81F7;" title="#BE81F7"></td><td style="background-color:#DA81F5;" title="#DA81F5"></td><td style="background-color:#F781F3;" title="#F781F3"></td><td style="background-color:#F781D8;" title="#F781D8"></td><td style="background-color:#F781BE;" title="#F781BE"></td><td style="background-color:#F7819F;" title="#F7819F"></td><td style="background-color:#D8D8D8;" title="#D8D8D8"></td></tr><tr><td style="background-color:#FA5858;" title="#FA5858"></td><td style="background-color:#FA8258;" title="#FA8258"></td><td style="background-color:#FAAC58;" title="#FAAC58"></td><td style="background-color:#F7D358;" title="#F7D358"></td><td style="background-color:#F4FA58;" title="#F4FA58"></td><td style="background-color:#D0FA58;" title="#D0FA58"></td><td style="background-color:#ACFA58;" title="#ACFA58"></td><td style="background-color:#82FA58;" title="#82FA58"></td><td style="background-color:#58FA58;" title="#58FA58"></td><td style="background-color:#58FA82;" title="#58FA82"></td><td style="background-color:#58FAAC;" title="#58FAAC"></td><td style="background-color:#58FAD0;" title="#58FAD0"></td><td style="background-color:#58FAF4;" title="#58FAF4"></td><td style="background-color:#58D3F7;" title="#58D3F7"></td><td style="background-color:#58ACFA;" title="#58ACFA"></td><td style="background-color:#5882FA;" title="#5882FA"></td><td style="background-color:#5858FA;" title="#5858FA"></td><td style="background-color:#8258FA;" title="#8258FA"></td><td style="background-color:#AC58FA;" title="#AC58FA"></td><td style="background-color:#D358F7;" title="#D358F7"></td><td style="background-color:#FA58F4;" title="#FA58F4"></td><td style="background-color:#FA58D0;" title="#FA58D0"></td><td style="background-color:#FA58AC;" title="#FA58AC"></td><td style="background-color:#FA5882;" title="#FA5882"></td><td style="background-color:#BDBDBD;" title="#BDBDBD"></td></tr><tr><td style="background-color:#FE2E2E;" title="#FE2E2E"></td><td style="background-color:#FE642E;" title="#FE642E"></td><td style="background-color:#FE9A2E;" title="#FE9A2E"></td><td style="background-color:#FACC2E;" title="#FACC2E"></td><td style="background-color:#F7FE2E;" title="#F7FE2E"></td><td style="background-color:#C8FE2E;" title="#C8FE2E"></td><td style="background-color:#9AFE2E;" title="#9AFE2E"></td><td style="background-color:#64FE2E;" title="#64FE2E"></td><td style="background-color:#2EFE2E;" title="#2EFE2E"></td><td style="background-color:#2EFE64;" title="#2EFE64"></td><td style="background-color:#2EFE9A;" title="#2EFE9A"></td><td style="background-color:#2EFEC8;" title="#2EFEC8"></td><td style="background-color:#2EFEF7;" title="#2EFEF7"></td><td style="background-color:#2ECCFA;" title="#2ECCFA"></td><td style="background-color:#2E9AFE;" title="#2E9AFE"></td><td style="background-color:#2E64FE;" title="#2E64FE"></td><td style="background-color:#2E2EFE;" title="#2E2EFE"></td><td style="background-color:#642EFE;" title="#642EFE"></td><td style="background-color:#9A2EFE;" title="#9A2EFE"></td><td style="background-color:#CC2EFA;" title="#CC2EFA"></td><td style="background-color:#FE2EF7;" title="#FE2EF7"></td><td style="background-color:#FE2EC8;" title="#FE2EC8"></td><td style="background-color:#FE2E9A;" title="#FE2E9A"></td><td style="background-color:#FE2E64;" title="#FE2E64"></td><td style="background-color:#A4A4A4;" title="#A4A4A4"></td></tr><tr><td style="background-color:#FF0000;" title="#FF0000"></td><td style="background-color:#FF4000;" title="#FF4000"></td><td style="background-color:#FF8000;" title="#FF8000"></td><td style="background-color:#FFBF00;" title="#FFBF00"></td><td style="background-color:#FFFF00;" title="#FFFF00"></td><td style="background-color:#BFFF00;" title="#BFFF00"></td><td style="background-color:#80FF00;" title="#80FF00"></td><td style="background-color:#40FF00;" title="#40FF00"></td><td style="background-color:#00FF00;" title="#00FF00"></td><td style="background-color:#00FF40;" title="#00FF40"></td><td style="background-color:#00FF80;" title="#00FF80"></td><td style="background-color:#00FFBF;" title="#00FFBF"></td><td style="background-color:#00FFFF;" title="#00FFFF"></td><td style="background-color:#00BFFF;" title="#00BFFF"></td><td style="background-color:#0080FF;" title="#0080FF"></td><td style="background-color:#0040FF;" title="#0040FF"></td><td style="background-color:#0000FF;" title="#0000FF"></td><td style="background-color:#4000FF;" title="#4000FF"></td><td style="background-color:#8000FF;" title="#8000FF"></td><td style="background-color:#BF00FF;" title="#BF00FF"></td><td style="background-color:#FF00FF;" title="#FF00FF"></td><td style="background-color:#FF00BF;" title="#FF00BF"></td><td style="background-color:#FF0080;" title="#FF0080"></td><td style="background-color:#FF0040;" title="#FF0040"></td><td style="background-color:#848484;" title="#848484"></td></tr><tr><td style="background-color:#DF0101;" title="#DF0101"></td><td style="background-color:#DF3A01;" title="#DF3A01"></td><td style="background-color:#DF7401;" title="#DF7401"></td><td style="background-color:#DBA901;" title="#DBA901"></td><td style="background-color:#D7DF01;" title="#D7DF01"></td><td style="background-color:#A5DF00;" title="#A5DF00"></td><td style="background-color:#74DF00;" title="#74DF00"></td><td style="background-color:#3ADF00;" title="#3ADF00"></td><td style="background-color:#01DF01;" title="#01DF01"></td><td style="background-color:#01DF3A;" title="#01DF3A"></td><td style="background-color:#01DF74;" title="#01DF74"></td><td style="background-color:#01DFA5;" title="#01DFA5"></td><td style="background-color:#01DFD7;" title="#01DFD7"></td><td style="background-color:#01A9DB;" title="#01A9DB"></td><td style="background-color:#0174DF;" title="#0174DF"></td><td style="background-color:#013ADF;" title="#013ADF"></td><td style="background-color:#0101DF;" title="#0101DF"></td><td style="background-color:#3A01DF;" title="#3A01DF"></td><td style="background-color:#7401DF;" title="#7401DF"></td><td style="background-color:#A901DB;" title="#A901DB"></td><td style="background-color:#DF01D7;" title="#DF01D7"></td><td style="background-color:#DF01A5;" title="#DF01A5"></td><td style="background-color:#DF0174;" title="#DF0174"></td><td style="background-color:#DF013A;" title="#DF013A"></td><td style="background-color:#6E6E6E;" title="#6E6E6E"></td></tr><tr><td style="background-color:#B40404;" title="#B40404"></td><td style="background-color:#B43104;" title="#B43104"></td><td style="background-color:#B45F04;" title="#B45F04"></td><td style="background-color:#B18904;" title="#B18904"></td><td style="background-color:#AEB404;" title="#AEB404"></td><td style="background-color:#86B404;" title="#86B404"></td><td style="background-color:#5FB404;" title="#5FB404"></td><td style="background-color:#31B404;" title="#31B404"></td><td style="background-color:#04B404;" title="#04B404"></td><td style="background-color:#04B431;" title="#04B431"></td><td style="background-color:#04B45F;" title="#04B45F"></td><td style="background-color:#04B486;" title="#04B486"></td><td style="background-color:#04B4AE;" title="#04B4AE"></td><td style="background-color:#0489B1;" title="#0489B1"></td><td style="background-color:#045FB4;" title="#045FB4"></td><td style="background-color:#0431B4;" title="#0431B4"></td><td style="background-color:#0404B4;" title="#0404B4"></td><td style="background-color:#3104B4;" title="#3104B4"></td><td style="background-color:#5F04B4;" title="#5F04B4"></td><td style="background-color:#8904B1;" title="#8904B1"></td><td style="background-color:#B404AE;" title="#B404AE"></td><td style="background-color:#B40486;" title="#B40486"></td><td style="background-color:#B4045F;" title="#B4045F"></td><td style="background-color:#B40431;" title="#B40431"></td><td style="background-color:#585858;" title="#585858"></td></tr><tr><td style="background-color:#8A0808;" title="#8A0808"></td><td style="background-color:#8A2908;" title="#8A2908"></td><td style="background-color:#8A4B08;" title="#8A4B08"></td><td style="background-color:#886A08;" title="#886A08"></td><td style="background-color:#868A08;" title="#868A08"></td><td style="background-color:#688A08;" title="#688A08"></td><td style="background-color:#4B8A08;" title="#4B8A08"></td><td style="background-color:#298A08;" title="#298A08"></td><td style="background-color:#088A08;" title="#088A08"></td><td style="background-color:#088A29;" title="#088A29"></td><td style="background-color:#088A4B;" title="#088A4B"></td><td style="background-color:#088A68;" title="#088A68"></td><td style="background-color:#088A85;" title="#088A85"></td><td style="background-color:#086A87;" title="#086A87"></td><td style="background-color:#084B8A;" title="#084B8A"></td><td style="background-color:#08298A;" title="#08298A"></td><td style="background-color:#08088A;" title="#08088A"></td><td style="background-color:#29088A;" title="#29088A"></td><td style="background-color:#4B088A;" title="#4B088A"></td><td style="background-color:#6A0888;" title="#6A0888"></td><td style="background-color:#8A0886;" title="#8A0886"></td><td style="background-color:#8A0868;" title="#8A0868"></td><td style="background-color:#8A084B;" title="#8A084B"></td><td style="background-color:#8A0829;" title="#8A0829"></td><td style="background-color:#424242;" title="#424242"></td></tr><tr><td style="background-color:#610B0B;" title="#610B0B"></td><td style="background-color:#61210B;" title="#61210B"></td><td style="background-color:#61380B;" title="#61380B"></td><td style="background-color:#5F4C0B;" title="#5F4C0B"></td><td style="background-color:#5E610B;" title="#5E610B"></td><td style="background-color:#4B610B;" title="#4B610B"></td><td style="background-color:#38610B;" title="#38610B"></td><td style="background-color:#21610B;" title="#21610B"></td><td style="background-color:#0B610B;" title="#0B610B"></td><td style="background-color:#0B6121;" title="#0B6121"></td><td style="background-color:#0B6138;" title="#0B6138"></td><td style="background-color:#0B614B;" title="#0B614B"></td><td style="background-color:#0B615E;" title="#0B615E"></td><td style="background-color:#0B4C5F;" title="#0B4C5F"></td><td style="background-color:#0B3861;" title="#0B3861"></td><td style="background-color:#0B2161;" title="#0B2161"></td><td style="background-color:#0B0B61;" title="#0B0B61"></td><td style="background-color:#210B61;" title="#210B61"></td><td style="background-color:#380B61;" title="#380B61"></td><td style="background-color:#4C0B5F;" title="#4C0B5F"></td><td style="background-color:#610B5E;" title="#610B5E"></td><td style="background-color:#610B4B;" title="#610B4B"></td><td style="background-color:#610B38;" title="#610B38"></td><td style="background-color:#610B21;" title="#610B21"></td><td style="background-color:#2E2E2E;" title="#2E2E2E"></td></tr><tr><td style="background-color:#3B0B0B;" title="#3B0B0B"></td><td style="background-color:#3B170B;" title="#3B170B"></td><td style="background-color:#3B240B;" title="#3B240B"></td><td style="background-color:#3A2F0B;" title="#3A2F0B"></td><td style="background-color:#393B0B;" title="#393B0B"></td><td style="background-color:#2E3B0B;" title="#2E3B0B"></td><td style="background-color:#243B0B;" title="#243B0B"></td><td style="background-color:#173B0B;" title="#173B0B"></td><td style="background-color:#0B3B0B;" title="#0B3B0B"></td><td style="background-color:#0B3B17;" title="#0B3B17"></td><td style="background-color:#0B3B24;" title="#0B3B24"></td><td style="background-color:#0B3B2E;" title="#0B3B2E"></td><td style="background-color:#0B3B39;" title="#0B3B39"></td><td style="background-color:#0B2F3A;" title="#0B2F3A"></td><td style="background-color:#0B243B;" title="#0B243B"></td><td style="background-color:#0B173B;" title="#0B173B"></td><td style="background-color:#0B0B3B;" title="#0B0B3B"></td><td style="background-color:#170B3B;" title="#170B3B"></td><td style="background-color:#240B3B;" title="#240B3B"></td><td style="background-color:#2F0B3A;" title="#2F0B3A"></td><td style="background-color:#3B0B39;" title="#3B0B39"></td><td style="background-color:#3B0B2E;" title="#3B0B2E"></td><td style="background-color:#3B0B24;" title="#3B0B24"></td><td style="background-color:#3B0B17;" title="#3B0B17"></td><td style="background-color:#1C1C1C;" title="#1C1C1C"></td></tr><tr><td style="background-color:#2A0A0A;" title="#2A0A0A"></td><td style="background-color:#2A120A;" title="#2A120A"></td><td style="background-color:#2A1B0A;" title="#2A1B0A"></td><td style="background-color:#29220A;" title="#29220A"></td><td style="background-color:#292A0A;" title="#292A0A"></td><td style="background-color:#222A0A;" title="#222A0A"></td><td style="background-color:#1B2A0A;" title="#1B2A0A"></td><td style="background-color:#122A0A;" title="#122A0A"></td><td style="background-color:#0A2A0A;" title="#0A2A0A"></td><td style="background-color:#0A2A12;" title="#0A2A12"></td><td style="background-color:#0A2A1B;" title="#0A2A1B"></td><td style="background-color:#0A2A22;" title="#0A2A22"></td><td style="background-color:#0A2A29;" title="#0A2A29"></td><td style="background-color:#0A2229;" title="#0A2229"></td><td style="background-color:#0A1B2A;" title="#0A1B2A"></td><td style="background-color:#0A122A;" title="#0A122A"></td><td style="background-color:#0A0A2A;" title="#0A0A2A"></td><td style="background-color:#120A2A;" title="#120A2A"></td><td style="background-color:#1B0A2A;" title="#1B0A2A"></td><td style="background-color:#220A29;" title="#220A29"></td><td style="background-color:#2A0A29;" title="#2A0A29"></td><td style="background-color:#2A0A22;" title="#2A0A22"></td><td style="background-color:#2A0A1B;" title="#2A0A1B"></td><td style="background-color:#2A0A12;" title="#2A0A12"></td><td style="background-color:#151515;" title="#151515"></td></tr><tr><td style="background-color:#190707;" title="#190707"></td><td style="background-color:#190B07;" title="#190B07"></td><td style="background-color:#191007;" title="#191007"></td><td style="background-color:#181407;" title="#181407"></td><td style="background-color:#181907;" title="#181907"></td><td style="background-color:#141907;" title="#141907"></td><td style="background-color:#101907;" title="#101907"></td><td style="background-color:#0B1907;" title="#0B1907"></td><td style="background-color:#071907;" title="#071907"></td><td style="background-color:#07190B;" title="#07190B"></td><td style="background-color:#071910;" title="#071910"></td><td style="background-color:#071914;" title="#071914"></td><td style="background-color:#071918;" title="#071918"></td><td style="background-color:#071418;" title="#071418"></td><td style="background-color:#071019;" title="#071019"></td><td style="background-color:#070B19;" title="#070B19"></td><td style="background-color:#070719;" title="#070719"></td><td style="background-color:#0B0719;" title="#0B0719"></td><td style="background-color:#100719;" title="#100719"></td><td style="background-color:#140718;" title="#140718"></td><td style="background-color:#190718;" title="#190718"></td><td style="background-color:#190714;" title="#190714"></td><td style="background-color:#190710;" title="#190710"></td><td style="background-color:#19070B;" title="#19070B"></td><td style="background-color:#000000;" title="#000000"></td></tr>			</tbody>
+		</table>
+	</div>
+</div>
+<div class="row-fluid color-details"><p>&nbsp;</p></div>
+
+<script>
+	function rgbToHsl(r, g, b)
+	{
+		r /= 255;
+		g /= 255;
+		b /= 255;
+
+		var max = Math.max(r, g, b);
+		var min = Math.min(r, g, b);
+		var h = 0;
+		var s = 0;
+		var l = (max + min) / 2;
+
+		if (max !== min)
+		{
+			var d = max - min;
+			s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+			if (max === r)
+				h = (g - b) / d + (g < b ? 6 : 0);
+			else if (max === g)
+				h = (b - r) / d + 2;
+			else
+				h = (r - g) / d + 4;
+			h *= 60;
+		}
+
+		return { h: h | 0, s: (s * 100) | 0, l: (l * 100) | 0 };
+	}
+
+	var $details = $('.color-details');
+	var $detailsText = $details.find('p');
+	$('.color-chart td').mouseenter(function()
+	{
+		var color = $(this).attr('title');
+
+		var r = parseInt(color.substr(1, 2), 16);
+		var g = parseInt(color.substr(3, 2), 16);
+		var b = parseInt(color.substr(5, 2), 16);
+		var hsl = rgbToHsl(r, g, b);
+
+		$detailsText.text(color + ' | rgb(' + r + ', ' + g + ', ' + b + ') | hsl(' + hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%)');
+		$detailsText.css('color', hsl.l < 50 ? '#fff' : '#000');
+		$details.css('background-color', color);
+	});
+</script>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
+
+					<!-- images -->
+
+<span id="images" class="anchor"></span>
+<span class="hr-shadow-top"></span>
+<h2 class="page-heading">images</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
-<p class="lead">Test navigation with the href Attribute</p>
-
+<p class="lead">Images with gPop</p>
 <br>
-<p>Simple links</p>
-<div class="row-fluid">
-	<div class="span4">
-		<a href="#" class="btn btn-large btn-block"><span class="icon-resize-vertical"></span>&nbsp;Anchor link</a>
-	</div>
-	<div class="span4">
-	<a id="testid" href="internal.html" class="btn btn-large btn-block"><span class="icon-arrow-right"></span>&nbsp;Internal site link</a>
-		 
-	</div>
-	<div class="span4">
-		<a href="https://github.com/vnmc" class="btn btn-large btn-block"><span class="icon-globe"></span>&nbsp;External link</a>
-	</div>
+<br>
+
+<div class="gPopDemoWapper">
+<!-- Gallery without content -->
+<div class="gPop-gallery" id="demo1">
+    <ul>
+        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
+        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
+        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
+    </ul> 
 </div>
-<br>
-
-<p>Scripted links</p>
-<div class="row-fluid">
-	<div class="span4" id="link4">
-		<a href="javascript:$('#link4').fadeTo('slow', 0.1).fadeTo('slow', 1);" class="btn btn-large btn-block">
-			<span class="icon-asterisk"></span>&nbsp;javascript: link<br>
-		</a>
-		<code>&lt;a href=&quot;javascript:foo()&quot;&gt;</code>
-	</div>
-	
-	<div class="span4" id="link5">
-		<a href="javascript:void(0)" class="btn btn-large btn-block" onclick="$('#link5').fadeTo('slow', 0.1).fadeTo('slow', 1);">
-			<span class="icon-hand-up"></span>&nbsp;onclick link<br>
-		</a>
-		<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;foo()&quot;&gt;</code>
-	</div>
-	<div class="span4" id="link6">
-		<a class="btn btn-large btn-block" onclick="$('#link6').fadeTo('slow', 0.1).fadeTo('slow', 1);">
-			<span class="icon-ban-circle"></span>&nbsp;No-href link<br>
-		</a>
-		<code>&lt;a onclick=&quot;foo()&quot;&gt;</code>
-	</div>
+<!-- /Gallery without content -->   
+<!-- /Gallery with content -->
+<!-- 4 image grid demo -->
+<div class="gPop-gallery" id="demo4">
+    <ul>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+    </ul>
 </div>
+<!-- /4 image grid demo -->
+<!-- 5 image grid demo -->
+<div class="gPop-gallery" id="demo5">
+    <ul>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- /5 image grid demo -->
 
+</div>
+<!-- /Gallery Flexible Grid demo -->					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
+
+					<!-- lightbox -->
+<span id="lightbox" class="anchor"></span>
+<span class="hr-shadow-top"></span>
+<h2 class="page-heading"><a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">lightbox2</a></h2>
+<span class="hr-shadow-bottom"></span>
 <br>
-<br>						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						<!--
-												<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-					-->
-						<!-- forms -->
+
+<div class="row-fluid">
+	<div class="span3"><a href="artwork/image-01.jpg" data-lightbox="example"><img src="artwork/image-01.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-02.jpg" data-lightbox="example"><img src="artwork/image-02.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-03.jpg" data-lightbox="example"><img src="artwork/image-03.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-04.jpg" data-lightbox="example"><img src="artwork/image-04.jpg"/></a></div>
+</div>
+<div class="row-fluid">
+	<div class="span3"><a href="artwork/image-05.jpg" data-lightbox="example"><img src="artwork/image-05.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-06.jpg" data-lightbox="example"><img src="artwork/image-06.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-07.jpg" data-lightbox="example"><img src="artwork/image-07.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-08.jpg" data-lightbox="example"><img src="artwork/image-08.jpg"/></a></div>
+</div>
+<div class="row-fluid">
+	<div class="span3"><a href="artwork/image-09.jpg" data-lightbox="example"><img src="artwork/image-09.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-10.jpg" data-lightbox="example"><img src="artwork/image-10.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-11.jpg" data-lightbox="example"><img src="artwork/image-11.jpg"/></a></div>
+	<div class="span3"><a href="artwork/image-12.jpg" data-lightbox="example"><img src="artwork/image-12.jpg"/></a></div>
+</div>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
+
+					<!-- forms -->
 <span id="forms" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Forms</h2>
+<h2 class="page-heading">form</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
-	<p class="lead"><i>Form testing</i></p>
-<br>
+
 <div class="row-fluid form-Row">
 	<div class="span6">
 		<form class="form-horizontal form">
@@ -411,115 +646,120 @@ http://www.jordanm.co.uk/palmreader
 			</div>
 		</form>
 	</div>
-</div>						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						<!-- images -->
+</div>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
 
-<span id="images" class="anchor"></span>
+					<!-- links -->
+<span id="links" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Images <small></small></h2>
+<h2 class="page-heading">links</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
-<p class="lead">Images with gPop</p>
-<br>
-<br>
-<div class="gPopDemoWapper">
-<!-- Gallery without content -->
-<div class="gPop-gallery" id="demo1">
-    <ul>
-        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
-        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
-        <li><a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"></a></li>
-    </ul> 
-</div>
-<!-- /Gallery without content -->   
-<!-- /Gallery with content -->
-<!-- 4 image grid demo -->
-<div class="gPop-gallery" id="demo4">
-    <ul>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-    </ul>
-</div>
-<!-- /4 image grid demo -->
-<!-- 5 image grid demo -->
-<div class="gPop-gallery" id="demo5">
-    <ul>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-        <li>
-            <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
-            <div>
-                <h4>Thumbnail label</h4>
-                <p>Thumbnail caption...</p>
-            </div>
-        </li>
-    </ul>
-</div>
-<!-- /5 image grid demo -->
 
+<p>simple links</p>
+<div class="row-fluid">
+	<div class="span4">
+		<a href="#" class="btn btn-large btn-block"><span class="icon-resize-vertical"></span>&nbsp;Anchor link</a>
+	</div>
+	<div class="span4">
+		<a id="testid" href="internal.html" class="btn btn-large btn-block"><span class="icon-arrow-right"></span>&nbsp;Internal site link</a> 
+	</div>
+	<div class="span4">
+		<a href="https://github.com/vnmc" class="btn btn-large btn-block"><span class="icon-globe"></span>&nbsp;External link</a>
+	</div>
 </div>
-<!-- /Gallery Flexible Grid demo -->						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						<!-- tab -->
+<br>
+
+<p>scripted links</p>
+<script>
+	function logClick(event)
+	{
+		event.cancelBubble = true;
+		if (event.stopPropagation)
+			event.stopPropagation();
+
+		$('.console').append('<p>' + event.target.id + ' clicked</p>');
+	}
+</script>
+
+<p>static html</p>
+<div class="row-fluid">
+	<div class="span4">
+		<a id="link4" onclick="logClick(event)" class="btn btn-large btn-block">#link4</a>
+	</div>	
+	<div class="span4">
+		<a id="link5" class="btn btn-large btn-block">#link5</a>
+	</div>
+	<div class="span4">
+		<a id="link6" class="btn btn-large btn-block">#link6</a>
+	</div>
+</div>
+<br>
+
+<p>dynamically created links</p>
+<div class="row-fluid" id="dynamic-links"></div>
+<br>
+
+<p>JavaScript event handler code for the links:</p>
+<div class="row-fluid">
+	<div class="span4">
+		<code>
+			// #link4, #link7:<br/>
+			&lt;a onclick=&quot;logClick(event)&quot;&gt;
+		</code>
+	</div>	
+	<div class="span4">
+		<code>
+			// #link5, #link8:<br/>
+			document.getElementById('link5') .onclick = logClick;
+		</code>
+	</div>
+	<div class="span4">
+		<code>
+			// #link6, #link9:<br/>
+			jQuery('#link6').click(logClick);
+		</code>
+	</div>
+</div>
+<code>
+	// clicking the links invokes the following function:<br/>
+	function logClick(event) {<br/>
+	&nbsp;&nbsp;<b>event.preventDefault();</b><br/>
+	&nbsp;&nbsp;console.log(event.target.id + ' clicked');<br/>
+	}
+</code>
+
+<div class="row-fluid console"></div>
+
+<script>
+	document.getElementById('link5').onclick = logClick;
+	$('#link6').click(logClick);
+
+	setTimeout(function()
+	{
+		$('#dynamic-links').html(
+			'<div class="span4"><a id="link7" class="btn btn-large btn-block" onclick="logClick(event)">#link7</a></div>' +
+			'<div class="span4"><a id="link8" class="btn btn-large btn-block">#link8<br/><span class="warning">Click won\'t propagate. Avoid this!</span></a></div>' +
+			'<div class="span4"><a id="link9" class="btn btn-large btn-block">#link9</a></div>'
+		);
+
+		document.getElementById('link8').onclick = logClick;
+		$('#link9').click(logClick);
+	}, 1000);
+</script>
+
+<br>
+<br>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
+
+					<!-- tab -->
 
 <span id="tabs" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">tabs</h2>
+<h2 class="page-heading">tabs &amp; accordion</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
+
 <div class="row-fluid">
 	<div class="span6">
 		<div class="tabbable">
@@ -581,10 +821,10 @@ http://www.jordanm.co.uk/palmreader
 			</div>
 		</div>
 	</div>
-</div>						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-						<br>
-						 <!--credits -->
+</div>					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<br>
 
+					 <!--credits -->
 <span id="credits" class="anchor"></span>
 <span class="hr-shadow-bottom"></span>
 <br>
@@ -598,151 +838,26 @@ http://www.jordanm.co.uk/palmreader
 	</div>
 </div>
 
-<!--
- check these cats out
-********************************************
--->
-
-<!--
-Icons
-http://glyphicons.com/
-
-Viljami Salminen
--
-http://mqtest.io/
-https://twitter.com/viljamis
-http://viljamis.com/
-
-Jordan Moore
--
-https://twitter.com/jordanmoore
-https://github.com/jordanmoore/palmreader
-http://www.jordanm.co.uk/palmreader
-
-Colors
--
-http://html-color-codes.info/
-
-gPop jQuery plugin
--
-https://github.com/vnmc/jquery.gpop
-
--->						<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					</div>
+					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
 				</div>
-				<div id="push"></div>
 			</div>
-			
-<!-- Footer -->
+			<div id="push"></div>
+		</div>
 
+		<!-- Footer -->
 <hr>
 
 <div id="footer">
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span4">
-			<p class="muted credit">Copyright © 2013 Vanamco AG. MIT license.</p>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span4">
+				<p class="muted credit">Copyright © 2013-2014 Vanamco AG. MIT license.</p>
+			</div>
+			<div class="span4">
+				<p>contact <a href="https://twitter.com/ghostlabapp">@ghostlabapp</a></p>
+			</div>
 		</div>
-		<div class="span4">
-			<p>contact <a href="https://twitter.com/ghostlabapp">@ghostlabapp</a></p>
-		</div>
-	</div>
-</div> 				
-	</div>
-		<!-- Scripts -->
-
-
-<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-<script src="js/jquery1.8.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.gpop.js"></script>
-
-<!-- menu -->
-
-<script>
-$(document).ready(function(){
-  
-  
-//   $('#main-nav-check').change(function(){
-//     var c = this.checked ? '#f00' : '#09f';
-//     $('body').css('color', c);
-// });
-
-
-  $('#main-nav-check').change(function(){
-    var c = this.checked ? '30%' : '0%';
-    $('.main-nav').css('width', c);
-});
-
-
-});
-
-</script>
-
-<!-- mq test mqtest.io-->
-
-<script type="text/javascript">
-function reduceRatio(numerator, denominator) {
-  var gcd, temp, divisor;
-
-  gcd = function (a, b) {
-    if (b === 0) {
-      return a;
-    }
-    return gcd(b, a % b);
-  };
-
-  if (numerator === denominator) {
-    return '1/1';
-  }
-
-  if (+numerator < +denominator) {
-    temp = numerator;
-    numerator = denominator;
-    denominator = temp;
-  }
-
-  divisor = gcd(+numerator, +denominator);
-
-  return 'undefined' === typeof temp ? (numerator / divisor) + '/' + (denominator / divisor) : (denominator / divisor) + '/' + (numerator / divisor);
-}
-</script>
-
-
-<script> 
-$(window).load(function() {
-
-
-  var docW = document.documentElement.clientWidth;
-  var docH = document.documentElement.clientHeight;
-  var w = screen.width;
-  var h = screen.height;
-  var ratio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
-  var sav = screen.availHeight;
-
-  var mqInfo = '<ul>' +
-  	'<li>width <b>' + docW + 'px / ' + docW / 16 + 'em</b></li>' +
-  	'<li>height <b>' + docH + 'px / ' + docH / 16 + 'em</b></li>' +
-  	'<li class="">Screen available height <b>' + sav + ' px / ' + sav / 16 + ' em</b></li>' +
-  	'<li>device-width <b>' + w + 'px / ' + w / 16 + 'em</b></li>' +
-  	'<li>device-height <b>' + h + 'px / '  + h / 16 + 'em</b></li>' +
-  	'<li>device-pixel-ratio <b>' + ratio + '</b></li>' +
-  	'<li class="aspect-ratio">aspect-ratio <b>' + reduceRatio(docW, docH) + '</b></li>' +
-  	'<li class="aspect-ratio">device-aspect-ratio <b>' + reduceRatio(w, h) + '</b></li>' +
-  	'</ul>';
-  	var mqTest = $('#mqTest');
-  	mqTest.html(mqInfo);
-
-    document.getElementById('timer').innerHTML = '<p>' + '<strong>' + 'Loaded on ' + '</strong>' + '<br>' + new Date() + '</p>';       
-
-	$('.gPop-gallery').each(function(){
-		$(this).gpop();
-	});
-});
-</script>
-
-<!-- /mqtest -->
-
-
+	</div> 				
+</div>
 	</body>
 </html>

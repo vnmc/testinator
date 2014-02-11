@@ -2,12 +2,13 @@
 
 <span id="images" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Images <small></small></h2>
+<h2 class="page-heading">images</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <p class="lead">Images with gPop</p>
 <br>
 <br>
+
 <div class="gPopDemoWapper">
 <!-- Gallery without content -->
 <div class="gPop-gallery" id="demo1">

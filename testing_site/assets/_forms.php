@@ -1,11 +1,10 @@
 <!-- forms -->
 <span id="forms" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Forms</h2>
+<h2 class="page-heading">form</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
-	<p class="lead"><i>Form testing</i></p>
-<br>
+
 <div class="row-fluid form-Row">
 	<div class="span6">
 		<form class="form-horizontal form">

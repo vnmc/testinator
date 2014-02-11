@@ -21,11 +21,11 @@
 ?>
 <span id="color" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">Color <small>base</small></h2>
+<h2 class="page-heading">colors</h2>
 <span class="hr-shadow-bottom"></span>
+
 <div class="row-fluid">
 	<div class="span12">
-		<p class="lead">Simple color test</p>
 		<br>
 		<table class="color-chart">
 			<tbody>
@@ -41,6 +41,55 @@
 						$idx++;
 					}
 				?>
-			</tbody></table>
+			</tbody>
+		</table>
 	</div>
 </div>
+<div class="row-fluid color-details"><p>&nbsp;</p></div>
+
+<script>
+	function rgbToHsl(r, g, b)
+	{
+		r /= 255;
+		g /= 255;
+		b /= 255;
+
+		var max = Math.max(r, g, b);
+		var min = Math.min(r, g, b);
+		var h = 0;
+		var s = 0;
+		var l = (max + min) / 2;
+
+		if (max !== min)
+		{
+			var d = max - min;
+			s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+			if (max === r)
+				h = (g - b) / d + (g < b ? 6 : 0);
+			else if (max === g)
+				h = (b - r) / d + 2;
+			else
+				h = (r - g) / d + 4;
+			h *= 60;
+		}
+
+		return { h: h | 0, s: (s * 100) | 0, l: (l * 100) | 0 };
+	}
+
+	var $details = $('.color-details');
+	var $detailsText = $details.find('p');
+	$('.color-chart td').mouseenter(function()
+	{
+		var color = $(this).attr('title');
+
+		var r = parseInt(color.substr(1, 2), 16);
+		var g = parseInt(color.substr(3, 2), 16);
+		var b = parseInt(color.substr(5, 2), 16);
+		var hsl = rgbToHsl(r, g, b);
+
+		$detailsText.text(color + ' | rgb(' + r + ', ' + g + ', ' + b + ') | hsl(' + hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%)');
+		$detailsText.css('color', hsl.l < 50 ? '#fff' : '#000');
+		$details.css('background-color', color);
+	});
+</script>

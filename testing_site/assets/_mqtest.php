@@ -3,21 +3,28 @@
 <span id="mqtest" class="anchor"></span>
 <br>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">MQ<small> test</small></h2>
+
+<h2 class="page-heading">device info</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <br>
+
 <div class="row-fluid">
     <div class="span12">
-        <p class="lead">media queries test</p>
-        <p><span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;<script>document.write(navigator.userAgent);</script></p>
+        <p>
+            <span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;
+            <script>document.write(navigator.userAgent);</script>
+        </p>
+        
         <div id="mqTest"></div>
-        <NOSCRIPT>
+        <noscript>
             <div class="alert alert-info">
-                <em>Your javascript is turned off<BR>
-                    Please enable JavaScript to test the browser User Agent and media query test</em>
+                <em>
+                    Your javascript is turned off<br>
+                    Please enable JavaScript to test the browser User Agent and media query test
+                </em>
             </div>
-        </NOSCRIPT>
+        </noscript>
         <div id="timer"><p></p></div>
     </div>
 </div>

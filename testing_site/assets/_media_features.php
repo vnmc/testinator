@@ -7,15 +7,14 @@ https://github.com/jordanmoore/palmreader
 http://www.jordanm.co.uk/palmreader
 -->
 
-<?php ?>
 <span id="media" class="anchor"></span>
 <span class="hr-shadow-top"></span>
-<h2 class="page-heading">@media <small>features</small></h2>
+<h2 class="page-heading">media queries</h2>
 <span class="hr-shadow-bottom"></span>
 <br>
 <div class="row-fluid">
 	<div class="span12">
-		<p class="lead">Showing what @media features your device can and can't see</p>
+		<p class="lead">Showing which @media features your device can and can't see</p>
 		<p>All the media query tests are listed below, the <span class="alert alert-success">green</span> features are currently active on this device</p>
 	</div>
 </div>
