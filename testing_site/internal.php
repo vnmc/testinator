@@ -1,3 +1,4 @@
+<?= include("assets/_inc.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>

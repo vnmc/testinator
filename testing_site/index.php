@@ -1,8 +1,10 @@
+<?php include("assets/_inc.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Ghostlab Testing page</title>
 		<?php include "assets/_head.php"; ?>
+		<?php include "assets/_scripts.php"; ?>
 	</head>
 
 	<body>
@@ -24,48 +26,16 @@
 		<div class="container-fluid content">
 			<div class="row-fluid">
 				<div class="span12">
-					<?php include "assets/_scripts.php"; ?>
 					<?php include "assets/_noscript.php"; ?>
 					<br>
 
-					<?php include "assets/_mqtest.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_media_features.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_grid.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_colors.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_images.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_lightbox.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_forms.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_links.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_tabs.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
-					<br>
-
-					<?php include "assets/_credits.php"; ?>
-					<a href="#" class="visible-phone pull-right">back to top &uarr;</a>
+					<?php
+						foreach ($assets as $id => $asset)
+						{
+							include("assets/{$asset["file"]}");
+							echo("<a href=\"#\" class=\"visible-phone pull-right\">back to top &uarr;</a><br/>");
+						}
+					?>
 				</div>
 			</div>
 			<div id="push"></div>

@@ -1,7 +1,5 @@
  <!--credits -->
-<span id="credits" class="anchor"></span>
-<span class="hr-shadow-bottom"></span>
-<br>
+<?php writeHeading(CREDITS); ?>
 <div class="row-fluid">
 	<div class="span12 center">
 		<p>| <a href="http://mqtest.io/">mqtest</a> by <a href="https://twitter.com/viljamis">Viljami Salminen</a> | 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html>
 	<head>
 		<title>Ghostlab internal page</title>
@@ -35,9 +35,12 @@
 </style>
 
 <!-- Css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="css/jquery-ui.css" rel="stylesheet"/>
+
+<link href="css/lightbox.css" rel="stylesheet" />
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -95,13 +98,15 @@
 </div>
 		<!-- Scripts -->
 
-<script src="js/jquery1.8.3.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
 <script src="js/jquery.gpop.js"></script>
 
 <!-- lightbox -->
-<link href="css/lightbox.css" rel="stylesheet" />
-<script src="js/lightbox-2.6.min.js"></script>
+<!--<script src="js/lightbox-2.6.min.js"></script>-->
+<script src="js/lightbox.js"></script>
 
 <!-- menu -->
 <script>
@@ -112,11 +117,48 @@
 			var c = this.checked ? '30%' : '0%';
 			$('.main-nav').css('width', c);
 		});
-	});
-</script>
 
-<!-- mq test mqtest.io-->
-<script type="text/javascript">
+
+		// jQuery UI samples
+
+		$('#sort-lyrics, #puzzle').sortable().disableSelection();
+		$('#jqui-tabs').tabs();
+		$('#jqui-accordion').accordion();
+		$('#jqui-datepicker').datepicker();
+
+		// color picker
+		var $swatch = $('#swatch');
+		var $red = $('#red');
+		var $green = $('#green');
+		var $blue = $('#blue');
+
+		var refreshSwatch = function()
+		{
+			var toHex = function(v)
+			{
+				var hex = v.toString(16);
+				return hex.length === 1 ? "0" + hex : hex;
+			};
+
+			$('#swatch').css('background-color', '#' + toHex($red.slider('value')) + toHex($green.slider('value')) + toHex($blue.slider('value')));
+		};
+
+		var sliderOpts = {
+			orientation: 'horizontal',
+			range: 'min',
+			max: 255,
+			value: 127,
+			slide: refreshSwatch,
+			change: refreshSwatch
+		};
+		$red.slider(sliderOpts);
+		$green.slider(sliderOpts);
+		$blue.slider(sliderOpts);
+		refreshSwatch();
+	});
+
+
+	// mq test mqtest.io
 	function reduceRatio(numerator, denominator)
 	{
 		var gcd, temp, divisor;

@@ -1,9 +1,5 @@
 <!-- forms -->
-<span id="forms" class="anchor"></span>
-<span class="hr-shadow-top"></span>
-<h2 class="page-heading">form</h2>
-<span class="hr-shadow-bottom"></span>
-<br>
+<?php writeHeading(FORMS); ?>
 
 <div class="row-fluid form-Row">
 	<div class="span6">

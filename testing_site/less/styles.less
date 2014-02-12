@@ -93,8 +93,6 @@ a:hover {
 }
 
 .warning {
-  font-size: 70%;
-  font-weight: bold;
   color: red;
 }
 
@@ -264,7 +262,7 @@ input, textarea {
     margin-bottom: 0px;
   }
 }
-  
+
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   height:27px;
 }
@@ -283,6 +281,81 @@ textarea {
 
   p {
     margin: 0;
+  }
+}
+
+
+/* jQueryUI examples */
+
+.ui-widget {
+  font-family: inherit !important;
+  font-size: inherit !important;
+}
+
+#sort-lyrics {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 3px 3px 3px;
+    padding: 0.4em 0.4em 0.4em 1.5em;
+
+    span {
+      position: absolute;
+      margin-left: -1.3em;
+    }
+  }
+}
+
+#puzzle {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 420px;
+  height: 315px;
+
+  li {
+    margin: 3px 3px 0 0;
+    padding: 1px;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/image-06.jpg);
+    background-size: 400% 300%;
+  }
+}
+
+#jqui-tabs, #jqui-accordion {
+  p {
+    text-align: left;
+  }
+}
+
+#swatch {
+  border-radius: 4px;
+
+  #red, #green, #blue {
+    margin: 2em;
+  }
+
+  #red .ui-slider-range {
+    background: #ef2929;
+  }
+  #red .ui-slider-handle {
+    border-color: #ef2929;
+  }
+  #green .ui-slider-range {
+    background: #8ae234;
+  }
+  #green .ui-slider-handle {
+    border-color: #8ae234;
+  }
+  #blue .ui-slider-range {
+    background: #729fcf;
+  }
+  #blue .ui-slider-handle {
+    border-color: #729fcf;
   }
 }
 

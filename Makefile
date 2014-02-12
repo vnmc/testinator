@@ -28,7 +28,7 @@ endef
 
 define build_css
 	mkdir -p $(DST)/css
-	cp $(SRC)/css/* $(DST)/css
+	cp -r $(SRC)/css/* $(DST)/css
 	$(LESS) $(LESS_FLAGS) $< $@
 endef
 

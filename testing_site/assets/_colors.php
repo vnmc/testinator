@@ -1,5 +1,5 @@
 <!-- colors -->
-<?
+<?php
 	$colors = array(
 		"#FBEFEF","#FBF2EF","#FBF5EF","#FBF8EF","#FBFBEF","#F8FBEF","#F5FBEF","#F2FBEF","#EFFBEF","#EFFBF2","#EFFBF5","#EFFBF8","#EFFBFB","#EFF8FB","#EFF5FB","#EFF2FB","#EFEFFB","#F2EFFB","#F5EFFB","#F8EFFB","#FBEFFB","#FBEFF8","#FBEFF5","#FBEFF2","#FFFFFF",
 		"#F8E0E0","#F8E6E0","#F8ECE0","#F7F2E0","#F7F8E0","#F1F8E0","#ECF8E0","#E6F8E0","#E0F8E0","#E0F8E6","#E0F8EC","#E0F8F1","#E0F8F7","#E0F2F7","#E0ECF8","#E0E6F8","#E0E0F8","#E6E0F8","#ECE0F8","#F2E0F7","#F8E0F7","#F8E0F1","#F8E0EC","#F8E0E6","#FAFAFA",
@@ -18,11 +18,9 @@
 		"#190707","#190B07","#191007","#181407","#181907","#141907","#101907","#0B1907","#071907","#07190B","#071910","#071914","#071918","#071418","#071019","#070B19","#070719","#0B0719","#100719","#140718","#190718","#190714","#190710","#19070B","#000000"
 	);
 	$numCols = 25;
+
+	writeHeading(COLORS);
 ?>
-<span id="color" class="anchor"></span>
-<span class="hr-shadow-top"></span>
-<h2 class="page-heading">colors</h2>
-<span class="hr-shadow-bottom"></span>
 
 <div class="row-fluid">
 	<div class="span12">

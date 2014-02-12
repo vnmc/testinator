@@ -7,11 +7,8 @@ https://github.com/jordanmoore/palmreader
 http://www.jordanm.co.uk/palmreader
 -->
 
-<span id="media" class="anchor"></span>
-<span class="hr-shadow-top"></span>
-<h2 class="page-heading">media queries</h2>
-<span class="hr-shadow-bottom"></span>
-<br>
+<?php writeHeading(MEDIA_QUERIES); ?>
+
 <div class="row-fluid">
 	<div class="span12">
 		<p class="lead">Showing which @media features your device can and can't see</p>
