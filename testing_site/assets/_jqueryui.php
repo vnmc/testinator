@@ -96,7 +96,7 @@
 <p class="lead">datepicker &amp; sliders</p>
 <div class="row-fluid">
 	<div class="span6">
-		When is your birthday?:
+		When is your birthday?
 		<input type="text" id="jqui-datepicker">
 	</div>
 
