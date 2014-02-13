@@ -1,7 +1,7 @@
 <!-- images -->
 
 <?php writeHeading(IMAGES); ?>
-<p class="lead">Images with gPop</p>
+<p class="lead">Images with <a href="https://github.com/vnmc/jquery.gpop" target="_blank">gPop</a></p>
 <br>
 <br>
 
