@@ -33,12 +33,20 @@
 				<div class="controls">
 					<label class="radio">
 						<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-						Option one
+						Blue Lady
 					</label>
 					<label class="radio">
 						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-						Option two
-					</label>					
+						Joe Bush
+					</label>
+					<label class="radio">
+						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						Minnie Quay
+					</label>
+					<label class="radio">
+						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						Ridgeway Ghost
+					</label>
 				</div>
 			</div>
 		</form>
@@ -78,11 +86,11 @@
 				<label class="control-label" for="selectBox">Select Multi</label>
 				<div class="controls">
 					<select multiple="multiple" name="selectBox" id="selectBox">
-						<option>Movies</option>
-						<option>Beach</option>
-						<option>shopping</option>
-						<option>Bar</option>
-						<option>Home</option>
+						<option>Castle</option>
+						<option>Graveyard</option>
+						<option>Alley</option>
+						<option>Bridge</option>
+						<option>At Home</option>
 					</select>
 				</div>
 			</div>
