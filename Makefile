@@ -21,7 +21,6 @@ define build_html
 	cp -r $(SRC)/img $(DST)
 	cp -r $(SRC)/js $(DST)
 	cp -r $(SRC)/fonts $(DST)
-	cp -r $(SRC)/artwork $(DST)
 	cp $(SRC)/*.png $(DST)
 	$(PHP) $< | sed 's/\.php/.html/g' > $@
 endef
