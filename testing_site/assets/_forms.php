@@ -40,11 +40,11 @@
 						Joe Bush
 					</label>
 					<label class="radio">
-						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
 						Minnie Quay
 					</label>
 					<label class="radio">
-						<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+						<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
 						Ridgeway Ghost
 					</label>
 				</div>
