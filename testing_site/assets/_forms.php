@@ -1,19 +1,20 @@
 <!-- forms -->
 <?php writeHeading(FORMS); ?>
 
-<div class="row-fluid form-Row">
-	<div class="span6">
-		<form class="form-horizontal form">
+<!--<form method="POST" action="results.php" enctype="multipart/form-data">-->
+<form method="POST">
+	<div class="row-fluid form-Row">
+		<div class="span6">
 			<div class="control-group">
 				<label class="control-label" for="inputName">Name</label>
 				<div class="controls">
-					<input type="text" id="inputName" placeholder="name" name="inputName">
+					<input type="text" id="inputName" placeholder="name" name="inputDetails[]">
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="inputEmail">Email</label>
 				<div class="controls">
-					<input type="text" id="inputEmail" placeholder="Email" name="inputEmail">
+					<input type="email" id="inputEmail" placeholder="Email" name="inputDetails[]">
 				</div>
 			</div>
 			<div class="control-group">
@@ -49,24 +50,22 @@
 					</label>
 				</div>
 			</div>
-		</form>
-	</div>
-	<div class="span6">
-		<form class="form-horizontal form">
+		</div>
+		<div class="span6">
 			<div class="control-group">
 				<label class="control-label" for="inputname">Checkbox</label>
 				<div class="controls">
 					<label class="checkbox">
-						<input type="checkbox"> Don't click me!
+						<input type="checkbox" name="check0"> Don't click me!
 					</label>
 					<label class="checkbox inline">
-						<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+						<input type="checkbox" id="inlineCheckbox1" name="check1" value="option1"> 1
 					</label>
 					<label class="checkbox inline">
-						<input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+						<input type="checkbox" id="inlineCheckbox2" name="check2" value="option2"> 2
 					</label>
 					<label class="checkbox inline">
-						<input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+						<input type="checkbox" id="inlineCheckbox3" name="check3" value="option3"> 3
 					</label>
 				</div>
 			</div>
@@ -97,9 +96,12 @@
 
 			<div class="control-group">
 				<div class="controls">					
+					<!--<input type="submit" class="btn"><span class="icon-envelope"></span>&nbsp;Send</input>-->
 					<button type="submit" class="btn"><span class="icon-envelope"></span>&nbsp;Send</button>
 				</div>
 			</div>
-		</form>
+
+			<!--<input type="file" name="myfile"/>-->
+		</div>
 	</div>
-</div>
+</form>
