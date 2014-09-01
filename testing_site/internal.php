@@ -1,4 +1,4 @@
-<?= include("assets/_inc.php"); ?>
+<? include("assets/_inc.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
