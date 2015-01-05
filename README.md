@@ -1,7 +1,7 @@
 Testinator
 ==========
 
-This is the testing page that comes bundled with the <a href="http://www.vanamco.com/ghostlab?utm_source=Github&utm_medium=github-Readme&utm_campaign=Github-Readme">Ghostlab</a> app. An app for cross browser testing and mobile website development.
+This is the testing page that comes bundled with the <a href="http://ghostlab.vanamco.com/">Ghostlab</a> app. An app for cross browser testing and mobile website development.
 
 ###Basic tests:
 
@@ -13,28 +13,6 @@ This is the testing page that comes bundled with the <a href="http://www.vanamco
 1. forms
 1. images
 1. tabs
-
-
-
-###Credits:
-
-######Viljami Salminen
-
-http://mqtest.io/ <br />
-
-######Jordan Moore
-
-https://twitter.com/jordanmoore <br />
-
-######gPop jQuery plugin
-
-https://github.com/vnmc/jquery.gpop
-
-######Icons
-http://glyphicons.com/
-
-
-
 
 License
 ==========
