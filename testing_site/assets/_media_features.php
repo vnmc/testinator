@@ -17,7 +17,7 @@ http://www.jordanm.co.uk/palmreader
 </div>
 <br>
 <div class="row-fluid">
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active screen"><span>screen</span></li>
@@ -47,7 +47,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active scan-interlace"><span>(scan:interlace)</span></li>
@@ -77,7 +77,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active fine"><span>(pointer:coarse) <span class="mq">[MQ Level 4]</span></span></li>

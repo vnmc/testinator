@@ -3,24 +3,24 @@
 
 <div class="gl-grid">
 	<div class="row-fluid">
-		<div class="span6">span6</div>
-		<div class="span2">span2</div>
-		<div class="span4">span4</div>
+		<div class="col-md-6">col-md-6</div>
+		<div class="col-md-2">col-md-2</div>
+		<div class="col-md-4">col-md-4</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span3">span3</div>
-		<div class="span6">span6</div>
-		<div class="span3">span3</div>
+		<div class="col-md-3">col-md-3</div>
+		<div class="col-md-6">col-md-6</div>
+		<div class="col-md-3">col-md-3</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span4">span4</div>
-		<div class="span4">span4</div>
-		<div class="span4">span4</div>
+		<div class="col-md-4">col-md-4</div>
+		<div class="col-md-4">col-md-4</div>
+		<div class="col-md-4">col-md-4</div>
 	</div>
 
 	<div class="row-fluid">
-		<div class="span3">span3</div>
-		<div class="span3">span3</div>
-		<div class="span6">span6</div>
+		<div class="col-md-3">col-md-3</div>
+		<div class="col-md-3">col-md-3</div>
+		<div class="col-md-6">col-md-6</div>
 	</div>
 </div>

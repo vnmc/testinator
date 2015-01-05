@@ -3,7 +3,7 @@
 
 <p class="lead">sortable</p>
 <div class="row-fluid">
-	<div class="span6">
+	<div class="col-md-6">
 		<p>Thriller (Michael Jackson)</p>
 		<ul id="sort-lyrics">
 			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>You start to freeze</li>
@@ -18,7 +18,7 @@
 		</ul>
 	</div>
 
-	<div class="span6">
+	<div class="col-md-6">
 		<p>Ghost Puzzle</p>
 		<ul id="puzzle">
 			<li style="background-position: -300% 0%"></li>
@@ -41,7 +41,7 @@
 <p class="lead">tabs &amp; accordion &mdash; <a href="http://www.americanfolklore.net/spooky-stories.html" target="_blank">more spooky stories</a></p>
 
 <div class="row-fluid">
-	<div class="span6">
+	<div class="col-md-6">
 		<div id="jqui-tabs">
 			<ul>
 				<li><a href="#jqui-tabs-1">Death Waltz</a></li>
@@ -66,7 +66,7 @@
 		</div>
 	</div>
 
-	<div class="span6">
+	<div class="col-md-6">
 		<div id="jqui-accordion">
 			<h3>Don't Turn on the Light</h3>
 			<div>
@@ -95,12 +95,12 @@
 
 <p class="lead">datepicker &amp; sliders</p>
 <div class="row-fluid">
-	<div class="span6">
+	<div class="col-md-6">
 		When did you first see the ghost?
 		<input type="text" id="jqui-datepicker">
 	</div>
 
-	<div class="span6">
+	<div class="col-md-6">
 		What, in your opinion, is the most ghostly color?
 		<div id="swatch">
 			<div id="red"></div>

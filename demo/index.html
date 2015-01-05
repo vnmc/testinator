@@ -250,7 +250,7 @@ http://www.jordanm.co.uk/palmreader
 </div>
 <br>
 <div class="row-fluid">
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active screen"><span>screen</span></li>
@@ -280,7 +280,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active scan-interlace"><span>(scan:interlace)</span></li>
@@ -310,7 +310,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active fine"><span>(pointer:coarse) <span class="mq">[MQ Level 4]</span></span></li>
@@ -342,7 +342,7 @@ http://www.jordanm.co.uk/palmreader
 	<div class="row-fluid">
 		<div class="span6">span6</div>
 		<div class="span2">span2</div>
-		<div class="span4">span4</div>
+		<div class="col-md-4">col-md-4</div>
 	</div>
 	<div class="row-fluid">
 		<div class="span3">span3</div>
@@ -350,9 +350,9 @@ http://www.jordanm.co.uk/palmreader
 		<div class="span3">span3</div>
 	</div>
 	<div class="row-fluid">
-		<div class="span4">span4</div>
-		<div class="span4">span4</div>
-		<div class="span4">span4</div>
+		<div class="col-md-4">col-md-4</div>
+		<div class="col-md-4">col-md-4</div>
+		<div class="col-md-4">col-md-4</div>
 	</div>
 
 	<div class="row-fluid">
@@ -364,13 +364,13 @@ http://www.jordanm.co.uk/palmreader
 <span id="links" class="anchor"></span><span class="hr-shadow-top"></span><h2 class="page-heading">links <small></small></h2><span class="hr-shadow-bottom"></span><br/>
 <p>simple links</p>
 <div class="row-fluid">
-	<div class="span4">
+	<div class="col-md-4">
 		<a href="#" class="btn btn-large btn-block"><span class="icon-resize-vertical"></span>&nbsp;Anchor link</a>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<a id="testid" href="internal.html" class="btn btn-large btn-block"><span class="icon-arrow-right"></span>&nbsp;Internal site link</a> 
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<a href="https://github.com/vnmc" class="btn btn-large btn-block"><span class="icon-globe"></span>&nbsp;External link</a>
 	</div>
 </div>
@@ -395,13 +395,13 @@ http://www.jordanm.co.uk/palmreader
 
 <p>static html</p>
 <div class="row-fluid">
-	<div class="span4">
+	<div class="col-md-4">
 		<a id="link4" onclick="logClick(event)" class="btn btn-large btn-block">#link4</a>
 	</div>	
-	<div class="span4">
+	<div class="col-md-4">
 		<a id="link5" class="btn btn-large btn-block">#link5</a>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<a id="link6" class="btn btn-large btn-block">#link6</a>
 	</div>
 </div>
@@ -413,19 +413,19 @@ http://www.jordanm.co.uk/palmreader
 
 <p>JavaScript event handler code for the links:</p>
 <div class="row-fluid">
-	<div class="span4">
+	<div class="col-md-4">
 		<code>
 			// #link4, #link7:<br/>
 			&lt;a onclick=&quot;logClick(event)&quot;&gt;
 		</code>
 	</div>	
-	<div class="span4">
+	<div class="col-md-4">
 		<code>
 			// #link5, #link8:<br/>
 			document.getElementById('link5') .onclick = logClick;
 		</code>
 	</div>
-	<div class="span4">
+	<div class="col-md-4">
 		<code>
 			// #link6, #link9:<br/>
 			jQuery('#link6').click(logClick);
@@ -457,9 +457,9 @@ http://www.jordanm.co.uk/palmreader
 	setTimeout(function()
 	{
 		$('#dynamic-links').append(
-			'<div class="span4"><a id="link7" class="btn btn-large btn-block warning" onclick="logClick(event)">#link7*</a></div>' +
-			'<div class="span4"><a id="link8" class="btn btn-large btn-block warning">#link8*</div>' +
-			'<div class="span4"><a id="link9" class="btn btn-large btn-block">#link9</a></div>'
+			'<div class="col-md-4"><a id="link7" class="btn btn-large btn-block warning" onclick="logClick(event)">#link7*</a></div>' +
+			'<div class="col-md-4"><a id="link8" class="btn btn-large btn-block warning">#link8*</div>' +
+			'<div class="col-md-4"><a id="link9" class="btn btn-large btn-block">#link9</a></div>'
 		);
 
 		document.getElementById('link8').onclick = logClick;
@@ -946,10 +946,10 @@ http://www.jordanm.co.uk/palmreader
 <div id="footer">
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span4">
+			<div class="col-md-4">
 				<p class="muted credit">Copyright © 2013-2014 Vanamco AG. MIT license.</p>
 			</div>
-			<div class="span4">
+			<div class="col-md-4">
 				<p>contact <a href="https://twitter.com/ghostlabapp">@ghostlabapp</a></p>
 			</div>
 		</div>

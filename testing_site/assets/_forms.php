@@ -4,7 +4,7 @@
 <!--<form method="POST" action="results.php" enctype="multipart/form-data">-->
 <form method="POST">
 	<div class="row-fluid form-Row">
-		<div class="span6">
+		<div class="col-md-6">
 			<div class="control-group">
 				<label class="control-label" for="inputName">Name</label>
 				<div class="controls">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="span6">
+		<div class="col-md-6">
 			<div class="control-group">
 				<label class="control-label" for="inputname">Checkbox</label>
 				<div class="controls">
@@ -95,9 +95,8 @@
 			</div>
 
 			<div class="control-group">
-				<div class="controls">					
-					<!--<input type="submit" class="btn"><span class="icon-envelope"></span>&nbsp;Send</input>-->
-					<button type="submit" class="btn"><span class="icon-envelope"></span>&nbsp;Send</button>
+				<div class="controls">
+					<button type="submit" class="btn btn-default"><span class="icon-envelope"></span>&nbsp;Send</button>
 				</div>
 			</div>
 

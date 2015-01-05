@@ -15,6 +15,9 @@
 
 <!-- fonts -->
 <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->
+<!-- @TODO Remove this and make the font local -->
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
 <style>
 	@font-face {
 	  font-family: 'Open Sans';
@@ -33,8 +36,8 @@
 <!-- Css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
 <link href="css/jquery-ui.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
 
 <link href="css/lightbox.css" rel="stylesheet" />
 

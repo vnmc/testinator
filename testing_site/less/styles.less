@@ -1,12 +1,15 @@
-// Styles.less
+// Styles /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 
-// Import Stylesheets
+// Import Stylesheets /////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
 @import "palm_reader.less";
 @import "jquery.gpop.less";
 
-
-/* mixins */
+// Mixins /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 .transition{
   -webkit-transition: all 0.3s ease-out; 
@@ -22,16 +25,11 @@
   background-size: contain;
 }
 
-.box-sizing{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;    
-  box-sizing: border-box; 
-}
+// Colors /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
-
-/* Colors */
-
-@white:         #fff;
+@white:         #ffffff;
+@black:         #000000;
 @lightGray:     #f2f2f2;
 @darkGray:      #e6e6e6;
 @darkerGray:    #3B3B3B;
@@ -39,31 +37,38 @@
 
 @linkColor:     #77c1b0;
 
+// Fonts //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
-/* Fonts */
+// Watch this space!
 
-.fancy-font{
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-
-/* Styles */
+// Styles /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 * {
-  .box-sizing;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;
 }
 
-html,body {
-  .fancy-font;
+html,
+body {
+  //font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Source Code Pro', Helvetica, Arial, sans-serif;
+  font-weight: 300;
   min-height: 100%;
-  height:100%;
+  height: 100%;
+  height: 100vh;
   background-color: @white;
+  //background-color: @black;
+  //color: @white;
+  //background-image: url('http://s15.postimg.org/5rwblull3/transp_bg_1.png');
+  background-repeat: repeat;
 }
-    
+
 .container-fluid {
-  max-width:80%;
-  margin:0 auto;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 p {
@@ -71,7 +76,7 @@ p {
 }
 
 a {
-  color:@linkColor;
+  color: @linkColor;
 }
 
 code {
@@ -105,15 +110,41 @@ a:hover {
   border:solid 1px @darkGray;
 }
 
+small, .small {
+  font-size: 65%;
+}
 
-// Grid
+
+// Nav ////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+.navbar-toggle {
+  border: none;
+  border-radius: 0;
+}
+
+.navbar {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+  font-size: 12px;
+  padding: 10px 10px;
+}
+
+// Grid ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 .gl-grid {
 	.row-fluid {
     margin-bottom: .9em;
   }
 
-  [class*="span"] {
+  [class*="col-"] {
     background: @lightGray;
     padding: .9em;
     .border
@@ -121,13 +152,9 @@ a:hover {
 }
 
 .color-chart {
-  width: 50em;
-  height: 30em;
+  width: 100%;
+  height: 50em;
   margin: 0 auto;
-
-  td {
-    border-radius: 50%;
-  }
 }
 
 .color-details {
@@ -181,8 +208,9 @@ input, textarea {
 	.hr-shadow;
 }
 
+// Main Header ////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
-/* Main Header */
 
 .main-header-base {
   background-color: @lightGray;
@@ -207,8 +235,8 @@ input, textarea {
   }
 }
 
-
-/* MQ test */
+// MQ test ////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 #mqTest {
   display: block;
@@ -242,7 +270,7 @@ input, textarea {
 }
 
 .tab-content > .active {
-  background-color: @lightGray;
+  background-color: @white;
   padding: 10px;
   border-bottom: 1px solid @darkGray;
   border-left: 1px solid @darkGray;
@@ -263,7 +291,21 @@ input, textarea {
   }
 }
 
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input {
   height:27px;
 }
 
@@ -284,8 +326,9 @@ textarea {
   }
 }
 
+// images /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
-/* images */
 
 .images img {
   width: 24%;
@@ -293,8 +336,8 @@ textarea {
   float: left;
 }
 
-
-/* jQueryUI examples */
+// jQueryUI examples //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 .ui-widget {
   font-family: inherit !important;
@@ -331,7 +374,7 @@ textarea {
     float: left;
     width: 100px;
     height: 100px;
-    background-image: url(../img/image-06.jpg);
+    background-image: url(../img/placeholder-image.jpg);
     background-size: 400% 300%;
     cursor: move;
   }
@@ -375,8 +418,8 @@ textarea {
   }
 }
 
-
-/* Sticky footer styles */
+// Sticky footer styles ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 .content {
   min-height: 100%;
@@ -391,15 +434,51 @@ textarea {
 }
 
 #footer {
-  background-color: @lightGray;
+  background-color: #333333;
   font-size: 12px;
   display: block;
+  color: @white;
 
   p {
     padding-top: 20px;
   }
 }
 
+// jQuery ui //////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+.ui-widget-header {
+  background: @lightGray;
+  border: none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #e6e6e6;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  background: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-bottom: none;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-tl,
+.ui-corner-tr,
+.ui-corner-bl,
+.ui-corner-br {
+  border-radius: 0;
+}
+
+.ui-widget-content,
+.ui-state-default {
+  border: 1px solid #d3d3d3;
+}
+
+// Media //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 
 @media (max-width: 979px) { 
   [class*="span"] {
@@ -419,30 +498,6 @@ textarea {
     .background-size;
   }
 
-
-  /* Menu Small screen */
-
-  .main-header {
-    position: fixed;
-    padding: 5px;
-    width: 100%;
-    left: 0;
-    height: 40px;
-    z-index: 1001;
-    .transition;
-
-    h2 {
-      margin-left: 2em;
-      text-align: center;
-      font-size: 130%;
-      margin-top: -.2em;
-
-      small {
-        font-size: 70%;
-      }
-    }
-  }
-
   .page-wrap {
     float: right;
     width: 100%;
@@ -453,7 +508,8 @@ textarea {
   }
 
   #footer {
-    background-color: transparent;
+    background-color: #333333;
+    color: @white;
   }
 }
 
@@ -499,3 +555,26 @@ textarea {
     }
   }
 }
+
+// THEME TEST /////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+/* 
+
+#mqTest ul li {
+  background: #e6ae09;
+  border: none;
+}
+
+.palm-container .inactive span {
+  background: #e6ae09;
+  border: none;
+}
+.palm-container span,
+li.active.screen span{
+  background: #7aa300;
+  color: #D6E9C6;
+  border: none;
+}
+
+*/

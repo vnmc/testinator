@@ -53,10 +53,6 @@
 		JQUERYUI => array(
 			"name" => "jQuery UI",
 			"file" => "_jqueryui.php"
-		),
-		CREDITS => array(
-			"name" => "credits",
-			"file" => "_credits.php"
 		)
 	);
 

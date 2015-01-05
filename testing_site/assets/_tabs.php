@@ -4,7 +4,7 @@
 <p class="lead"><a href="http://www.americanfolklore.net/spooky-stories.html" target="_blank">spooky stories</a></p>
 
 <div class="row-fluid">
-	<div class="span6">
+	<div class="col-md-6">
 		<div class="tabbable">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab1" data-toggle="tab">Golden Hand</a></li>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="span6">
+	<div class="col-md-6">
 		<div class="accordion" id="accordion2">
 			<div class="accordion-group">
 				<div class="accordion-heading">
