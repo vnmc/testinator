@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-title" content="Ghostlab">
 
-<!-- Fav and touch icons -->
+<!-- Favicon and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
@@ -19,28 +19,30 @@
 
 <!-- fonts -->
 <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->
+<!-- @TODO Remove this and make the font local -->
+
 <style>
-	@font-face {
-	  font-family: 'Open Sans';
-	  font-style: normal;
-	  font-weight: 300;
-	  src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/OpenSans-300.woff) format('woff');
-	}
-	@font-face {
-	  font-family: 'Open Sans';
-	  font-style: normal;
-	  font-weight: 400;
-	  src: local('Open Sans'), local('OpenSans'), url(fonts/OpenSans-400.woff) format('woff');
-	}
+@font-face {
+    font-family: 'source_code_proregular';
+    src: url('fonts/sourcecodepro-regular-webfont.eot');
+    src: url('fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcecodepro-regular-webfont.woff2') format('woff2'),
+         url('fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+         url('fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+         url('fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 </style>
 
 <!-- Css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-<link href="css/bootstrap-responsive.min.css" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<link href="fonts/source-code-pro.css" rel="stylesheet"/>
 <link href="css/jquery-ui.css" rel="stylesheet"/>
-
 <link href="css/lightbox.css" rel="stylesheet" />
+
+<link href="css/styles.css" rel="stylesheet"/>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -50,8 +52,8 @@
 
 	<body>
 		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-md-12">
 					<!-- noscript -->
 <noscript>
     <div class="alert alert-info no-script" style="margin-top:80px;">
@@ -67,10 +69,10 @@
 <p class="lead">You have crossed over into the twilight</p>
 <br>
 <br>
-<div class="row-fluid content">
+<div class="row content">
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
-		<a href="index.html" class="btn btn-large btn-block"><span class="icon-arrow-left"></span>&nbsp;Get me out of here!</a>
+		<a href="index.html" class="btn btn-default"><span class="icon-arrow-left"></span>&nbsp;Get me out of here!</a>
 	</div>
 	<div class="col-md-4"></div>
 	<div id="push"></div>
@@ -86,13 +88,16 @@
 
 <div id="footer">
 	<div class="container-fluid">
-		<div class="row-fluid">
+		<div class="row">
 			<div class="col-md-4">
-				<p class="muted credit">Copyright © 2013-<?php echo date("Y") ?> Vanamco AG. MIT license.</p>
+				<p class="muted credit">Copyright © 2013-2015 Vanamco AG. MIT license.</p>
 			</div>
 			<div class="col-md-4">
-				<p>contact <a href="https://twitter.com/ghostlabapp">@ghostlabapp</a></p>
+				<p>Download source on <a href="https://github.com/vnmc/testinator">Github testinator</a></p>
 			</div>
+			<div class="col-md-4">
+				<p>contact <a href="https://twitter.com/ghostlabapp">@ghostlabapp</a> | <a href="http://vanamco.com/help"> Vanamco help </a></p>
+			</div>			
 		</div>
 	</div> 				
 </div>
@@ -114,7 +119,7 @@
 		$('#main-nav-check').change(function()
 		{
 			var c = this.checked ? '30%' : '0%';
-			$('.main-nav').css('width', c);
+			$('.navbar').css('width', c);
 		});
 
 
@@ -155,7 +160,6 @@
 		$blue.slider(sliderOpts);
 		refreshSwatch();
 	});
-
 
 	// mq test mqtest.io
 	function reduceRatio(numerator, denominator)
@@ -215,6 +219,8 @@
 			$(this).gpop();
 		});
 	});
+
+	$('.collapse').collapse()
 </script>
 
 <!-- /mqtest -->	</body>

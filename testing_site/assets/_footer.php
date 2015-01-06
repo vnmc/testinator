@@ -5,7 +5,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-4">
-				<p class="muted credit">Copyright © 2013-<?php echo date("Y") ?> Vanamco AG. MIT license.</p>
+				<p class="muted credit">Copyright © 2013-2015 Vanamco AG. MIT license.</p>
 			</div>
 			<div class="col-md-4">
 				<p>Download source on <a href="https://github.com/vnmc/testinator">Github testinator</a></p>
