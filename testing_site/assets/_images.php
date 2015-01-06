@@ -30,21 +30,21 @@
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Lady Ghost!</h4>
-                <p>by <a href="http://www.flickr.com/photos/lin84/3405928373/" target="_blank">Lindsay Silveira</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Ghosts</h4>
-                <p>by <a href="http://www.flickr.com/photos/smashmirrorcardboardface/4684635509/" target="_blank">smashmirrorcardboardface</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Ghost Tour -<br/>Toowong Cemetery</h4>
-                <p>by <a href="https://www.flickr.com/photos/luvlite/6373360819/" target="_blank">rewindyourtime</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
     </ul>
@@ -57,35 +57,35 @@
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>the saddest ghost.</h4>
-                <p>by <a href="https://www.flickr.com/photos/gylo/179034909/" target="_blank">jason saul</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Ghost light</h4>
-                <p>by <a href="https://www.flickr.com/photos/bleedingfred/2802733459" target="_blank">Federico Pelloni</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Ghosts</h4>
-                <p>by <a href="http://www.flickr.com/photos/agella/8261833215/" target="_blank">adam graddy</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Lightpainting Ghost</h4>
-                <p>by <a href="http://www.flickr.com/photos/92440430@N08/8395927062/" target="_blank">Lukas Hansen</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
                 <h4>Brains and Ghosts</h4>
-                <p>by <a href="http://www.flickr.com/photos/soapbeard/3000404348/" target="_blank">soapbeard</a></p>
+                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
             </div>
         </li>
     </ul>

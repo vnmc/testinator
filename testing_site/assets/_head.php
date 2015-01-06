@@ -13,28 +13,22 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<!-- fonts -->
-<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">-->
-<!-- @TODO Remove this and make the font local -->
-
 <style>
-@font-face {
-    font-family: 'source_code_proregular';
-    src: url('fonts/sourcecodepro-regular-webfont.eot');
-    src: url('fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/sourcecodepro-regular-webfont.woff2') format('woff2'),
-         url('fonts/sourcecodepro-regular-webfont.woff') format('woff'),
-         url('fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
-         url('fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+    @font-face {
+        font-family: 'source_code_proregular';
+        src: url('fonts/sourcecodepro-regular-webfont.eot');
+        src: url('fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/sourcecodepro-regular-webfont.woff2') format('woff2'),
+             url('fonts/sourcecodepro-regular-webfont.woff') format('woff'),
+             url('fonts/sourcecodepro-regular-webfont.ttf') format('truetype'),
+             url('fonts/sourcecodepro-regular-webfont.svg#source_code_proregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
 </style>
 
 <!-- Css -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-<link href="fonts/source-code-pro.css" rel="stylesheet"/>
 <link href="css/jquery-ui.css" rel="stylesheet"/>
 <link href="css/lightbox.css" rel="stylesheet" />
 
