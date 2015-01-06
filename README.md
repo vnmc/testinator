@@ -3,6 +3,8 @@ Testinator
 
 This is the testing page that comes bundled with the <a href="http://ghostlab.vanamco.com/">Ghostlab</a> app. An app for cross browser testing and mobile website development.
 
+Demo: [http://vanamco.com/hosting/testinator/](http://vanamco.com/hosting/testinator/)
+
 ###Basic tests:
 
 1. mq test
