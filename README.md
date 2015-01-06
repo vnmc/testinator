@@ -14,12 +14,20 @@ This is the testing page that comes bundled with the <a href="http://ghostlab.va
 1. images
 1. tabs
 
-License
-==========
+### Authors and Contributors
+
+matthias @matthias-christen
+Andi @andiio
+
+### Support or Contact
+
+Having trouble with Testinator? contact us on [Twitter - @ghostlabapp](https://twitter.com/ghostlabapp) or via the [help desk] (http://vanamco.com/help) and we’ll help you sort it out. Check out the documentation at http://feedback.vanamco.com/ 
+
+### License
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Vanamco
+Copyright (c) 2015 Vanamco
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
