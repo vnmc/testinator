@@ -41,8 +41,8 @@
 	
 		<?php include "assets/_nav.php"; ?>
 		<div class="container-fluid content">
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-md-12">
 					<?php include "assets/_noscript.php"; ?>
 					<br>
 
@@ -50,7 +50,7 @@
 						foreach ($assets as $id => $asset)
 						{
 							include("assets/{$asset["file"]}");
-							echo("<a href=\"#\" class=\"visible-phone pull-right\">back to top &uarr;</a><br/>");
+							echo("<a href=\"#\" class=\"visible-xs pull-right\">back to top &uarr;</a><br/>");
 						}
 					?>
 				</div>

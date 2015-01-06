@@ -16,7 +16,7 @@
 		$('#main-nav-check').change(function()
 		{
 			var c = this.checked ? '30%' : '0%';
-			$('.main-nav').css('width', c);
+			$('.navbar').css('width', c);
 		});
 
 
@@ -57,7 +57,6 @@
 		$blue.slider(sliderOpts);
 		refreshSwatch();
 	});
-
 
 	// mq test mqtest.io
 	function reduceRatio(numerator, denominator)
@@ -117,6 +116,8 @@
 			$(this).gpop();
 		});
 	});
+
+	$('.collapse').collapse()
 </script>
 
 <!-- /mqtest -->

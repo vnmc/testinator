@@ -8,23 +8,6 @@
 @import "palm_reader.less";
 @import "jquery.gpop.less";
 
-// Mixins /////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////
-
-.transition{
-  -webkit-transition: all 0.3s ease-out; 
-  -moz-transition: all 0.3s ease-out; 
-  -o-transition: all 0.3s ease-out; 
-  transition: all 0.3s ease-out; 
-}
-
-.background-size{
-  webkit-background-size: contain;
-  moz-background-size: contain;
-  o-background-size: contain;
-  background-size: contain;
-}
-
 // Colors /////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +16,10 @@
 @lightGray:     #f2f2f2;
 @darkGray:      #e6e6e6;
 @darkerGray:    #3B3B3B;
-@darkestGray:   #333;
+@darkestGray:   #333333;
+
+@lightGreen:    #D6E9C6;
+@darkGreen:     #468847;
 
 @linkColor:     #77c1b0;
 
@@ -53,8 +39,7 @@
 
 html,
 body {
-  //font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-family: 'Source Code Pro', Helvetica, Arial, sans-serif;
+  font-family: 'source_code_proregular', Helvetica, Arial, sans-serif;
   font-weight: 300;
   min-height: 100%;
   height: 100%;
@@ -63,6 +48,8 @@ body {
   //background-color: @black;
   //color: @white;
   //background-image: url('http://s15.postimg.org/5rwblull3/transp_bg_1.png');
+  //background-image: url('http://s21.postimg.org/cg3azyi6r/tiny_grid_2_X.png');
+  background-size: 20px;
   background-repeat: repeat;
 }
 
@@ -91,19 +78,22 @@ a:hover {
   text-decoration: none;
 }
 
-.alert {
-  padding:2px;
-  text-align: center;
-  font-size:16px;
+#footer a:hover {
+  color: @lightGray;
 }
 
-.warning {
-  color: red;
+.alert {
+  padding: 2px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  color: @darkGreen;
+  background-color: @lightGreen;
 }
 
 .anchor {
-  display:block;
-  height:57px;
+  display: block;
+  height: 57px;
 }
 
 .border {
@@ -115,7 +105,7 @@ small, .small {
 }
 
 
-// Nav ////////////////////////////////////////////////////////////////////////////
+// Navigation /////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
 .navbar-toggle {
@@ -123,31 +113,28 @@ small, .small {
   border-radius: 0;
 }
 
-.navbar {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
+
 .navbar-default .navbar-nav > li > a {
-  font-size: 12px;
-  padding: 10px 10px;
+  font-size: 11px;
 }
 
 // Grid ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
 .gl-grid {
-	.row-fluid {
+
+	.row {
     margin-bottom: .9em;
   }
 
   [class*="col-"] {
+    .border;
     background: @lightGray;
-    padding: .9em;
-    .border
+    padding: 0.9em;
   }
 }
 
@@ -158,10 +145,10 @@ small, .small {
 }
 
 .color-details {
+  .border;
   padding: 0.5em;
   border-radius: 4px;
   margin-top: 1em;
-  .border;
 
   p {
     margin: 0;
@@ -174,8 +161,9 @@ small, .small {
 }
 
 .gPop-gallery {
+  
   ul {
-    margin-left:0;
+    margin-left: 0;
   }
 
   p {
@@ -183,21 +171,24 @@ small, .small {
   }
 }
 
-.form-Row {
-  max-width: 50em;
-  margin: 0 auto;
+input, textarea {
+  width: 95%;
 }
 
-input, textarea {
-  width:95%;
+#selectBox {
+  width: 100%;
 }
+
 
 .hr-shadow {
 	display: block;
 	width: 100%;
 	height: 1px;
-  .background-size;
-  background-color: #e6e6e6;
+  background-color: @darkGray;
+  webkit-background-size: contain;
+  moz-background-size: contain;
+  o-background-size: contain;
+  background-size: contain;  
 }
 
 .hr-shadow-bottom {
@@ -246,20 +237,19 @@ input, textarea {
     margin-left: 0px;
 
     li {
-      color: #5A5A5A;
-      background: #f2f2f2;
-      border: solid 1px #e6e6e6;
+      color: @darkestGray;
+      background: @lightGray;
+      border: solid 1px @darkGray;
       margin-bottom: .4em;
       padding: .2em;
-
-      b {
-        float: right;
-        font-size: 12px;
-      }
     }
+
+    b {
+      float: right;
+      font-size: 12px;
+    }    
   }
 }
-
 
 .tab-pane p {
   text-align: justify;
@@ -314,12 +304,12 @@ textarea {
 }
 
 .console {
+  .border;
   margin-top: 1em;
   color: @lightGray;
   background-color: @darkestGray;
   border-radius: 4px;
   padding: 0.5em;
-  .border;
 
   p {
     margin: 0;
@@ -328,7 +318,6 @@ textarea {
 
 // images /////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
-
 
 .images img {
   width: 24%;
@@ -380,10 +369,8 @@ textarea {
   }
 }
 
-#jqui-tabs, #jqui-accordion {
-  p {
-    text-align: left;
-  }
+#jqui-tabs, #jqui-accordion p {
+  text-align: left;
 }
 
 #jqui-datepicker {
@@ -394,7 +381,9 @@ textarea {
   padding: 0.5em;
   border-radius: 4px;
 
-  #red, #green, #blue {
+  #red,
+  #green,
+  #blue {
     margin: 2em;
   }
 
@@ -429,15 +418,14 @@ textarea {
 }
 
 #push, #footer {
-  height: 60px;
   min-height: 60px;
 }
 
 #footer {
-  background-color: #333333;
+  color: @white;
+  background-color: @darkestGray;
   font-size: 12px;
   display: block;
-  color: @white;
 
   p {
     padding-top: 20px;
@@ -453,11 +441,11 @@ textarea {
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  background: #e6e6e6;
+  background: @darkGray;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  background: #ffffff;
-  border: 1px solid #d3d3d3;
+  .border;
+  background: @white;
   border-bottom: none;
 }
 .ui-corner-all,
@@ -474,13 +462,18 @@ textarea {
 
 .ui-widget-content,
 .ui-state-default {
-  border: 1px solid #d3d3d3;
+  .border;
+}
+
+.btn {
+  margin-bottom: 1em;
 }
 
 // Media //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
 @media (max-width: 979px) { 
+
   [class*="span"] {
     margin-bottom: 1em;
     display: block;
@@ -495,7 +488,10 @@ textarea {
   }
 
   .hr-shadow-top, .hr-shadow-bottom {
-    .background-size;
+    webkit-background-size: contain;
+    moz-background-size: contain;
+    o-background-size: contain;
+    background-size: contain;
   }
 
   .page-wrap {
@@ -508,12 +504,13 @@ textarea {
   }
 
   #footer {
-    background-color: #333333;
+    background-color: @darkestGray;
     color: @white;
   }
 }
 
 @media (max-width: 740px) {
+  
   .color-chart {
     width: 37.5em;
     height: 22.5em;
@@ -521,6 +518,7 @@ textarea {
 }
 
 @media (max-width: 550px) {
+
   .color-chart {
     width: 25em;
     height: 15em;
@@ -534,6 +532,7 @@ textarea {
 }
 
 @media (max-width: 380px) {
+  
   .color-chart {
     width: 20em;
     height: 12em;
@@ -541,6 +540,7 @@ textarea {
 }
 
 @media (max-width: 430px) {
+  
   #sort-lyrics li {
     font-size: 80%;
   }
@@ -556,25 +556,5 @@ textarea {
   }
 }
 
-// THEME TEST /////////////////////////////////////////////////////////////////////
+// The End ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
-
-/* 
-
-#mqTest ul li {
-  background: #e6ae09;
-  border: none;
-}
-
-.palm-container .inactive span {
-  background: #e6ae09;
-  border: none;
-}
-.palm-container span,
-li.active.screen span{
-  background: #7aa300;
-  color: #D6E9C6;
-  border: none;
-}
-
-*/

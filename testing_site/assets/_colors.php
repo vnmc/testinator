@@ -22,8 +22,8 @@
 	writeHeading(COLORS);
 ?>
 
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-md-12">
 		<br>
 		<table class="color-chart">
 			<tbody>
@@ -43,7 +43,7 @@
 		</table>
 	</div>
 </div>
-<div class="row-fluid color-details"><p>&nbsp;</p></div>
+<div class="row color-details"><p>&nbsp;</p></div>
 
 <script>
 	function rgbToHsl(r, g, b)

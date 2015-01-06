@@ -3,8 +3,8 @@
 <?php writeHeading(DEVICE_INFO); ?>
 <br/>
 
-<div class="row-fluid">
-    <div class="span12">
+<div class="row">
+    <div class="col-md-12">
         <p>
             <span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;
             <script>document.write(navigator.userAgent);</script>

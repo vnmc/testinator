@@ -2,7 +2,7 @@
 <?php writeHeading(LINKS); ?>
 
 <p>simple links</p>
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-4">
 		<a href="#" class="btn btn-default btn-lg btn-block"><span class="icon-resize-vertical"></span>&nbsp;Anchor link</a>
 	</div>
@@ -33,7 +33,7 @@
 </script>
 
 <p>static html</p>
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-4">
 		<a id="link4" onclick="logClick(event)" class="btn btn-default btn-lg btn-block">#link4</a>
 	</div>	
@@ -47,11 +47,11 @@
 <br>
 
 <p>dynamically created links</p>
-<div class="row-fluid" id="dynamic-links"></div>
+<div class="row" id="dynamic-links"></div>
 <br>
 
 <p>JavaScript event handler code for the links:</p>
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-4">
 		<code>
 			// #link4, #link7:<br/>
@@ -80,10 +80,10 @@
 	}
 </code>
 
-<div class="row-fluid console"></div>
+<div class="row console"></div>
 <br/>
 
-<div class="row-fluid warning">
+<div class="row warning">
 	<span>
 		* Click won't propagate if element was created by setting innerHTML of an ancestor element and the event handler stops propagation.<br/>
 	</span>

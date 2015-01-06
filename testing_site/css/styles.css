@@ -1,3 +1,9 @@
+#mqTest ul {
+  padding: 0;
+}
+.palm-container ul {
+  padding: 0;
+}
 .palm-container li {
   margin-bottom: 0.65em;
   list-style: none;
@@ -26,10 +32,10 @@
   width: 100%;
 }
 .palm-container span {
-  background: #D6E9C6;
+  background: #d6e9c6;
   color: #468847;
   padding: 5px;
-  border: 1px solid #D6E9C6;
+  border: 1px solid #d6e9c6;
   text-transform: uppercase;
   display: block;
   border: solid 1px #e6e6e6;
@@ -399,18 +405,6 @@
     width: 100%;
   }
 }
-.transition {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.background-size {
-  webkit-background-size: contain;
-  moz-background-size: contain;
-  o-background-size: contain;
-  background-size: contain;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -418,12 +412,13 @@
 }
 html,
 body {
-  font-family: 'Source Code Pro', Helvetica, Arial, sans-serif;
+  font-family: 'source_code_proregular', Helvetica, Arial, sans-serif;
   font-weight: 300;
   min-height: 100%;
   height: 100%;
   height: 100vh;
   background-color: #ffffff;
+  background-size: 20px;
   background-repeat: repeat;
 }
 .container-fluid {
@@ -446,13 +441,16 @@ a:hover {
   color: #333333;
   text-decoration: none;
 }
+#footer a:hover {
+  color: #f2f2f2;
+}
 .alert {
   padding: 2px;
   text-align: center;
   font-size: 16px;
-}
-.warning {
-  color: red;
+  border: none;
+  color: #468847;
+  background-color: #d6e9c6;
 }
 .anchor {
   display: block;
@@ -469,25 +467,20 @@ small,
   border: none;
   border-radius: 0;
 }
-.navbar {
-  margin-left: -20px;
-  margin-right: -20px;
-}
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a {
-  font-size: 12px;
-  padding: 10px 10px;
+  font-size: 11px;
 }
-.gl-grid .row-fluid {
+.gl-grid .row {
   margin-bottom: .9em;
 }
 .gl-grid [class*="col-"] {
-  background: #f2f2f2;
-  padding: .9em;
   border: solid 1px #e6e6e6;
+  background: #f2f2f2;
+  padding: 0.9em;
 }
 .color-chart {
   width: 100%;
@@ -495,10 +488,10 @@ small,
   margin: 0 auto;
 }
 .color-details {
+  border: solid 1px #e6e6e6;
   padding: 0.5em;
   border-radius: 4px;
   margin-top: 1em;
-  border: solid 1px #e6e6e6;
 }
 .color-details p {
   margin: 0;
@@ -513,43 +506,42 @@ small,
 .gPop-gallery p {
   text-align: justify;
 }
-.form-Row {
-  max-width: 50em;
-  margin: 0 auto;
-}
 input,
 textarea {
   width: 95%;
+}
+#selectBox {
+  width: 100%;
 }
 .hr-shadow {
   display: block;
   width: 100%;
   height: 1px;
+  background-color: #e6e6e6;
   webkit-background-size: contain;
   moz-background-size: contain;
   o-background-size: contain;
   background-size: contain;
-  background-color: #e6e6e6;
 }
 .hr-shadow-bottom {
   display: block;
   width: 100%;
   height: 1px;
+  background-color: #e6e6e6;
   webkit-background-size: contain;
   moz-background-size: contain;
   o-background-size: contain;
   background-size: contain;
-  background-color: #e6e6e6;
 }
 .hr-shadow-top {
   display: block;
   width: 100%;
   height: 1px;
+  background-color: #e6e6e6;
   webkit-background-size: contain;
   moz-background-size: contain;
   o-background-size: contain;
   background-size: contain;
-  background-color: #e6e6e6;
 }
 .main-header-base {
   background-color: #f2f2f2;
@@ -578,13 +570,13 @@ textarea {
   margin-left: 0px;
 }
 #mqTest ul li {
-  color: #5A5A5A;
+  color: #333333;
   background: #f2f2f2;
   border: solid 1px #e6e6e6;
   margin-bottom: .4em;
   padding: .2em;
 }
-#mqTest ul li b {
+#mqTest ul b {
   float: right;
   font-size: 12px;
 }
@@ -632,12 +624,12 @@ textarea {
   resize: none;
 }
 .console {
+  border: solid 1px #e6e6e6;
   margin-top: 1em;
   color: #f2f2f2;
   background-color: #333333;
   border-radius: 4px;
   padding: 0.5em;
-  border: solid 1px #e6e6e6;
 }
 .console p {
   margin: 0;
@@ -682,7 +674,7 @@ textarea {
   background-size: 400% 300%;
   cursor: move;
 }
-#jqui-tabs p,
+#jqui-tabs,
 #jqui-accordion p {
   text-align: left;
 }
@@ -724,14 +716,13 @@ textarea {
 }
 #push,
 #footer {
-  height: 60px;
   min-height: 60px;
 }
 #footer {
+  color: #ffffff;
   background-color: #333333;
   font-size: 12px;
   display: block;
-  color: #ffffff;
 }
 #footer p {
   padding-top: 20px;
@@ -746,8 +737,8 @@ textarea {
   background: #e6e6e6;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  border: solid 1px #e6e6e6;
   background: #ffffff;
-  border: 1px solid #d3d3d3;
   border-bottom: none;
 }
 .ui-corner-all,
@@ -763,7 +754,10 @@ textarea {
 }
 .ui-widget-content,
 .ui-state-default {
-  border: 1px solid #d3d3d3;
+  border: solid 1px #e6e6e6;
+}
+.btn {
+  margin-bottom: 1em;
 }
 @media (max-width: 979px) {
   [class*="span"] {
@@ -831,22 +825,3 @@ textarea {
     height: 65px;
   }
 }
-/* 
-
-#mqTest ul li {
-  background: #e6ae09;
-  border: none;
-}
-
-.palm-container .inactive span {
-  background: #e6ae09;
-  border: none;
-}
-.palm-container span,
-li.active.screen span{
-  background: #7aa300;
-  color: #D6E9C6;
-  border: none;
-}
-
-*/

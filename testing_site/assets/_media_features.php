@@ -9,15 +9,15 @@ http://www.jordanm.co.uk/palmreader
 
 <?php writeHeading(MEDIA_QUERIES); ?>
 
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-md-12">
 		<p class="lead">Showing which @media features your device can and can't see</p>
 		<p>All the media query tests are listed below, the <span class="alert alert-success">green</span> features are currently active on this device</p>
 	</div>
 </div>
 <br>
-<div class="row-fluid">
-	<div class="col-md-4">
+<div class="row">
+	<div class="col-lg-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active screen"><span>screen</span></li>
@@ -47,7 +47,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="col-md-4">
+	<div class="col-lg-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active scan-interlace"><span>(scan:interlace)</span></li>
@@ -77,7 +77,7 @@ http://www.jordanm.co.uk/palmreader
 			</ul>
 		</div>
 	</div>
-	<div class="col-md-4">
+	<div class="col-lg-4">
 		<div class="palm-container">
 			<ul>
 				<li class="active fine"><span>(pointer:coarse) <span class="mq">[MQ Level 4]</span></span></li>

@@ -2,7 +2,7 @@
 <?php writeHeading(JQUERYUI); ?>
 
 <p class="lead">sortable</p>
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-6">
 		<p>Thriller (Michael Jackson)</p>
 		<ul id="sort-lyrics">
@@ -38,9 +38,9 @@
 </div>
 <br/>
 
-<p class="lead">tabs &amp; accordion &mdash; <a href="http://www.americanfolklore.net/spooky-stories.html" target="_blank">more spooky stories</a></p>
+<p class="lead">tabs &amp; accordion </p>
 
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-6">
 		<div id="jqui-tabs">
 			<ul>
@@ -94,14 +94,13 @@
 <br/>
 
 <p class="lead">datepicker &amp; sliders</p>
-<div class="row-fluid">
+<div class="row">
 	<div class="col-md-6">
 		When did you first see the ghost?
 		<input type="text" id="jqui-datepicker">
 	</div>
 
 	<div class="col-md-6">
-		What, in your opinion, is the most ghostly color?
 		<div id="swatch">
 			<div id="red"></div>
 			<div id="green"></div>
