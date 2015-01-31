@@ -27,7 +27,7 @@
 		<br>
 		<table class="color-chart">
 			<tbody>
-				<?
+				<?php
 					$idx = 0;
 					foreach ($colors as $color)
 					{
