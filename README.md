@@ -16,9 +16,15 @@ Demo: [http://vanamco.com/hosting/testinator/](http://vanamco.com/hosting/testin
 1. images
 1. tabs
 
+### Building
+Run the makefile to build the site. Requires lessc and plugin-less-clean-css to be installed.
+
+
 ### Support or Contact
 
 Having trouble with Testinator? contact us on [Twitter - @ghostlabapp](https://twitter.com/ghostlabapp) or via the [help desk] (http://vanamco.com/help) and we’ll help you sort it out. Check out the documentation at http://feedback.vanamco.com/ 
+
+
 
 ### License
 
