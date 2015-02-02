@@ -1,5 +1,5 @@
 # Compilers
-LESS = lessc
+LESS = node_modules/less/bin/lessc
 PHP = php -q
 
 # Optimization flags

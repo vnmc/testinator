@@ -1,0 +1,11 @@
+{
+	"name": "Testinator",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vnmc/testinator.git"
+	},
+	"devDependencies": {
+		"less": "^2.3.1",
+		"less-plugin-clean-css": "^1.4.0"
+	}
+}
