@@ -12,7 +12,7 @@ http://www.jordanm.co.uk/palmreader
 <div class="row">
 	<div class="col-md-12">
 		<p class="lead">Showing which @media features your device can and can't see</p>
-		<p>All the media query tests are listed below, the <span class="alert alert-success">green</span> features are currently active on this device</p>
+		<p>All the media query tests are listed below, the <span class="alert alert-success">blue</span> features are currently active on this device</p>
 	</div>
 </div>
 <br>

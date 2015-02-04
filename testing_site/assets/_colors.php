@@ -33,7 +33,7 @@
 					{
 						if ($idx % $numCols == 0)
 							echo("<tr>");
-						echo("<td style=\"background-color:$color;\" title=\"$color\"></td>");
+						echo("<td><div style=\"background-color:$color;\" title=\"$color\"></div></td>");
 						if ($idx % $numCols == $numCols - 1)
 							echo("</tr>");
 						$idx++;
@@ -43,7 +43,11 @@
 		</table>
 	</div>
 </div>
-<div class="row color-details"><p>&nbsp;</p></div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="color-details"><p>Move your mouse over the colors to pick one</p></div>
+	</div>
+</div>
 
 <script>
 	function rgbToHsl(r, g, b)
@@ -77,7 +81,7 @@
 
 	var $details = $('.color-details');
 	var $detailsText = $details.find('p');
-	$('.color-chart td').mouseenter(function()
+	$('.color-chart div').mouseenter(function()
 	{
 		var color = $(this).attr('title');
 

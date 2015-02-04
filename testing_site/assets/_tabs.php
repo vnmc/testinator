@@ -1,8 +1,8 @@
 <!-- tab -->
-<?php writeHeading(TABS, "(Bootstrap)"); ?>
+<?php writeHeading(TABS, "from <a href=\"http://www.bootstrap.com\" target=\"_blank\">Bootstrap</a>"); ?>
 
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<div class="tabbable">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab1" data-toggle="tab">Golden Hand</a></li>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		  <div class="panel panel-default">
 		    <div class="panel-heading" role="tab" id="headingOne">

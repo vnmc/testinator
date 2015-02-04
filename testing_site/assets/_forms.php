@@ -4,33 +4,35 @@
 <!--<form method="POST" action="results.php" enctype="multipart/form-data">-->
 <form method="POST">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-sm-6">
 			<div class="form-group">
 				<label for="inputName">Name</label>
 				<div class="controls">
-					<input type="text" id="inputName" placeholder="name" name="inputDetails[]">
+					<input type="text" id="inputName" placeholder="Casper The Ghost" name="inputDetails[]">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inputEmail">Email</label>
+				<label for="inputEmail">E-Mail</label>
 				<div class="controls">
-					<input type="email" id="inputEmail" placeholder="Email" name="inputDetails[]">
+					<input type="email" id="inputEmail" placeholder="casper@ghostlab.org" name="inputDetails[]">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword">Password</label>
 				<div class="controls">
-					<input type="password" id="inputPassword" placeholder="Password" name="inputPassword">
+					<input type="password" id="inputPassword" placeholder="secret" name="inputPassword">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputMessage">Message</label>
 				<div class="controls">
-					<textarea rows="3" placeholder="Message" id="inputMessage" name="inputMessage"></textarea>
+					<textarea rows="5" id="inputMessage" name="inputMessage"></textarea>
 				</div>
 			</div>
+		</div>
+		<div class="col-sm-6">
 			<div class="form-group">
-				<label for="optionsRadios">Option</label>
+				<label for="optionsRadios">Select your favorite Ghost</label>
 				<div class="radio">
 					<label>
 						<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -50,10 +52,8 @@
 					</label>
 				</div>
 			</div>
-		</div>
-		<div class="col-lg-6">
-			<div class="">
-				<label for="inputname">Checkbox</label>
+			<div class="form-group">
+				<label for="inputname">Tick some checkboxes</label>
 				<div class="checkbox">
 					<label class="checkbox">
 						<input type="checkbox" name="check0"> Don't click me!
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="selectSingle">Select</label>
+				<label for="selectSingle">Select one option</label>
 				<div class="controls">
 					<select id="selectSingle" name="selectSingle">
 						<option>1</option>
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="selectBox">Select Multi</label>
+				<label for="selectBox">Where would you like to meet?</label>
 				<div class="controls">
 					<select multiple="multiple" name="selectBox" id="selectBox">
 						<option>Castle</option>

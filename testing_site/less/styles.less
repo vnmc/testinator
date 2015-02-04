@@ -15,13 +15,14 @@
 @black:         #000000;
 @lightGray:     #f2f2f2;
 @darkGray:      #e6e6e6;
+@mediumGray:    #999999;
 @darkerGray:    #3B3B3B;
 @darkestGray:   #333333;
 
-@lightGreen:    #D6E9C6;
-@darkGreen:     #468847;
+@lightGreen:    #54b6da;
+@darkGreen:     #366fa5;
 
-@linkColor:     #77c1b0;
+@linkColor:     #54b6da;
 
 // Fonts //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -39,27 +40,17 @@
 
 html,
 body {
-  font-family: 'source_code_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   min-height: 100%;
   height: 100%;
   height: 100vh;
   background-color: @white;
-  //background-color: @black;
-  //color: @white;
-  //background-image: url('http://s15.postimg.org/5rwblull3/transp_bg_1.png');
-  //background-image: url('http://s21.postimg.org/cg3azyi6r/tiny_grid_2_X.png');
-  background-size: 20px;
-  background-repeat: repeat;
 }
 
 .container-fluid {
   max-width: 80%;
   margin: 0 auto;
-}
-
-p {
-  text-align: center;
 }
 
 a {
@@ -93,7 +84,13 @@ a:hover {
 
 .anchor {
   display: block;
-  height: 57px;
+  height: 107px;
+}
+
+@media (max-width: 767px) {
+  .anchor {
+    height: 57px;
+  }
 }
 
 .border {
@@ -102,6 +99,10 @@ a:hover {
 
 small, .small {
   font-size: 65%;
+}
+
+h3, h4, h5, h6, p.lead {
+  text-align: center;
 }
 
 
@@ -140,8 +141,20 @@ small, .small {
 
 .color-chart {
   width: 100%;
-  height: 50em;
+  height: 30em;
   margin: 0 auto;
+  border-spacing: 5px;
+  border-collapse: separate;
+
+  td {
+    position: relative;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+  }
 }
 
 .color-details {
@@ -149,6 +162,7 @@ small, .small {
   padding: 0.5em;
   border-radius: 4px;
   margin-top: 1em;
+  text-align: center;
 
   p {
     margin: 0;
@@ -158,6 +172,7 @@ small, .small {
 
 .page-heading {
   text-align: center;
+  margin: 10px 0;
 }
 
 .gPop-gallery {
@@ -171,13 +186,6 @@ small, .small {
   }
 }
 
-input, textarea {
-  width: 95%;
-}
-
-#selectBox {
-  width: 100%;
-}
 
 
 .hr-shadow {
@@ -241,7 +249,8 @@ input, textarea {
       background: @lightGray;
       border: solid 1px @darkGray;
       margin-bottom: .4em;
-      padding: .2em;
+      padding: .5em;
+      border-radius: 3px;
     }
 
     b {
@@ -249,10 +258,6 @@ input, textarea {
       font-size: 12px;
     }    
   }
-}
-
-.tab-pane p {
-  text-align: justify;
 }
 
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
@@ -267,18 +272,113 @@ input, textarea {
   border-right: 1px solid @darkGray;
 }
 
-.accordion-heading {
-  background-color: @white;
-}
-
-.accordion-inner {
-  background-color: @lightGray;
-}
-
 .tabbable {
   .nav {
     margin-bottom: 0px;
+    color: @white;
+    background-color: @black;
+    padding: 5px 5px 0 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    a {
+      color: @white;
+      background-color: inherit;
+      border: none !important;
+      border-bottom: 1px solid transparent !important;
+
+      &:hover {
+        background-color: @black;
+        height: 40px;
+      }
+    }
+
+    .active {
+      color: @black;
+      background-color: @white;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+
+      a {
+        color: @black;
+
+        &:hover {
+          height: 41px;
+        }
+      }
+    }
   }
+}
+
+.panel-default > .panel-heading {
+  color: @white;
+  background-color: @black;
+
+  h4 {
+    text-align: left;
+    font-weight: normal;
+  }
+
+  a:hover {
+    color: @white;
+  }
+}
+
+.console {
+  .border;
+  margin-top: 1em;
+  color: @lightGray;
+  background-color: @darkestGray;
+  border-radius: 4px;
+  padding: 0.5em;
+
+  p {
+    margin: 0;
+  }
+}
+
+// links /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+.btn-warning {
+  color: #fff;
+  background-color: @lightGreen;
+  border-color: @darkGreen;
+
+  &:hover {
+    background-color: @darkGreen;
+    border-color: @darkGreen;
+  }
+}
+
+// images /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+.images img {
+  width: 24%;
+  margin: 0 1% 1% 0;
+  float: left;
+}
+
+
+// form /////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+
+label {
+  font-weight: normal;
+  font-size: smaller;
+  color: @mediumGray;
+  margin-bottom: 0;  
+}
+
+.radio {
+  margin-top: 0
+}
+
+.radio label, .checkbox label {
+  margin: 2px 1em 2px 0;
+  color: @black;
+  font-size: inherit;
 }
 
 input[type="text"], 
@@ -296,34 +396,27 @@ input[type="search"],
 input[type="tel"], 
 input[type="color"], 
 .uneditable-input {
-  height:27px;
+  padding: 2px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px solid @darkGray;
+  border-bottom: 1px solid @darkGray;
+  width: 95%;
 }
 
 textarea {
   resize: none;
+  width: 95%;
+  padding: 2px;
+  border: 1px solid @darkGray;
 }
 
-.console {
-  .border;
-  margin-top: 1em;
-  color: @lightGray;
-  background-color: @darkestGray;
-  border-radius: 4px;
-  padding: 0.5em;
-
-  p {
-    margin: 0;
-  }
+select {
+  width: 95%;
+  border: 1px solid @darkGray;
+  padding: 2ox;
 }
 
-// images /////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////
-
-.images img {
-  width: 24%;
-  margin: 0 1% 1% 0;
-  float: left;
-}
 
 // jQueryUI examples //////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -435,6 +528,30 @@ textarea {
 // jQuery ui //////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 
+.ui-widget h3 {
+  text-align: left;
+}
+
+/*
+.ui-tabs {
+  padding: 0;
+}
+
+.ui-tabs-nav {
+  background: @black;
+
+  li {
+    border: none;
+  }
+}
+
+.ui-tabs-anchor {
+  background: @black;
+  color: @white;
+}
+*/
+
+/*
 .ui-widget-header {
   background: @lightGray;
   border: none;
@@ -448,6 +565,7 @@ textarea {
   background: @white;
   border-bottom: none;
 }
+
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-right,
@@ -458,7 +576,7 @@ textarea {
 .ui-corner-bl,
 .ui-corner-br {
   border-radius: 0;
-}
+}*/
 
 .ui-widget-content,
 .ui-state-default {
@@ -510,17 +628,13 @@ textarea {
 }
 
 @media (max-width: 740px) {
-  
   .color-chart {
-    width: 37.5em;
     height: 22.5em;
   }
 }
 
 @media (max-width: 550px) {
-
   .color-chart {
-    width: 25em;
     height: 15em;
   }
 
@@ -532,15 +646,12 @@ textarea {
 }
 
 @media (max-width: 380px) {
-  
   .color-chart {
-    width: 20em;
     height: 12em;
   }
 }
 
 @media (max-width: 430px) {
-  
   #sort-lyrics li {
     font-size: 80%;
   }

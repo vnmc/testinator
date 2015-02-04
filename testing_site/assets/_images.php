@@ -1,7 +1,6 @@
 <!-- images -->
 
-<?php writeHeading(IMAGES); ?>
-<p class="lead">Images with <a href="https://github.com/vnmc/jquery.gpop" target="_blank">gPop</a></p>
+<?php writeHeading(IMAGES, "with <a href=\"https://github.com/vnmc/jquery.gpop\" target=\"_blank\">gPop</a>"); ?>
 <br>
 <br>
 
@@ -22,29 +21,25 @@
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4><a href="http://ghostlab.vanamco.com/" target="_blank">Ghostlab</a></h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 1</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Lady Ghost!</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 2</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Ghosts</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 3</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Ghost Tour -<br/>Toowong Cemetery</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 4</h4>
             </div>
         </li>
     </ul>
@@ -56,36 +51,31 @@
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>the saddest ghost.</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 1</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Ghost light</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 2</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Ghosts</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 3</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Lightpainting Ghost</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 4</h4>
             </div>
         </li>
         <li>
             <a href="#images"><img alt="image-alt" src="img/placeholder-image.jpg"/></a>
             <div>
-                <h4>Brains and Ghosts</h4>
-                <p>by <a href="http://andi.io/" target="_blank">Vanamco</a></p>
+                <h4>Ghost 5</h4>
             </div>
         </li>
     </ul>

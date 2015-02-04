@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ghostlab Testing page</title>
+		<title>Ghostlab Testing Page</title>
 		<?php include "assets/_head.php"; ?>
 		<?php include "assets/_scripts.php"; ?>
 	</head>

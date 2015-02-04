@@ -14,44 +14,44 @@
 
 	$assets = array(
 		DEVICE_INFO => array(
-		 	"name" => "device info",
+		 	"name" => "Device Info",
 		 	"file" => "_mqtest.php"
 		),
 		MEDIA_QUERIES => array(
-			"name" => "media queries",
+			"name" => "Media Queries",
 			"file" => "_media_features.php"
 		),
-		GRID => array(
-			"name" => "fluid grid",
+		/*GRID => array(
+			"name" => "Fluid Grid",
 			"file" => "_grid.php"
-		),
+		),*/
 		LINKS => array(
-			"name" => "links",
+			"name" => "Links",
 			"file" => "_links.php"
 		),
 		COLORS => array(
-			"name" => "colors",
+			"name" => "Colors",
 			"file" => "_colors.php"
 		),
 		FORMS => array(
-			"name" => "form",
+			"name" => "Form",
 			"file" => "_forms.php"
 		),
 		IMAGES => array(
-			"name" => "images",
+			"name" => "Images",
 			"file" => "_images.php"
 		),
 		LIGHTBOX => array(
-			"name" => "lightbox2",
+			"name" => "Lightbox2",
 			"file" => "_lightbox.php"
 		),
 		TABS => array(
-			"shortname" => "tabs",
-			"name" => "tabs &amp; accordion",
+			"shortname" => "Tabs",
+			"name" => "Tabs &amp; Accordion",
 			"file" => "_tabs.php"
 		),
 		JQUERYUI => array(
-			"name" => "jQuery UI",
+			"name" => "jQuery UI Components",
 			"file" => "_jqueryui.php"
 		)
 	);

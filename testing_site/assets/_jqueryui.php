@@ -1,9 +1,9 @@
 <!-- jQuery UI -->
 <?php writeHeading(JQUERYUI); ?>
 
-<p class="lead">sortable</p>
+<p class="lead">Sortable</p>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<p>Thriller (Michael Jackson)</p>
 		<ul id="sort-lyrics">
 			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>You start to freeze</li>
@@ -18,7 +18,7 @@
 		</ul>
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<p>Ghost Puzzle</p>
 		<ul id="puzzle">
 			<li style="background-position: -300% 0%"></li>
@@ -38,10 +38,10 @@
 </div>
 <br/>
 
-<p class="lead">tabs &amp; accordion </p>
+<p class="lead">Tabs &amp; Accordion </p>
 
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<div id="jqui-tabs">
 			<ul>
 				<li><a href="#jqui-tabs-1">Death Waltz</a></li>
@@ -63,7 +63,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<div id="jqui-accordion">
 			<h3>Don't Turn on the Light</h3>
 			<div>
@@ -86,14 +86,15 @@
 </div>
 <br/>
 
-<p class="lead">datepicker &amp; sliders</p>
+<p class="lead">Datepicker &amp; Sliders</p>
 <div class="row">
-	<div class="col-md-6">
-		When did you first see the ghost?
+	<div class="col-sm-6">
+		<label>When did you first see the ghost?</label>
 		<input type="text" id="jqui-datepicker">
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-sm-6">
+		<label>What color did it have?</label>
 		<div id="swatch">
 			<div id="red"></div>
 			<div id="green"></div>

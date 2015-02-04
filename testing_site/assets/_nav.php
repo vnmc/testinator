@@ -9,7 +9,8 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        Webpage Testinator
+        <!--Webpage Testinator-->
+        Ghostlab Testing Page
         <small class="sr-only">Ghostlab App</small>
       </a>
 

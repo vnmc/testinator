@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-12">
         <p>
-            <span class="label label-info">User Agent:</span>&nbsp;&nbsp;&nbsp;
+            <span class="alert alert-success">User Agent:</span>&nbsp;&nbsp;&nbsp;
             <script>document.write(navigator.userAgent);</script>
         </p>
 

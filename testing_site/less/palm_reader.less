@@ -28,11 +28,11 @@
 		color: #d14836;
 	}
 	.mq {
+		display: inline;
 		padding-left: 0.5em;
 		font-size: 0.8em;
 		color: #757575;
-		display: block
-		border: 0;
+		border: none;
 	}
 	.active{
 		width:100%;
@@ -42,14 +42,14 @@
 		color: @darkGreen;
 		padding: 5px;
 		border: 1px solid @lightGreen;
-		text-transform: uppercase;
 		display: block;
-		border: solid 1px #e6e6e6;
-		
+		border: solid 1px @darkGreen;
+		border-radius: 3px;
 	}
 	.inactive span {
 		color: #5A5A5A;
 		background: #f2f2f2;
+		border-color: #e6e6e6;
 	}
 	#byline {
 		text-align: center;

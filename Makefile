@@ -3,7 +3,7 @@ LESS = node_modules/less/bin/lessc
 PHP = php -q
 
 # Optimization flags
-LESS_FLAGS = --plugin=less-plugin-clean-css
+#LESS_FLAGS = --plugin=less-plugin-clean-css
 
 # The source directory
 SRC ?= testing_site
@@ -36,7 +36,7 @@ endef
 
 all: $(OUTPUTS)
 
-$(DST)/css/styles.css: $(SRC)/less/styles.less
+$(DST)/css/styles.css: $(SRC)/less/styles.less $(SRC)/less/palm_reader.less
 	$(build_css)
 
 $(DST)/index.html: $(SRC)/index.php $(DST)/css/styles.css $(INCLUDES)
