@@ -21,7 +21,7 @@
             foreach ($assets as $id => $asset)
             {
               $name = array_key_exists("shortname", $asset) ? $asset["shortname"] : $asset["name"];
-              echo("<li><a href=\"#$id\">$name</a></li>");
+              echo("<li><a href=\"#$id\" data-toggle=\"collapse\" data-target=\"#navbar\">$name</a></li>");
             }
           ?>
       </ul>

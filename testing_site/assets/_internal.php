@@ -6,6 +6,8 @@
 <br>
 
 <p class="lead">You have crossed over into the twilight</p>
+<center>
+<div id="timer"><p></p></div>
 <br>
 <br>
 <div class="row content">
@@ -18,3 +20,4 @@
 </div>
 <br>
 <br>
+</center>
