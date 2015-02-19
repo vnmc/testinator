@@ -3,7 +3,7 @@ LESS = lessc
 PHP = php -q
 
 # Optimization flags
-LESS_FLAGS = --plugin=less-plugin-clean-css
+LESS_FLAGS = -clean-css
 
 # The source directory
 SRC ?= testing_site
