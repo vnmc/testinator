@@ -1,0 +1,15 @@
+- var includeScripts = false // we don't want the scripts in internal.html
+include _head.jade
+
+include _nav.jade
+
+.container
+  .row
+    h2 Internal site page
+    .lead.align-center You have crossed over into the twilight
+
+  .row
+    .col-md-4.col-md-offset-4
+      a(href="/", class="btn-gl btn-large") Internal site link
+
+include _footer.jade

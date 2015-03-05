@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Matthias Christen   -- Code -- @ghostlabapp
+    Andi Dysart     -- Code -- @gitmash
+    Florian Mueller     -- Code -- @vanamco
+
+# THANKS
+
+    The man that invented currywurst and beer
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Ghostlab
+    jQuery, Modernizr, PHP,
+    Github, Grunt, the humble browser
+
+    mqtest by Viljami Salminen | http://mqtest.io/
+    Grid | http://getbootstrap.com
+
+
+Vanamco AG was founded in 2011 by Florian Mueller in Zurich Switzerland.
+
+Vanamco quickly found success and cemented its place on the world stage with developing websites and products such as Ghostlab (http://ghostlab.vanamco.com) and Devicelab (http://devicelab.vanamco.com) Today Vanamco and they are well known in the web community and there products are used All over the globe from small freelance web designers to the hardcore website quality control and testing firms.
+
+While serving the need of multinational companies, Vanamco is a wed design company in Zurich that loves working for local business. No job is too small and love to add that extra detail to make a digital product that much better and unique.
+
+- BOOM -

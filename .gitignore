@@ -1,3 +1,5 @@
-node_modules/
-demo/
+.sass-cache/
+build/
+distribution/
+node_modules
 .DS_Store
