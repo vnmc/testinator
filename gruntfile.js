@@ -47,7 +47,7 @@ module.exports = function(grunt) {
                       'source/js/*.js',
                       'source/js/vendor/*.js'
                   ],
-                  dest: 'distribution/js/production.js',
+                  dest: 'demo/js/production.js',
               },
               build: {
                   src: [
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
           uglify: {
             build: {
               src: 'build/js/production.js',
-              dest: 'distribution/js/production.js'
+              dest: 'demo/js/production.js'
             }
           },
 
@@ -71,13 +71,13 @@ module.exports = function(grunt) {
                 expand: true,                  
                 cwd: 'build/img/',                   
                 src: ['**/*.{png,jpg,gif,svg}'],   
-                dest: 'distribution/img/'
+                dest: 'demo/img/'
               },
               {
                 expand: true,                  
                 cwd: 'build/css/images/',                   
                 src: ['**/*.{png,jpg,gif}'],   
-                dest: 'distribution/css/images/'
+                dest: 'demo/css/images/'
               }            
               ]
             }
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'source/scss',
                 src: ['*.scss'],
-                dest: 'distribution/css/',
+                dest: 'demo/css/',
                 ext: '.css'
               }]
             },
@@ -141,8 +141,8 @@ module.exports = function(grunt) {
                 collapseWhitespace: true
               },
               files: {
-                'distribution/index.html': 'build/index.html',
-                'distribution/internal.html': 'build/internal.html'
+                'demo/index.html': 'build/index.html',
+                'demo/internal.html': 'build/internal.html'
               }
             }
           },
@@ -163,12 +163,12 @@ module.exports = function(grunt) {
             },
             dist: {
               files: [
-                {expand: true, cwd: 'source/', src: ['fonts/**'], dest: 'distribution/'},
-                {expand: true, flatten: true, src: ['source/*.png'], dest: 'distribution/'},
-                {expand: true, flatten: true, src: ['source/*.txt'], dest: 'distribution/'},
-                {expand: true, flatten: true, src: ['source/browserconfig.xml'], dest: 'distribution/'},
-                {expand: true, flatten: true, src: ['source/favicon.ico'], dest: 'distribution/'},
-                {expand: true, flatten: true, src: ['source/404.html'], dest: 'distribution/'}                
+                {expand: true, cwd: 'source/', src: ['fonts/**'], dest: 'demo/'},
+                {expand: true, flatten: true, src: ['source/*.png'], dest: 'demo/'},
+                {expand: true, flatten: true, src: ['source/*.txt'], dest: 'demo/'},
+                {expand: true, flatten: true, src: ['source/browserconfig.xml'], dest: 'demo/'},
+                {expand: true, flatten: true, src: ['source/favicon.ico'], dest: 'demo/'},
+                {expand: true, flatten: true, src: ['source/404.html'], dest: 'demo/'}                
               ]
             }
           }
