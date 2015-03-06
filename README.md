@@ -9,9 +9,9 @@ Demo: [http://vanamco.com/hosting/testinator/](http://vanamco.com/hosting/testin
 
 ```npm install```
 
-```grunt``` Build
+```grunt build``` 
 
-```grunt``` Distribution
+```grunt distribution``` 
 
 ### License
 
