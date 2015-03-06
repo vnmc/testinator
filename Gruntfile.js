@@ -90,6 +90,14 @@ module.exports = function(grunt)
                 dest: 'build/css/main.min.css'
             }
         },
+        
+        uncss: {
+          dist: {
+            files: {
+              'demo/css/main.css': ['demo/index.html', 'demo/internal.html']
+            }
+          }
+        },
 
         jade: {
             compile: {
@@ -237,11 +245,12 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('default', ['jade', 'sass:build', 'autoprefixer', 'copy:main', 'concat:build']);
-    grunt.registerTask('dist', ['copy:dist', 'concat:dist', 'sass:dist', 'uglify', 'htmlmin']);
+    grunt.registerTask('dist', ['copy:dist', 'concat:dist', 'sass:dist', 'uglify', 'htmlmin', 'uncss']);
 };
