@@ -31,10 +31,25 @@
   .row
     .col-md-12 
       code
-        | // jQuery <br>
-        | $('.color_tabs > li').hover( <br>
-        | &nbsp;&nbsp;function(){ $(this).addClass('hover') }, <br>
-        | &nbsp;&nbsp;function(){ $(this).removeClass('hover') } <br>
-        |  )
-
+        span.comment // jQuery
+        br
+        span $(
+        span.string '.color_tabs > li'
+        span ).hover(
+        br
+        span.property &nbsp;&nbsp;function
+        span () { $(
+        span.property this
+        span ).addClass(
+        span.string 'hover'
+        span ) },
+        br
+        span.property &nbsp;&nbsp;function
+        span () { $(
+        span.property this
+        span ).removeClass(
+        span.string 'hover'
+        span ) }
+        br
+        span );
 hr

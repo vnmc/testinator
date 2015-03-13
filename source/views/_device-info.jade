@@ -15,7 +15,18 @@
   .row 
     .col-md-12
       code
-        | /* Pure CSS hover synchronisation */ <br> li:hover { background-color: #f7f7f7; }
+        span.comment /* Pure CSS hover synchronisation */
+        br
+        span tr
+        span.pseudo :hover
+        span &nbsp;{
+        br
+        span.property &nbsp;&nbsp;background-color
+        span :&nbsp;
+        span.color #f7f7f7
+        span ;
+        br
+        span }
 
       noscript
         .notification.notification-info

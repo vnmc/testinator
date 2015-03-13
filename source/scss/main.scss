@@ -788,7 +788,14 @@ code {
     background-color: $colorWhite;
     padding: 0 5px;
     color: $colorDarkGray;
-  }  
+  }
+
+  .comment { color: #4c934c; }
+  .pseudo { color: #8A0886; font-style: italic; }
+  .property { color: #0040FF; }
+  .elt { color: #8A0886; }
+  .color { color: #ac2925; }
+  .string { color: #ac2925; }
 }
 
 .output {
@@ -818,20 +825,13 @@ code {
 ////////////////////////////////////////////////////////////////////////////////
 
 #mqTest {
-
-  ul {
-    @extend .padding-margin-reset;
-    list-style-type: none;
+  table {
+    margin: 0 auto 4em;
   }
 
-  $sizeMqTestList: 50px;
-
-  li {
-    font-size: 19px;
-    padding: 0 5px;
+  tr {
     border-bottom: 1px solid $colorLine;
-    height: $sizeMqTestList;
-    line-height: $sizeMqTestList;
+    transition: background-color 1s ease;
 
     &:first-child {
       border-top: 1px solid $colorLine;
@@ -839,13 +839,24 @@ code {
 
     &:hover {
       background-color: $colorLightestGray;
-      transition: all 1s ease;
     }
   }
 
-  b {
-    float: right;
-    clear: right;
+  td {
+    font-size: 19px;
+    padding: 10px 5px;
+
+    &:nth-child(2) {
+      font-weight: bold;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #mqTest td {
+    height: 64px;
+    padding: 0 5px;
   }
 }
 

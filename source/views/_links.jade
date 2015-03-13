@@ -65,19 +65,28 @@
   .row
       .col-md-4
         code
-          | // #link4, #link7:
+          span.comment // #link4, #link7:
           br
-          | &lt;a onclick=&quot;logClick(event)&quot;&gt;
+          span.elt &lt;a&nbsp;
+          span.property onclick
+          span =
+          span.string &quot;logClick(event)&quot;
+          span.elt &gt;
       .col-md-4
         code
-          | // #link5, #link8:
+          span.comment // #link5, #link8:
           br
-          | document.getElementById(&apos;link5&apos;) .onclick = logClick;
+          span.property document
+          span .getElementById(
+          span.string &apos;link5&apos;
+          span ).onclick = logClick;
       .col-md-4
         code
-          | // #link6, #link9:
+          span.comment // #link6, #link9:
           br
-          | jQuery(&apos;#link6&apos;).click(logClick);
+          span jQuery(
+          span.string &apos;#link6&apos;
+          span ).click(logClick);
  
 
   .row

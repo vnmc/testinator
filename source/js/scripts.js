@@ -72,16 +72,16 @@ $(document).ready(function(){
       var h = screen.height;
       var ratio = ('devicePixelRatio' in window) ? window.devicePixelRatio : 'unsupported';
       var sav = screen.availHeight;
-      var mqInfo = '<ul>' +
-                      '<li>width <b>' + docW + 'px / ' + docW / 16 + 'em</b></li>' +
-                      '<li>height <b>' + docH + 'px / ' + docH / 16 + 'em</b></li>' +
-                      '<li class="">Screen available height <b>' + sav + ' px / ' + sav / 16 + ' em</b></li>' +
-                      '<li>device-width <b>' + w + 'px / ' + w / 16 + 'em</b></li>' +
-                      '<li>device-height <b>' + h + 'px / '  + h / 16 + 'em</b></li>' +
-                      '<li>device-pixel-ratio <b>' + ratio + '</b></li>' +
-                      '<li class="aspect-ratio">aspect-ratio <b>' + reduceRatio(docW, docH) + '</b></li>' +
-                      '<li class="aspect-ratio">device-aspect-ratio <b>' + reduceRatio(w, h) + '</b></li>' +
-                    '</ul>';
+      var mqInfo = '<table>' +
+          '<tr><td>width</td><td>' + docW + 'px (' + docW / 16 + 'em)</b></td></tr>' +
+          '<tr><td>height</td><td>' + docH + 'px (' + docH / 16 + 'em)</td></tr>' +
+          '<tr><td>available screen height</td><td>' + sav + 'px (' + sav / 16 + 'em)</td></tr>' +
+          '<tr><td>device-width</td><td>' + w + 'px (' + w / 16 + 'em)</td></tr>' +
+          '<tr><td>device-height</td><td>' + h + 'px ('  + h / 16 + 'em)</td></tr>' +
+          '<tr><td>device-pixel-ratio</td><td>' + ratio + '</td></tr>' +
+          '<tr><td>aspect-ratio</td><td>' + reduceRatio(docW, docH) + '</td></tr>' +
+          '<tr><td>device-aspect-ratio</td><td>' + reduceRatio(w, h) + '</td></tr>' +
+        '</table>';
 
       var mqTest = $('#mqTest');
       mqTest.html(mqInfo);
