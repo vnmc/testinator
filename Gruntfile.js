@@ -33,11 +33,10 @@ module.exports = function(grunt)
 
         concat: {
             dist: {
-                src: [
-                    'source/js/*.js',
-                    'source/js/vendor/*.js'
-                ],
-                dest: 'demo/js/production.js'
+                files: {
+                    'demo/js/production.js': ['source/js/*.js', 'source/js/vendor/*.js'],
+                    'iframe/js/production.js': ['source/js/*.js', 'source/js/vendor/*.js']
+                }
             },
             build: {
                 src: [
@@ -50,8 +49,20 @@ module.exports = function(grunt)
 
         uglify: {
             build: {
-                src: 'build/js/production.js',
-                dest: 'demo/js/production.js'
+                files: [
+                    {
+                        expand: true,
+                        src: 'production.js',
+                        dest: 'demo/js/',
+                        cwd: 'build/js'
+                    },
+                     {
+                        expand: true,
+                        src: 'production.js',
+                        dest: 'iframe/js/',
+                        cwd: 'build/js'
+                    }
+                ]
             }
         },
 
@@ -61,13 +72,22 @@ module.exports = function(grunt)
                     style: 'compressed'
                 },
 
-                files: [{
-                    expand: true,
-                    cwd: 'source/scss',
-                    src: ['*.scss'],
-                    dest: 'demo/css/',
-                    ext: '.css'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'source/scss',
+                        src: ['*.scss'],
+                        dest: 'demo/css/',
+                        ext: '.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'source/scss',
+                        src: ['*.scss'],
+                        dest: 'iframe/css/',
+                        ext: '.css'
+                    }
+                ]
             },
             build: {
                 files: [{
@@ -100,7 +120,8 @@ module.exports = function(grunt)
                 },
                 files: {
                     "build/index.html": ["source/views/index.jade"],
-                    "build/internal.html": ["source/views/internal.jade"]
+                    "build/internal.html": ["source/views/internal.jade"],
+                    "build/website-iframe.html": ["source/views/website-iframe.jade"]
                 }
             }
         },
@@ -113,7 +134,9 @@ module.exports = function(grunt)
                 },
                 files: {
                     'demo/index.html': 'build/index.html',
-                    'demo/internal.html': 'build/internal.html'
+                    'demo/internal.html': 'build/internal.html',
+                    'iframe/index.html': 'build/website-iframe.html',
+                    'iframe/internal.html': 'build/internal.html'
                 }
             }
         },
@@ -226,6 +249,55 @@ module.exports = function(grunt)
                         cwd: 'build/css/images/',
                         src: ['**/*.{png,jpg,gif}'],
                         dest: 'demo/css/images/'
+                    },
+                    /* */
+                    {
+                        expand: true,
+                        cwd: 'source/',
+                        src: ['fonts/**'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/*.png'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/*.txt'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/browserconfig.xml'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/favicon.ico'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['source/404.html'],
+                        dest: 'iframe/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'build/img/',
+                        src: ['**/*.{png,jpg,gif,svg}'],
+                        dest: 'iframe/img/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'build/css/images/',
+                        src: ['**/*.{png,jpg,gif}'],
+                        dest: 'iframe/css/images/'
                     }
                 ]
             }
