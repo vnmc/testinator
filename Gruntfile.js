@@ -121,7 +121,8 @@ module.exports = function(grunt)
                 files: {
                     "build/index.html": ["source/views/index.jade"],
                     "build/internal.html": ["source/views/internal.jade"],
-                    "build/website-iframe.html": ["source/views/website-iframe.jade"]
+                    "build/website-iframe.html": ["source/views/website-iframe.jade"],
+                    "build/internal-iframe.html": ["source/views/internal-iframe.jade"]
                 }
             }
         },
@@ -136,7 +137,7 @@ module.exports = function(grunt)
                     'demo/index.html': 'build/index.html',
                     'demo/internal.html': 'build/internal.html',
                     'iframe/index.html': 'build/website-iframe.html',
-                    'iframe/internal.html': 'build/internal.html'
+                    'iframe/internal-iframe.html': 'build/internal-iframe.html'
                 }
             }
         },

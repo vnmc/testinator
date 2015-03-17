@@ -88,6 +88,7 @@ $color-19381F:      #19381F;
 ///////////////////////////////////////////////////////////////////////////////////
 
 $size2:  2px;
+$size9: 9px;
 $size12: 12px;
 $size14: 14px;
 $size16: 16px;
@@ -103,6 +104,8 @@ $sizeBorderRadius:     $size2;
 $sizeFontLarge:        $size16; // Site List heading
 $sizeFontMedium:       $size14; // Settings input
 $sizeFontSmall:        $size12; // URL/Folder typo
+$sizeFontTiny:         $size9; // only for iframe demo
+
 
 
 // Font weights ///////////////////////////////////////////////////////////////////
@@ -196,7 +199,12 @@ hr{
   margin-bottom: 2em;
   float: none;
   clear: both;
+  @media (max-width: 200px) {
+    font-size: 18px;
+  }
 }
+
+
 
 // Global //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -206,6 +214,9 @@ hr{
   @include font-size(4);
   font-weight: 300;
   margin-bottom: 0.2em;
+  @media (max-width: 200px) {
+    @include font-size(2);
+  }
 }
 
 .section-subheading {
@@ -321,6 +332,9 @@ $gl-btn-color: $colorLighterGray;
   .pixelNumber {
     @include font-size(10);
     font-weight: 700;
+    @media (max-width: 550px) {
+      @include font-size(5);
+    }
   }
 
   span {
@@ -548,11 +562,15 @@ $colorTabsHeight: 6em;
 
       span {
         text-decoration: none;
-      font-size: 4em;
+        font-size: 4em;
         display: none;
         color: #ffffff;
         font-weight: 300;
         padding-left: 1em;
+        @media (max-width: 200px) {
+          font-size: 2em;
+          line-height: 3em;
+        }
       }
     
     &.hover > span {
@@ -693,6 +711,18 @@ $colorTabsHeight: 6em;
   }
 }
 
+@media (max-width: 200px) {
+    #puzzle {
+      width: 136px;
+      height: 105px;
+      li {
+        width: 31px;
+        height: 31px;
+      }
+    }
+  }
+
+
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-top {
@@ -778,6 +808,9 @@ code {
   position: relative;
   font-size: $sizeFontLarge;
   word-break: break-all;
+  @media (max-width: 200px) {
+    font-size: $sizeFontTiny;
+  }
 
   &::before {
     content: "code";
