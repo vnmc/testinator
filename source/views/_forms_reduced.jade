@@ -1,0 +1,71 @@
+.container(id="scrollStopsHere")
+  h2 Wow! Not bad finger power!
+
+
+hr
+
+.container
+  h2 Great, now let's try filling out some forms!
+
+  form(role="form")
+    .row
+      .col-md-12
+        .form-group
+          label What geek qualities do you posess (apart from the force, of course)?
+          input(type="text")
+        .form-group
+          label What is the weakest root password?
+          input(type="password")
+
+        .form-group
+          label How about your E-mail (we won't spam you!)
+          input(type="email")
+
+        .form-group
+          label What is the day of the week?
+          select
+            option Monday
+            option Tuesday
+            option Wednesday
+            option Thursday
+            option Friday
+            option Saturday
+            option Sunday
+            option I have no idea
+    
+    .row
+      .col-md-6
+        .form-group
+            label How do you stay on top of things?
+            .checkbox
+              label
+                  input(type='checkbox')
+                  |  Comic con
+            .checkbox
+              label
+                  input(type='checkbox')
+                  |  Ted talks
+            .checkbox
+              label
+                  input(type='checkbox')
+                  |  Newspaper
+      .col-md-6
+        .form-group
+          label What is the best operating system?
+          .radio
+              label
+                  input(type='radio', name="radio")
+                  | Windows
+          .radio
+              label
+                  input(type='radio', name="radio")
+                  | Macintosh
+          .radio
+              label
+                  input(type='radio', name="radio")
+                  | Linux
+      br
+      .col-md-2.col-md-offset-10
+        button(type="submit" class="btn-gl") Send
+
+hr    
