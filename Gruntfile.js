@@ -34,14 +34,35 @@ module.exports = function(grunt)
         concat: {
             dist: {
                 files: {
-                    'demo/js/production.js': ['source/js/*.js', 'source/js/vendor/*.js'],
-                    'iframe/js/production.js': ['source/js/*.js', 'source/js/vendor/*.js']
+                    'demo/js/production.js':  [
+                    'source/js/jquery-1.11.2.min.js',
+                    'source/js/jquery-ui.min.js',
+                    'source/js/bootstrap.min.js',
+                    'source/js/jquery.tablset.min.js',
+                    'source/js/lightbox-2.6.min.js',
+                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
+                    'source/js/scripts.js'
+                    ],
+                    'iframe/js/production.js':  [
+                    'source/js/jquery-1.11.2.min.js',
+                    'source/js/jquery-ui.min.js',
+                    'source/js/bootstrap.min.js',
+                    'source/js/jquery.tablset.min.js',
+                    'source/js/lightbox-2.6.min.js',
+                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
+                    'source/js/scripts.js'
+                    ]
                 }
             },
             build: {
                 src: [
-                    'source/js/*.js',
-                    'source/js/vendor/*.js'
+                    'source/js/jquery-1.11.2.min.js',
+                    'source/js/jquery-ui.min.js',
+                    'source/js/bootstrap.min.js',
+                    'source/js/jquery.tablset.min.js',
+                    'source/js/lightbox-2.6.min.js',
+                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
+                    'source/js/scripts.js'
                 ],
                 dest: 'build/js/production.js'
             }
