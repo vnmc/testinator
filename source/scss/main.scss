@@ -861,6 +861,14 @@ code {
   .string { color: #ac2925; }
 }
 
+span.code {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  border: 1px solid $colorLine;
+  margin: 0 0.3em;
+  padding: 0 0.3em;
+}
+
 .output {
   @extend code;
 
