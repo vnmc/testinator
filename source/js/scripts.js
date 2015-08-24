@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  $('#user-agent').html(navigator.userAgent);
+
   // jQuery UI samples
   $('#sort-lyrics, #puzzle').sortable().disableSelection();
   $('#jqui-tabs').tabs();
