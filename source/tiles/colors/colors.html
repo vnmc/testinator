@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="jquery-2.2.2.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
+
+		<style>
+			body {
+				font-family: 'Pavanam', sans-serif;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			.tiles {
+				width: 900px;
+				height: 600px;
+			}
+
+			.tile {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 60px;
+				height: 60px;
+				padding: 10px;
+				float: left;
+				text-align: center;
+				transform: scale(1);
+				box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0);
+				transition: color 0.4s ease, transform 0.1s ease, text-shadow 0.4s ease;
+				z-index: 0;
+			}
+
+			.tile, a {
+				color: transparent;
+				font-size: 11px;
+				text-shadow: 0 0 2px rgba(0, 0, 0, 0);			
+			}
+
+			a {
+				font-size: 9px;
+				text-decoration: none;
+			}
+
+			.tile:hover {
+				color: #fff;
+				transform: scale(1.3);
+				text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+				box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+				z-index: 2;
+				/*transition: color 0.4s ease, transform 0.1s ease, text-shadow 0.4s ease;*/
+			}
+
+			.tile:hover a {
+				color: #fff;
+				text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tiles"></div>
+
+		<script>
+			/*
+			var colors = ['aliceblue','antiquewhite','aqua','aquamarine','azure','beige','bisque','black','blanchedalmond','blue','blueviolet','brown','burlywood','cadetblue','chartreuse','chocolate','coral','cornflowerblue','cornsilk','crimson','cyan','darkblue','darkcyan','darkgoldenrod','darkgray','darkgreen','darkgrey','darkkhaki','darkmagenta','darkolivegreen','darkorange','darkorchid','darkred','darksalmon','darkseagreen','darkslateblue','darkslategray','darkslategrey','darkturquoise','darkviolet','deeppink','deepskyblue','dimgray','dimgrey','dodgerblue','firebrick','floralwhite','forestgreen','fuchsia','gainsboro','ghostwhite','gold','goldenrod','gray','green','greenyellow','grey','honeydew','hotpink','indianred','indigo','ivory','khaki','lavender','lavenderblush','lawngreen','lemonchiffon','lightblue','lightcoral','lightcyan','lightgoldenrodyellow','lightgray','lightgreen','lightgrey','lightpink','lightsalmon','lightseagreen','lightskyblue','lightslategray','lightslategrey','lightsteelblue','lightyellow','lime','limegreen','linen','magenta','maroon','mediumaquamarine','mediumblue','mediumorchid','mediumpurple','mediumseagreen','mediumslateblue','mediumspringgreen','mediumturquoise','mediumvioletred','midnightblue','mintcream','mistyrose','moccasin','navajowhite','navy','oldlace','olive','olivedrab','orange','orangered','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','papayawhip','peachpuff','peru','pink','plum','powderblue','purple','rebeccapurple','red','rosybrown','royalblue','saddlebrown','salmon','sandybrown','seagreen','seashell','sienna','silver','skyblue','slateblue','slategray','slategrey','snow','springgreen','steelblue','tan','teal','thistle','tomato','turquoise','violet','wheat','white','whitesmoke','yellow','yellowgreen'
+			];*/
+			/*
+			var colors = ['black', 'midnightblue', 'darkslategray', 'dimgray', 'darkolivegreen', 'darkgreen', 'green', 'forestgreen', 'seagreen', 'mediumseagreen', 'springgreen', 'lime', 'limegreen', 'lawngreen', 'chartreuse', 'olivedrab', 'olive', 'darkgoldenrod', 'darkkhaki', 'yellowgreen', 'greenyellow', 'gold', 'yellow', 'sandybrown', 'lightsalmon', 'darksalmon', 'salmon', 'goldenrod', 'peru', 'orange', 'darkorange', 'chocolate', 'orangered', 'red', 'crimson', 'brown', 'firebrick', 'maroon', 'darkred', 'saddlebrown', 'sienna', 'indianred', 'tomato', 'coral', 'palevioletred', 'hotpink', 'deeppink', 'mediumvioletred', 'purple', 'darkmagenta', 'mediumpurple', 'mediumorchid', 'blueviolet', 'darkorchid', 'darkviolet', 'fuchsia', 'magenta', 'orchid', 'violet', 'thistle', 'plum', 'lightpink', 'lightcoral', 'burlywood', 'tan', 'navajowhite', 'peachpuff', 'wheat', 'khaki', 'palegoldenrod', 'moccasin', 'lemonchiffon', 'blanchedalmond', 'bisque', 'antiquewhite', 'papayawhip', 'beige', 'lightgoldenrodyellow', 'cornsilk', 'lightyellow', 'seashell', 'oldlace', 'linen', 'lightcyan', 'azure', 'aliceblue', 'mintcream', 'ghostwhite', 'white', 'white', 'white', 'snow', 'ivory', 'floralwhite', 'honeydew', 'whitesmoke', 'lavenderblush', 'lavender', 'mistyrose', 'pink', 'gainsboro', 'lightgray', 'silver', 'paleturquoise', 'powderblue', 'lightblue', 'lightsteelblue', 'skyblue', 'lightskyblue', 'palegreen', 'lightgreen', 'darkgray', 'darkseagreen', 'gray', 'rosybrown', 'cornflowerblue', 'steelblue', 'cadetblue', 'slategray', 'lightslategray', 'mediumaquamarine', 'aquamarine', 'mediumturquoise', 'turquoise', 'darkturquoise', 'cyan', 'aqua', 'mediumspringgreen', 'lightseagreen', 'darkcyan', 'teal', 'deepskyblue', 'dodgerblue', 'royalblue', 'mediumslateblue', 'slateblue', 'darkblue', 'navy', 'indigo', 'darkslateblue', 'rebeccapurple', 'mediumblue', 'blue'];*/
+
+			var colors = ["yellow","cornsilk","lightyellow","ivory","mintcream","white","white","floralwhite","seashell","linen","antiquewhite","lavenderblush","snow","white","ghostwhite","greenyellow","palegoldenrod","lemonchiffon","lightgoldenrodyellow","honeydew","lightcyan","azure","oldlace","papayawhip","blanchedalmond","bisque","mistyrose","whitesmoke","aliceblue","lavender","chartreuse","lawngreen","khaki","palegreen","aquamarine","cyan","paleturquoise","beige","wheat","moccasin","navajowhite","gainsboro","lightblue","powderblue","lightgrey","springgreen","lime","gold","lightgreen","turquoise","aqua","pink","peachpuff","burlywood","darkkhaki","tan","thistle","lightskyblue","skyblue","lightgray","mediumspringgreen","limegreen","yellowgreen","darkseagreen","mediumaquamarine","mediumturquoise","lightpink","lightsalmon","orange","goldenrod","sandybrown","plum","deepskyblue","lightsteelblue","silver","dodgerblue","cornflowerblue","cadetblue","mediumseagreen","lightseagreen","darkturquoise","darksalmon","coral","darkorange","darkgoldenrod","salmon","hotpink","violet","darkgray","darkgrey","mediumslateblue","mediumpurple","orchid","rosybrown","gray","grey","peru","tomato","orangered","chocolate","lightcoral","palevioletred","deeppink","olivedrab","seagreen","slateblue","mediumorchid","fuchsia","indianred","dimgrey","slategray","lightslategray","steelblue","crimson","red","firebrick","brown","olive","forestgreen","green","blueviolet","darkorchid","magenta","sienna","dimgray","slategrey","lightslategrey","royalblue","darkviolet","rebeccapurple","indigo","maroon","darkred","darkolivegreen","darkgreen","purple","darkmagenta","mediumvioletred","saddlebrown","darkslategrey","teal","darkcyan","darkslateblue","blue","mediumblue","darkblue","navy","midnightblue","black","darkslategray"];
+
+			var colors = ["greenyellow","yellow","mintcream","white","white","snow","seashell","ivory","beige","cornsilk","lightyellow","honeydew","aquamarine","aqua","cyan","chartreuse","lemonchiffon","floralwhite","white","ghostwhite","lavenderblush","linen","oldlace","papayawhip","blanchedalmond","lightgoldenrodyellow","palegreen","springgreen","mediumaquamarine","turquoise","lawngreen","palegoldenrod","whitesmoke","azure","aliceblue","lavender","gainsboro","antiquewhite","bisque","wheat","moccasin","lightgreen","mediumspringgreen","limegreen","mediumseagreen","lime","khaki","mistyrose","lightcyan","paleturquoise","lightgray","lightgrey","peachpuff","navajowhite","tan","burlywood","yellowgreen","mediumturquoise","skyblue","lightskyblue","gold","orange","pink","lightblue","powderblue","silver","thistle","lightsalmon","sandybrown","darkorange","goldenrod","darkkhaki","darkturquoise","lightsteelblue","deepskyblue","salmon","lightcoral","lightpink","violet","plum","darkgrey","darkgray","darksalmon","coral","peru","darkgoldenrod","darkseagreen","lightseagreen","cornflowerblue","dodgerblue","deeppink","palevioletred","hotpink","magenta","orchid","gray","rosybrown","tomato","orangered","chocolate","olive","olivedrab","cadetblue","lightslategray","lightslategrey","mediumslateblue","mediumpurple","mediumorchid","fuchsia","slategrey","grey","indianred","crimson","red","forestgreen","green","seagreen","darkcyan","steelblue","slategray","slateblue","blueviolet","darkorchid","mediumvioletred","dimgray","dimgrey","sienna","brown","firebrick","darkolivegreen","darkgreen","darkslateblue","rebeccapurple","royalblue","teal","blue","darkviolet","darkmagenta","purple","darkslategray","darkslategrey","saddlebrown","darkred","maroon","midnightblue","navy","darkblue","indigo","mediumblue","black"];
+			//*/
+
+			/*
+			var colors = [ '#ABAD1A', '#AB1DED', '#AB0DED', '#ACAC1A', '#ACAD1A', '#ACCEDE', '#ACED1A', '#AC1D1C', '#ADD1CE', '#AFACED', '#AFF1ED', '#BABB1E', '#BAB1ED', '#BACABA', '#BACCAE', '#BADD1E', '#BAFFED', '#BA0BAB', '#BEADED', '#BEDAFF', '#BEDDED', '#BEDEAD', '#BEDEAF', '#BEEBEE', '#BEEFED', '#B1AC1D', '#B1BBED', '#B1DD1E', '#B1FACE', '#B1FFED', '#B0BBED', '#B0BB1E', '#B0CC1A', '#B0CC1E', '#B0D1CE', '#B0D1ED', '#B00B00', '#B00D1E', '#CABBED', '#CABB1E', '#CAB1A1', '#CACC1A', '#CADDED', '#CADD1E', '#CEB01D', '#C1CADA', '#C0BAEA', '#C0BBED', '#C0BCAB', '#C0CC1C', '#C0CC1D', '#C0DDED', '#C0DE1A', '#C0FFEE', '#C01FED', '#C01FFE', '#C00B00', '#C00EED', '#DABBED', '#DAB01A', '#DAD0ED', '#DAFFED', '#DEBB1E', '#DECADE', '#DECAD1', '#DECEDE', '#DEC1DE', '#DEC0DE', '#DEC01C', '#DEEDED', '#DEFACE', '#DEFADE', '#DEF1ED', '#DE1CED', '#DE1F1C', '#D1AC1D', '#D1AD1C', '#D1BBED', '#D110D0', '#D0BBED', '#D0BB1E', '#D0DDED', '#D0DD1E', '#D0FFED', '#D00DAB', '#D00DAD', '#EBCD1C', '#EDD1ED', '#EFFACE', '#FACADE', '#FEEDED', '#F1BBED', '#F1C01D', '#F1DDED', '#F1DFAD', '#F0BBED', '#1DEAED', '#10D1DE', '#0EC01D', '#0FF1CE', '#00EC1A' ];
+			//*/
+
+			/*
+			var colors = [ '#ABACA5','#ABAD1A','#ABA5ED','#ABA5E5','#ABA51A','#ABA51C','#ABA510','#ABA551','#ABBA51','#ABBE55','#ABCE55','#ABED6E','#ABE66E','#ABE55E','#AB1DED','#AB1DE5','#AB16E1','#AB0DED','#AB0DE5','#ACAC1A','#ACAD1A','#ACCEDE','#ACCE55','#ACC15E','#ACED1A','#AC1D1C','#ADA6E5','#ADA610','#ADD1CE','#AD0BE5','#AD0B05','#AEDE61','#AFACED','#AFF1ED','#AFF1E5','#A6AD1C','#A6A2ED','#A661E5','#A6061C','#A5CEBC','#A5D1C5','#A51DE5','#A55A15','#A55BAA','#A55E55','#A5515A','#A5515E','#A55151','#A5512E','#A21DE5','#BABB1E','#BAB1ED','#BAB1E5','#BAB005','#BACABA','#BACCAE','#BADA55','#BADD1E','#BAD6ED','#BAD6E5','#BAFFED','#BA6A55','#BA66ED','#BA661E','#BA6105','#BA12A5','#BA12ED','#BA12E5','#BA0BAB','#BA51C5','#BA501D','#BA55E5','#BA551A','#BA551E','#BA5505','#BA2005','#BEADED','#BEB055','#BEDAFF','#BEDA2E','#BEDDED','#BEDEAD','#BEDEAF','#BEEBEE','#BEEFED','#BEF065','#BE6A55','#BE6A2E','#BE66ED','#BE60B5','#BE16E5','#BE5CAB','#BE51DE','#BE55E5','#BE2A22','#B1AC1D','#B1A5ED','#B1A5E5','#B1BBED','#B1DD1E','#B1FACE','#B1FFED','#B166ED','#B1661E','#B10F06','#B106A5','#B10515','#B0BBED','#B0BB1E','#B0CA6E','#B0CCE5','#B0CC1A','#B0CC1E','#B0CC15','#B0DE6A','#B0D61E','#B0D1CE','#B0D1ED','#B0D1E5','#B0FF05','#B066ED','#B061E5','#B0161D','#B00B00','#B00D1E','#B0061E','#B002ED','#B002E5','#B055ED','#B055E5','#CABA5A','#CABBED','#CABB1E','#CAB1A1','#CAB0B5','#CACA05','#CACC1A','#CADDED','#CADD1E','#CADD15','#CAD6ED','#CAD6E5','#CA155E','#CA5ABA','#CA5ABE','#CA5E1C','#CA551A','#CA551E','#CA5515','#CA21B1','#CEA5ED','#CEA5E5','#CEB1D5','#CEB01D','#CE1BA5','#CE1B05','#CE55ED','#CE55E5','#CE5510','#C1CADA','#C15C05','#C0A6ED','#C0BAEA','#C0BBED','#C0BCAB','#C0BE60','#C0B1A5','#C0B055','#C0CC1C','#C0CC1D','#C0C0A5','#C0DDED','#C0DEC5','#C0DE1A','#C0FFEE','#C066ED','#C0661E','#C061DA','#C01FED','#C01FFE','#C00B00','#C00EED','#C00EE5','#C05EC5','#C051E5','#C055A5','#C0551C','#C0551D','#C0551E','#C021E5','#C022E5','#DABBED','#DAB01A','#DAD0ED','#DAD0E5','#DAFFED','#DA6ABA','#DA66ED','#DA60BA','#DA60E5','#DA15ED','#DA15EE','#DA15E5','#DA551E','#DEBA5E','#DEBB1E','#DEB055','#DECADE','#DECAD1','#DECEDE','#DECE55','#DEC1DE','#DEC15E','#DEC0DE','#DEC01C','#DEEDED','#DEE5E5','#DEE515','#DEFACE','#DEFADE','#DEF1ED','#DEF1E5','#DEF065','#DE6A6E','#DE6A55','#DE66ED','#DE1CED','#DE1CE5','#DE1F1C','#DE5EED','#DE512E','#D1AC1D','#D1AD1C','#D1A21D','#D1BA5E','#D1BBED','#D1D1E5','#D1D0E5','#D1E5E5','#D1E515','#D166ED','#D110D0','#D10DE5','#D15A20','#D15CED','#D15C05','#D15616','#D1201C','#D0BBED','#D0BB1E','#D0B1E5','#D0DDED','#D0DD1E','#D0D6ED','#D0D6E5','#D0D0E5','#D0FFED','#D066ED','#D0661E','#D061E5','#D00DAB','#D00DAD','#D05A6E','#D055ED','#D055E5','#EAD105','#EA51E5','#EBCA5C','#EBCD1C','#ECE51C','#ECE515','#EDD1ED','#EDD1E5','#EDD0E5','#EFFACE','#E615E5','#E6012E','#E051DE','#E0201C','#E5C0BA','#E50D1C','#E55EDA','#E55EDE','#FACADE','#FAC1A5','#FAC1E5','#FAD6ED','#FAD6E5','#FAECE5','#FA66ED','#FA5CE5','#FA5C1A','#FA5C15','#FEA5ED','#FEA5E5','#FEA2ED','#FEA2E5','#FEEDED','#FEE2ED','#FEE2E5','#FE0FF5','#FE55ED','#FE55E5','#FE22ED','#FE22E5','#F1A5C0','#F1BBED','#F1C0E5','#F1C01D','#F1DDED','#F1DE05','#F1DFAD','#F1D6ED','#F1D6E5','#F166ED','#F12616','#F122ED','#F122E5','#F0BBED','#F06D06','#F066ED','#F061E5','#F055AE','#F055ED','#F055E5','#6ABBA1','#6ABBED','#6AB6AB','#6AB1E5','#6ADAEA','#6ADBEE','#6ADDED','#6ADD15','#6AD1D5','#6AD01D','#6AFFED','#6AFFE5','#6A66ED','#6A5BA6','#6A55ED','#6A55E5','#6A2AB0','#6A2EB0','#6EBB1E','#6E66EE','#6E0DE5','#6E0D1C','#6E01D5','#6E051D','#61BBED','#61B01A','#61DDEA','#61D6EA','#61D6EE','#6166ED','#60ADED','#60BBED','#60B1E5','#60B11D','#60B0E5','#60DDED','#60D51B','#600D1E','#600FED','#6005ED','#6005E5','#1B1CE5','#1B15E5','#1DEAED','#1DE51A','#1D16B0','#10D1DE','#10D1D5','#10D12E','#10D050','#15C05E','#151D1A','#150DEF','#155E15','#0B5EDE','#0B5E55','#0B51DE','#0DE55A','#0EC01D','#0E5061','#0FF1CE','#06D0AD','#06D0A5','#00EC1A','#00201D','#05A6E5','#5ABBED','#5ABECA','#5ACC05','#5A6A1E','#5A66ED','#5A1CE5','#5A16A5','#5A55ED','#5A55E5','#5CAB1A','#5CAB1D','#5CA1FE','#5C1A6E','#5C0FF5','#5C061E','#5EABA6','#5EABED','#5EABEE','#5EAD06','#5EBA60','#5ECC05','#5ECEDE','#5ECE55','#5ED6ED','#5ED6E5','#5EEDED','#5EE5EE','#5E66ED','#5E6610','#5E15ED','#5E15E5','#5E12ED','#5E12E5','#5E55ED','#51BBED','#51CCED','#51C5AC','#51E6ED','#51E6E5','#515500','#50BBED','#50CA6E','#50C1E5','#50DA1C','#50DDED','#5066ED','#5006EE','#500500','#2A6A1E','#2A66ED','#2EBEC5','#21C2AC','#2166ED','#2162A6','#20D1AC','#2001D5','#200515','#200200' ];
+			//*/
+
+			var REPLACEMENTS = [ 'O', 'I', 'Z', null, null, 'S', 'G' ];
+
+			function getWordLink(colorWord)
+			{
+				var word = colorWord.substr(1).replace(/[61052]/g, function(m)
+				{
+					return REPLACEMENTS[parseInt(m, 10)];
+				}).toLowerCase();
+				
+				return '<br><a href="https://www.merriam-webster.com/dictionary/' + word + '">' + word + '</a>';
+			}
+
+			var $tiles = $('.tiles');
+			var len = colors.length;
+			for (var i = 0; i < len; i++)
+			{
+				$tiles.append('<div class="tile" style="background-color:' + colors[i] + '">' + colors[i].replace(/(dark|midnight|medium|light|pale|blanched|golden|spring|saddle|sandy|navajo|ghost|antique|powder|corn|flower|cadet|dodger|royal|slate|rebecca|forest|olive|deep|sky|aqua|papaya|lemon|lavender|white|yellow|orange|red|blue|green)/g, '$1&shy;') + '</div>');
+				//$tiles.append('<div class="tile" style="background-color:' + colors[i] + '">' + colors[i] + getWordLink(colors[i]) + '</div>');
+			}
+		</script>
+	</body>
+</html>

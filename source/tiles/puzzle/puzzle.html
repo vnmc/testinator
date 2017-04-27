@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="jquery-2.2.2.min.js"></script>
+        <script src="jquery-ui-1.12.0/jquery-ui.js"></script>
+        <style>
+            .container {
+                position: relative;
+                margin: 0 auto;
+                width: 420px;
+                height: 315px;
+            }
+
+            #puzzle {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            #puzzle li {
+                margin: 3px 3px 0 0;
+                padding: 1px;
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-image: url(castle.jpg);
+                background-size: 400% 300%;
+                cursor: move;
+            }
+
+            .won {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                color: orange;
+                font-size: 80px;
+                text-align: center;
+                line-height: 315px;
+                text-shadow: 0 0 10px rgba(0,0,0,0.5);
+                opacity: 0;
+                transform: scale(0.1) rotate(0deg);
+                transition: transform 1s ease, opacity 0.3s ease;
+            }
+
+            .won.visible {
+                opacity: 1;
+                transform: scale(1) rotate(720deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <ul id="puzzle"></ul>
+            <div class="won">You did it!</div>
+        </div>
+        <button id="btnScramble">Scramble</button>
+
+        <script>
+            var $puzzle = $('#puzzle');
+            $puzzle.sortable({
+                stop: function()
+                {
+                    var solved = true;
+                    var $tiles = $puzzle.find('li[data-idx]');
+                    var len = $tiles.length;
+
+                    for (var i = 0; i < len; i++)
+                    {
+                        if (parseInt($($tiles[i]).attr('data-idx'), 10) !== i)
+                        {
+                            solved = false;
+                            break;
+                        }
+                    }
+
+                    if (solved)
+                        $('.won').addClass('visible');
+                }
+            }).disableSelection();
+
+            var tiles = [
+                { pos: '0% 0%', idx: 0 },
+                { pos: '-100% 0%', idx: 1 },
+                { pos: '-200% 0%', idx: 2 },
+                { pos: '-300% 0%', idx: 3 },
+                { pos: '0% -100%', idx: 4 },
+                { pos: '-100% -100%', idx: 5 },
+                { pos: '-200% -100%', idx: 6 },
+                { pos: '-300% -100%', idx: 7 },
+                { pos: '0% -200%', idx: 8 },
+                { pos: '-100% -200%', idx: 9 },
+                { pos: '-200% -200%', idx: 10 },
+                { pos: '-300% -200%', idx: 11 }
+            ];
+
+            function random(seed)
+            {
+                var x = Math.sin(seed) * 10000;
+                return x - Math.floor(x);
+            }
+
+            function scramble()
+            {
+                var len = tiles.length;
+                var seed = Math.floor(new Date().getTime() / 1000);
+
+                while (len > 0)
+                {
+                    var idx = (random(seed) * len) | 0;
+                    --len;
+
+                    var tmp = tiles[len];
+                    tiles[len] = tiles[idx];
+                    tiles[idx] = tmp;
+                }
+
+                $puzzle.empty();
+                $('.won').removeClass('visible');
+                len = tiles.length;
+
+                for (var i = 0; i < len; i++)
+                {
+                    var tile = tiles[i];
+                    $puzzle.append('<li style="background-position:' + tile.pos + '" data-idx="' + tile.idx + '"></li>');
+                }
+            }
+
+            $('#btnScramble').click(scramble);
+            scramble();
+        </script>
+    </body>
+</html>

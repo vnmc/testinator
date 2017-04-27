@@ -1,0 +1,72 @@
+@keyframes bouncing {
+	0% {
+		background-position: 50% 100%;
+	}
+
+	100% {
+		background-position: 50% 80%;
+	}
+}
+
+@keyframes whacky {
+	0% {
+		color: #888;
+		filter: blur(0);
+		transform: scale(1);
+	}
+
+	20% {
+		color: #ddd;
+		filter: blur(5px);
+		transform: scale(1.5);
+	}
+
+	70% {
+		color: #555;
+		filter: blur(1px);
+		transform: scale(0.7);
+	}
+
+	100% {
+		color: #888;
+		filter: blur(0);
+		transform: scale(1);
+	}
+}
+
+body.ghost {
+	height: 100vh;
+	background-image: url("ghost.gif");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	animation: bouncing 25s ease infinite alternate;
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 90%;
+	}
+
+	h1 {
+		padding: 0 40px;
+		text-align: center;
+		font-size: 40px;
+		animation: whacky 60s ease infinite;
+
+		@media (min-width: 768px) {
+			padding: 0 80px;
+			font-size: 60px;
+		}
+	}
+
+	a {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		width: 200px;
+		margin-left: -100px;
+		text-align: center;
+	}
+}

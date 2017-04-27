@@ -1,0 +1,44 @@
+.s-slideshow {
+	display: flex;
+	flex-direction: column;
+
+	header {
+		background-color: deeppink;
+	}
+
+	.app-wrapper {
+		position: relative;
+		min-height: 350px;
+		flex: 1;		
+	}
+
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		background-size: cover;
+
+		&:nth-child(1) {
+			background-image: url("photo01.jpg");
+		}
+
+		&:nth-child(2) {
+			background-image: url("photo02.jpg");
+		}
+
+		&:nth-child(3) {
+			background-image: url("photo03.jpg");
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 0;
+		width: 100%;
+
+		span {
+			margin: 0 1px;
+		}
+	}
+}

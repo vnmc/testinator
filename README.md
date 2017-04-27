@@ -1,9 +1,7 @@
-Testinator2
-==========
+Testinator 3
+============
 
 This is the testing page that comes bundled with the <a href="http://ghostlab.vanamco.com/">Ghostlab</a> app. An app for cross browser testing and mobile website development.
-
-Demo: [http://vanamco.com/hosting/testinator/](http://vanamco.com/hosting/testinator/)
 
 ### Build
 
@@ -17,7 +15,7 @@ Demo: [http://vanamco.com/hosting/testinator/](http://vanamco.com/hosting/testin
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Vanamco
+Copyright (c) 2015-2017 Vanamco
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

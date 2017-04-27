@@ -1,0 +1,22 @@
+.s-links {
+	background-color: lighten(goldenrod, 10%);
+
+	header {
+		background-color: goldenrod;
+	}
+
+	ul {
+		padding: 20px;
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+		display: block;
+		margin: 5px 0;
+	}
+
+	a {
+		display: inline-block;
+	}
+}

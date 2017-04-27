@@ -1,0 +1,74 @@
+.s-puzzle {
+    display: flex;
+    flex-direction: column;
+
+    header {
+        position: relative;
+        background-color: orangered;
+        z-index: 1;
+    }
+
+	.app-wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 315px;
+        flex: 1;
+
+        // fixed aspect ratio
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 60%;
+        }
+    }
+
+    #puzzle {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        bottom: 0;
+        width: 100%;
+        width: calc(100% + 2px);
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            width: 25%;
+            height: 33.33%;
+            margin: 0;
+            border: 1px solid white;
+            float: left;
+            background-image: url("photo01.jpg");
+            background-size: 400% 300%;
+            cursor: move;
+        }
+    }
+
+    .won {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: orangered;
+        font-size: 80px;
+        text-align: center;
+        line-height: 315px;
+        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        opacity: 0;
+        transform: scale(0.1);
+        transition: transform 1s cubic-bezier(.65,.25,.34,1.44), opacity 0.3s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+}

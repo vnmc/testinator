@@ -1,0 +1,156 @@
+.s-pipes {
+	background-color: darken(mediumseagreen, 5%);
+
+	header {
+		background-color: mediumseagreen;
+	}
+
+	.wrapper {
+		position: relative;
+	}
+
+	canvas {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 300px;
+		background-color: green;
+	}
+
+	.app-wrapper {
+		position: relative;
+		width: 300px;
+		height: 380px;
+		margin: 0 auto;
+	}
+
+	.container {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		float: left;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&.horz {
+			overflow-x: scroll;
+			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%20100%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l0%2C4%20l90%2C0%20l0%2C-4%20l5%2C5%20l-5%2C5%20l0%2C-4%20l-90%2C0%20l0%2C4%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
+			background-position: 0 100%;
+
+			div  {
+				width: 1000px;
+				height: 100px;
+			}
+		}
+
+		&.vert {
+			overflow-y: scroll;
+			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%2010%20100%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l5%2C5%20l-4%2C0%20l0%2C90%20l4%2C0%20l-5%2C5%20l-5%2C-5%20l4%2C0%20l0%2C-90%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
+			background-position: 100% 0;
+
+			div {
+				with: 100px;
+				height: 1000px;
+			}
+		}
+
+		div {
+			position: relative;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			stroke: slategray;
+			fill: none;
+			box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	.tap, .hose {
+		fill: slategray;
+	}
+
+	.flowing {
+		stroke: deepskyblue !important;
+	}
+
+	@keyframes falling {
+		0% { transform: translate(0, 0); }
+		100% { transform: translate(0, 50px); }
+	}
+
+	@keyframes turning {
+		0% { transform: rotateY(0deg); }
+		100% { transform: rotateY(360deg); }
+	}
+
+	.handle {
+		transform-origin: 5px 0;
+		animation: turning 10s linear infinite;
+
+		circle {
+			fill: slategray;
+			stroke: none;
+		}
+	}
+
+	.drops {
+		position: absolute;
+		left: 0;
+		top: 40px;
+		height: 60px;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 1s ease;
+	}
+
+	.flowing + .drops {
+		opacity: 1;
+	}
+
+	.drop {
+		position: absolute !important;
+		width: 2px;
+		height: 25px;
+		border-radius: 3px;
+		background-color: deepskyblue;
+		animation: falling 1s linear infinite;
+	}
+
+	.ground {
+		position: absolute;
+		left: 0;
+		top: 300px;
+		width: 300px;
+		height: 80px;
+		background-color: darken(mediumseagreen, 5%);
+	}
+
+	.pot {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		width: 100px;
+		height: 100px;
+	}
+
+	.flower {
+		position: absolute;
+		right: 30px;
+		top: -30px;
+		height: 100%;
+		opacity: 0;
+		transform: scale(0.1) translate(0,100px);
+		transition: transform 1s 1s ease, opacity 1s 1s ease;
+	}
+
+	.flowering {
+		opacity: 1;
+		transform: scale(1) translate(0);
+	}
+}

@@ -1,0 +1,35 @@
+.s-deviceinfo {
+	display: flex;
+	flex-direction: column;
+	background-color: lighten(black, 15%);
+
+	header {
+		background-color: black;
+	}
+
+	.app-wrapper {
+		flex: 1;
+		padding: 20px;
+	}
+
+	table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+	}
+
+	td {
+		padding: 4px 8px;
+		color: darken(white, 20%);
+		font-size: 16px;
+		font-weight: 300;
+
+		&:first-child {
+			width: 50%;
+		}
+	}
+
+	tr:nth-child(2n) {
+		background-color: lighten(black, 20%);
+	}
+}

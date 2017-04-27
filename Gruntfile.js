@@ -5,15 +5,15 @@ module.exports = function(grunt)
 
         watch: {
             scripts: {
-                files: ['source/js/*.js'],
-                tasks: ['concat', 'uglify'],
+                files: ['source/**/*.js'],
+                tasks: ['uglify'],
                 options: {
                     spawn: true
                 }
             },
 
             css: {
-                files: ['**/*.scss'],
+                files: ['source/**/*.scss'],
                 tasks: ['sass', 'autoprefixer'],
                 options: {
                     spawn: true
@@ -21,50 +21,8 @@ module.exports = function(grunt)
             },
 
             jade: {
-                files: ['source/views/*.jade'],
+                files: ['source/**/*.jade'],
                 tasks: ['jade']
-            },
-
-            html: {
-                files: ['source/*.html'],
-                tasks: ['htmlmin']
-            }
-        },
-
-        concat: {
-            dist: {
-                files: {
-                    'demo/js/production.js':  [
-                    'source/js/jquery-1.11.2.min.js',
-                    'source/js/jquery-ui.min.js',
-                    'source/js/bootstrap.min.js',
-                    'source/js/jquery.tablset.min.js',
-                    'source/js/lightbox-2.6.min.js',
-                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
-                    'source/js/scripts.js'
-                    ],
-                    'iframe/js/production.js':  [
-                    'source/js/jquery-1.11.2.min.js',
-                    'source/js/jquery-ui.min.js',
-                    'source/js/bootstrap.min.js',
-                    'source/js/jquery.tablset.min.js',
-                    'source/js/lightbox-2.6.min.js',
-                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
-                    'source/js/scripts.js'
-                    ]
-                }
-            },
-            build: {
-                src: [
-                    'source/js/jquery-1.11.2.min.js',
-                    'source/js/jquery-ui.min.js',
-                    'source/js/bootstrap.min.js',
-                    'source/js/jquery.tablset.min.js',
-                    'source/js/lightbox-2.6.min.js',
-                    'source/js/modernizr-2.8.3-respond-1.4.2.min.js',
-                    'source/js/scripts.js'
-                ],
-                dest: 'build/js/production.js'
             }
         },
 
@@ -72,52 +30,31 @@ module.exports = function(grunt)
             build: {
                 files: [
                     {
-                        expand: true,
-                        src: 'production.js',
-                        dest: 'demo/js/',
-                        cwd: 'build/js'
-                    },
-                     {
-                        expand: true,
-                        src: 'production.js',
-                        dest: 'iframe/js/',
-                        cwd: 'build/js'
+                        src: [
+                            'source/assets/js/jquery-3.2.0.min.js',
+                            'source/assets/js/jquery-ui.min.js',
+                            'source/assets/js/jquery.easing.min.js',
+                            'source/assets/js/swiper.jquery.min.js',
+                            'source/tiles/**/*.js'
+                        ],
+                        dest: 'build/main.js'
                     }
                 ]
             }
         },
 
         sass: {
-            dist: {
+            build: {
                 options: {
                     style: 'compressed'
                 },
 
                 files: [
                     {
-                        expand: true,
-                        cwd: 'source/scss',
-                        src: ['*.scss'],
-                        dest: 'demo/css/',
-                        ext: '.css'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'source/scss',
-                        src: ['*.scss'],
-                        dest: 'iframe/css/',
-                        ext: '.css'
+                        src: 'source/index.scss',
+                        dest: 'build/index.css'
                     }
                 ]
-            },
-            build: {
-                files: [{
-                    expand: true,
-                    cwd: 'source/scss',
-                    src: ['*.scss'],
-                    dest: 'build/css/',
-                    ext: '.css'
-                }]
             }
         },
 
@@ -126,208 +63,59 @@ module.exports = function(grunt)
                 browsers: ['last 2 versions', 'ie 8', 'ie 9']
             },
 
-            multiple_files: {
-                src: 'build/css/main.css',
-                dest: 'build/css/main.min.css'
+            build: {
+                src: 'build/index.css',
+                dest: 'build/index.min.css'
             }
         },
 
         jade: {
-            compile: {
+            build: {
+                /*
                 options: {
                     data: {
                         debug: false
                     }
-                },
+                },*/
                 files: {
-                    "build/index.html": ["source/views/index.jade"],
-                    "build/internal.html": ["source/views/internal.jade"],
-                    "build/website-iframe.html": ["source/views/website-iframe.jade"],
-                    "build/internal-iframe.html": ["source/views/internal-iframe.jade"]
-                }
-            }
-        },
-
-        htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {
-                    'demo/index.html': 'build/index.html',
-                    'demo/internal.html': 'build/internal.html',
-                    'iframe/index.html': 'build/website-iframe.html',
-                    'iframe/internal-iframe.html': 'build/internal-iframe.html'
+                    'build/index.html': 'source/index.jade',
+                    'build/page2.html': 'source/page2.jade'
                 }
             }
         },
 
         copy: {
-            main: {
+            build: {
                 files: [
                     {
                         expand: true,
-                        cwd: 'source/',
-                        src: ['fonts/**'],
+                        cwd: 'source/assets/favicon',
+                        src: '*.png',
                         dest: 'build/'
                     },
                     {
                         expand: true,
-                        flatten: true,
-                        src: ['source/css/images/*'],
-                        dest: 'build/css/images/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/img/*'],
-                        dest: 'build/img/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/js/vendor/jquery-1.11.2.min.js'],
-                        dest: 'build/js/vendor/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/*.png'],
+                        cwd: 'source/assets/meta',
+                        src: '*',
                         dest: 'build/'
                     },
                     {
                         expand: true,
-                        flatten: true,
-                        src: ['source/*.txt'],
+                        cwd: 'source/assets/images',
+                        src: '*',
                         dest: 'build/'
                     },
                     {
                         expand: true,
-                        flatten: true,
-                        src: ['source/browserconfig.xml'],
+                        cwd: 'source/assets/fonts',
+                        src: '*',
                         dest: 'build/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/favicon.ico'],
-                        dest: 'build/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/404.html'],
-                        dest: 'build/'
-                    }
-                ]
-            },
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'source/',
-                        src: ['fonts/**'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/*.png'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/*.txt'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/browserconfig.xml'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/favicon.ico'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/404.html'],
-                        dest: 'demo/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'build/img/',
-                        src: ['**/*.{png,jpg,gif,svg}'],
-                        dest: 'demo/img/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'build/css/images/',
-                        src: ['**/*.{png,jpg,gif}'],
-                        dest: 'demo/css/images/'
-                    },
-                    /* */
-                    {
-                        expand: true,
-                        cwd: 'source/',
-                        src: ['fonts/**'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/*.png'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/*.txt'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/browserconfig.xml'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/favicon.ico'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        flatten: true,
-                        src: ['source/404.html'],
-                        dest: 'iframe/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'build/img/',
-                        src: ['**/*.{png,jpg,gif,svg}'],
-                        dest: 'iframe/img/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'build/css/images/',
-                        src: ['**/*.{png,jpg,gif}'],
-                        dest: 'iframe/css/images/'
                     }
                 ]
             }
         }
-
     });
 
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -336,6 +124,5 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-    grunt.registerTask('default', ['jade', 'sass:build', 'autoprefixer', 'copy:main', 'concat:build']);
-    grunt.registerTask('dist', ['copy:dist', 'concat:dist', 'sass:dist', 'uglify', 'htmlmin']);
+    grunt.registerTask('default', ['jade', 'sass', 'autoprefixer', 'uglify', 'copy']);
 };

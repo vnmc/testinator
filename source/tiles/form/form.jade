@@ -1,0 +1,45 @@
+section.s-form
+	header
+		h1 Forms &amp; Ghostlab
+		ul.progressbar
+			li.active Basic Forms
+			li Distributed Form Fills
+			li Automatic Form Fills
+			li Quickfills
+			li Quickfill Data
+
+	form
+		fieldset
+			h2 Basic Form Filling with Ghostlab
+			p Whenever you fill out a form on any one client, it will be filled out in sync on the others.
+			input(type='text', placeholder='Email')
+			//- TODO: add checkboxes, radios, selects
+			button.next Next
+		fieldset
+			h2 Distributed Form Fills
+			p Triple-Click on any form field to open the distributed form fill tool. It will show you inputs for the field in every browser.
+			input(type='text', placeholder='First Name')
+			button.previous Previous
+			button.next Next
+		fieldset
+			h2 Automatic Form Fills
+			p Use the Automatic Form Fill shortcut (Ctrl-Shift-F by default) to fill out this entire form below!
+			input(type='text', placeholder='Twitter')
+			input(type='text', placeholder='Facebook')
+			input(type='text', placeholder='Google Plus')
+			button.previous Previous
+			button.next Next
+		fieldset
+			h2 Quickfills
+			p Use quickfills to quickly populate a field - like $e for an E-Mail.
+			input(type='text', placeholder='First Name')
+			input(type='text', placeholder='Last Name')
+			input(type='text', placeholder='Phone')
+			textarea(placeholder='Address')
+			button.previous Previous
+			button.next Next
+		fieldset
+			h2 Quickfill Data
+			p Define datasets for quickfills to enter different values on every client. E.g. $0
+			input(type='text', placeholder='First Name')
+			button.previous Previous
