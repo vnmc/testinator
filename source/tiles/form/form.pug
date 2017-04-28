@@ -13,7 +13,22 @@ section.s-form
 			h2 Basic Form Filling with Ghostlab
 			p Whenever you fill out a form on any one client, it will be filled out in sync on the others.
 			input(type='text', placeholder='Email')
-			//- TODO: add checkboxes, radios, selects
+			label
+				input(type='checkbox')
+				| XXX
+			label
+				input(type='radio', name='radios')
+				| A
+			label
+				input(type='radio', name='radios')
+				| B
+			label
+				input(type='radio', name='radios')
+				| C
+			select
+				option Alpha
+				option Beta
+				option Gamma
 			button.next Next
 		fieldset
 			h2 Distributed Form Fills
