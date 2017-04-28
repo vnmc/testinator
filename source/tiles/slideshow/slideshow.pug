@@ -5,9 +5,8 @@ section.s-slideshow
     .app-wrapper
         .swiper-container
             .swiper-wrapper
-                .swiper-slide
-                .swiper-slide
-                .swiper-slide
+                - for (var i = 1; i <= 4; i++)
+                    .swiper-slide(style='background-image: url(photo' + '0000'.substr(4 - String(i).length) + i + '.jpg)')
         .swiper-pagination.swiper-pagination-white
         
         .swiper-button-prev

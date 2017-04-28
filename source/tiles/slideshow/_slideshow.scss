@@ -8,29 +8,28 @@
 
 	.app-wrapper {
 		position: relative;
-		min-height: 350px;
-		flex: 1;		
+		min-height: 315px;
+		flex: 1;
+
+		// fixed aspect ratio
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: ((1067 / 1600) * 100%);
+        }	
 	}
 
 	.swiper-container {
-		width: 100%;
-		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
 	}
 
 	.swiper-slide {
 		background-size: cover;
-
-		&:nth-child(1) {
-			background-image: url("photo01.jpg");
-		}
-
-		&:nth-child(2) {
-			background-image: url("photo02.jpg");
-		}
-
-		&:nth-child(3) {
-			background-image: url("photo03.jpg");
-		}
 	}
 
 	.swiper-pagination {

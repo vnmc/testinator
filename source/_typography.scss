@@ -1,23 +1,25 @@
+// http://nikoskip.me/gfonts.php
+// Google Fonts URL = https://fonts.googleapis.com/css?family=Roboto:300,400
+
 @font-face {
     font-family: Roboto;
     font-style: normal;
     font-weight: 400;
-    src: url('Roboto-Regular-Latin.woff2') format('woff2');
+    src: url('Roboto-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Roboto-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Roboto-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('Roboto-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 @font-face {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 400;
-    src: url('Roboto-Regular-LatinExt.woff2') format('woff2');
-    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
-    src: url('Roboto-Light-Latin.woff2') format('woff2');
+    src: url('Roboto-Light.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Roboto-Light.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Roboto-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }

@@ -35,7 +35,7 @@
 
 		&.horz {
 			overflow-x: scroll;
-			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%20100%2010%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l0%2C4%20l90%2C0%20l0%2C-4%20l5%2C5%20l-5%2C5%20l0%2C-4%20l-90%2C0%20l0%2C4%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
+			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%20100%2010%22%20preserveAspectRatio%3D%22xMinYMax%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l0%2C4%20l90%2C0%20l0%2C-4%20l5%2C5%20l-5%2C5%20l0%2C-4%20l-90%2C0%20l0%2C4%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
 			background-position: 0 100%;
 
 			div  {
@@ -46,11 +46,11 @@
 
 		&.vert {
 			overflow-y: scroll;
-			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%2010%20100%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l5%2C5%20l-4%2C0%20l0%2C90%20l4%2C0%20l-5%2C5%20l-5%2C-5%20l4%2C0%20l0%2C-90%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
+			background-image: url("data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%3F%3E%3Csvg%20viewBox%3D%220%200%2010%20100%22%20preserveAspectRatio%3D%22xMaxYMin%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%2C5%20l5%2C-5%20l5%2C5%20l-4%2C0%20l0%2C90%20l4%2C0%20l-5%2C5%20l-5%2C-5%20l4%2C0%20l0%2C-90%20Z%22%20fill%3D%22rgba(255%2C255%2C255%2C.6)%22%2F%3E%3C%2Fsvg%3E");
 			background-position: 100% 0;
 
 			div {
-				with: 100px;
+				width: 100px;
 				height: 1000px;
 			}
 		}
@@ -143,7 +143,8 @@
 		position: absolute;
 		right: 30px;
 		top: -30px;
-		height: 100%;
+		width: 48px;
+		height: 80px;
 		opacity: 0;
 		transform: scale(0.1) translate(0,100px);
 		transition: transform 1s 1s ease, opacity 1s 1s ease;

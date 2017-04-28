@@ -20,9 +20,9 @@ module.exports = function(grunt)
                 }
             },
 
-            jade: {
-                files: ['source/**/*.jade'],
-                tasks: ['jade']
+            pug: {
+                files: ['source/**/*.pug'],
+                tasks: ['pug']
             }
         },
 
@@ -69,7 +69,7 @@ module.exports = function(grunt)
             }
         },
 
-        jade: {
+        pug: {
             build: {
                 /*
                 options: {
@@ -78,8 +78,8 @@ module.exports = function(grunt)
                     }
                 },*/
                 files: {
-                    'build/index.html': 'source/index.jade',
-                    'build/page2.html': 'source/page2.jade'
+                    'build/index.html': 'source/index.pug',
+                    'build/page2.html': 'source/page2.pug'
                 }
             }
         },
@@ -116,13 +116,13 @@ module.exports = function(grunt)
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-    grunt.registerTask('default', ['jade', 'sass', 'autoprefixer', 'uglify', 'copy']);
+    grunt.registerTask('default', ['pug', 'sass', 'autoprefixer', 'uglify', 'copy']);
 };
