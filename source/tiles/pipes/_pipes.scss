@@ -32,6 +32,7 @@
 		float: left;
 		background-repeat: no-repeat;
 		background-size: contain;
+		-webkit-overflow-scrolling: touch;
 
 		&.horz {
 			overflow-x: scroll;

@@ -82,6 +82,9 @@ $(document).ready(function()
 	var $svgs = $elt.find('svg');
 	document.addEventListener('scroll', function(event)
 	{
+		if (event.target === document)
+			return;
+
 		$svgs.removeClass('flowing');
 
 		var visibleElements = [];
@@ -122,4 +125,18 @@ $(document).ready(function()
 
 		$elt.find('.flower').toggleClass('flowering', $('[data-pos=22]').is('.flowing'));
 	}, true);
+
+	// disable scrolling the document if the mouse is in this app
+	if (!('ontouchstart' in window) && !navigator.maxTouchPoints)
+	{
+		$elt.on('mouseenter', function()
+		{
+			$('body').css('overflow', 'hidden');
+		});
+
+		$elt.on('mouseleave', function()
+		{
+			$('body').css('overflow', 'scroll');
+		});
+	}
 });
