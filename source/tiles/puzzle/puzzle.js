@@ -2,6 +2,13 @@ $(document).ready(function()
 {
 	var $puzzle = $('#puzzle');
     $puzzle.sortable({
+        'ui-floating': true,
+
+        start: function(e, ui)
+        {
+            $puzzle.sortable('refreshPositions');
+        },
+
         stop: function()
         {
             var solved = true;

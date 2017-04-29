@@ -129,12 +129,14 @@ $(document).ready(function()
 	// disable scrolling the document if the mouse is in this app
 	if (!('ontouchstart' in window) && !navigator.maxTouchPoints)
 	{
-		$elt.on('mouseenter', function()
+		$scrollables = $elt.find('.horz, .vert');
+
+		$scrollables.on('mouseenter', function()
 		{
 			$('body').css('overflow', 'hidden');
 		});
 
-		$elt.on('mouseleave', function()
+		$scrollables.on('mouseleave', function()
 		{
 			$('body').css('overflow', 'scroll');
 		});
